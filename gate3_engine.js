@@ -109,12 +109,24 @@
    const s=700101+i,test=880101+i,model=train(s,256);
    const result=benchmark(model,test,512);
    const e=result.relativeMSE;
+   // Check sign-reversal invariance and absence-of-clue ambiguity on an
+   // additional seeded probe, never used to fit or rank populations.
+   const probe=G2.newCase(G2.rng(test+17));
+   const noClue=infer(model,probe.raw,null);
+   const intact=infer(model,probe.raw,probe.q);
+   const reversed=infer(model,probe.raw,probe.q,"reverse");
+   const cutProbe=infer(model,probe.raw,probe.q,"cut");
+   const causalCheck=noClue.means.every(v=>Math.abs(v)===0)&&
+     Math.abs(cutProbe.means[1])===0&&Math.abs(cutProbe.means[2])===0&&
+     Math.abs(reversed.means[0]-intact.means[0])<1e-12&&
+     Math.abs(reversed.means[1]+intact.means[1])<1e-12&&
+     Math.abs(reversed.means[2]+intact.means[2])<1e-12;
    const checks={
     primary:e.learned<.80,
     shuffle:e.shuffled-e.learned>=.20,
     unpaired:e.unpaired-e.learned>=.20,
-    supervised:e.learned-e.supervised<=.10,
-    cut:Math.abs(e.cut-1)<1e-10,
+    supervised:Math.abs(e.learned-e.supervised)<=.10,
+    cut:Math.abs(e.cut-1)<1e-10&&causalCheck,
    };
    rows.push({seed:s,testSeed:test,relativeMSE:e,checks});
   }
