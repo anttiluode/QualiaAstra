@@ -60,3 +60,23 @@ Still open: learn graph topology and causal factors with no fixed A→B→C wiri
 make recipient populations mutually revise one another through recurrent
 prediction/error exchanges; then isolate any benefit of state-shaped pings at
 matched signal/energy budget, without treating predictive success as qualia.
+
+## Gate 4 completed: wiring selection, without a residual-specific advantage
+
+[Gate 4 interactive demo](../gate4.html) · [Protocol](GATE4_PROTOCOL.md) ·
+[Report](GATE4_RESULTS.md) · [Full confirmation](../results/gate4_confirmation.json).
+
+A deliberately narrow topology-learning test allowed a two-edge budget over
+all-to-all candidate delayed links in a synthetic A/B/C/D world. All 12 held-out
+populations learned A→B→C with both five-tick delays and reconstructed hidden B/C
+waves at median relative error 0.464 versus disconnected error 1.0. Crucially,
+**delay-aware signed Hebbian correlation and unsigned coactivity did exactly
+as well**: the extra claim that residual-aware selection is uniquely beneficial
+was **not supported (0/12)**. This is a useful negative result, not a defect to
+hide by weakening the controls.
+
+The next discriminating test should introduce interfering redundant causes,
+interventions and shifting contexts, predeclaring what future-error learning adds
+beyond delayed correlation. Physical cable adaptation, literal local axon
+sprouting, continuous apical states and matched-cost state-shaped pings are still
+open. Do not conflate absence of emitted spikes with absence of sensory error.
