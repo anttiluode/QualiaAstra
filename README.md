@@ -17,6 +17,43 @@ To use the viewer: **Code → Download ZIP**, extract it, then double-click
 `index.html`. Keep the four `viewer*.js` files beside it. No server, installation,
 GPU or network is needed. The GitHub file page itself displays source, not the app.
 
+## Gate 7: screen off A, but preserve an imagined B relay (12-seed confirmation)
+
+**[Open the live Gate 7 lab](https://anttiluode.github.io/QualiaAstra/gate7.html)** ·
+**[Registered protocol](docs/GATE7_PROTOCOL.md)** ·
+**[Detailed scientific report](docs/GATE7_RESULTS.md)** ·
+**[All twelve population results](results/gate7_confirmation.json)**
+
+Claude's [screening-off wave-body experiment](https://github.com/anttiluode/QualiaClaude/tree/main/screen) learned to suppress a redundant direct
+A→C influence when real B could explain C, but lost the ability to predict C
+from A alone when B was missing. Gate 7 tests an **engineered integration**:
+learn conditional A/B→C weights from real full ABC observations, screen
+direct A→C nearly away, then use an A-generated **internal B expectation**
+to relay C predictions during B's absence. Genuine B-like sensory input
+can instead revise the B state, with source likelihood inferred from Gate 6's
+noisy physical waveform, without any explicit source flag at test.
+
+**Held-out confirmation:** all seven preregistered conditions passed in
+**12/12 independent populations** (512 full ABC calibration events, 320
+known-source waveform probes per source, 4096 separate evaluation episodes
+per population). Median absolute direct A→C coefficient was **0.025**
+for conditional residual regression, vs **0.496** for separate correlation
+fits. The screened learner with imagined B and waveform-source inference
+achieved relative C error **0.726**, close to the exact source-aware Bayes
+reference (**0.725**). Turning off imagined B raised error to **0.837**;
+the uncalibrated independent similarity learner counted A twice and reached
+**0.954**.
+
+Important controls are not hidden: **ordinary joint OLS ties residual
+screening exactly**, and globally rescaling similarity improves it to
+**0.737**. An A-only shortcut scores **0.759**, a better baseline than
+the intentionally deprived no-relay model. The screen-off weights are learned
+with global batch statistics; A and B are **supplied** candidate predictors.
+Source waveforms are **engineered**, calibrated with known isolated
+stimulation, not discovered biologically. This is not Claude's actual
+fading-clock wave field, no neuron sprouts an axon here, and it does not
+establish qualia. See the [full Gate 7 limitations](docs/GATE7_RESULTS.md).
+
 ## Gate 6: physical wave signatures instead of a source bit (12-seed confirmation)
 
 **[Open the live Gate 6 waveform laboratory](https://anttiluode.github.io/QualiaAstra/gate6.html)** ·
