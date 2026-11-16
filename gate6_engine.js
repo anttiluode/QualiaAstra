@@ -18,13 +18,14 @@ return (1-Math.exp(-x/rise))*Math.exp(-x/decay)-
 }
 function shape(mode,source,jitter=0){
 if(!MODES.includes(mode))throw Error("Unknown physical condition "+mode);
+if(mode==="combined"){const c=shape("cable",source,jitter),p=shape("spike",source,jitter);const mixed=c.map((v,i)=>.6*v+.4*p[i]);const magnitude=Math.hypot(...mixed);return mixed.map(v=>v/magnitude);}
 const pair=SPECS[mode][source==="actual"?0:source==="replay"?1:-1];if(!pair)throw Error("Unknown stimulus origin");
 const v=Array.from({length:N},(_,t)=>raw(t,pair[0],pair[1],jitter));
 const power=Math.hypot(...v);return v.map(x=>x/power);
 }
 function nuisance(r){
-return {jitter:Math.floor(r()*3)-1,amp:2.15*(.86+.28*r()),
- noise:Array.from({length:N},()=>.22*G5.normal(r))};
+return {jitter:Math.floor(r()*3)-1,amp:2.6*(.86+.28*r()),
+ noise:Array.from({length:N},()=>.19*G5.normal(r))};
 }
 function waveform(mode,source,z,n,swap=false){
 if(z!==1&&z!==-1)throw Error("Signal must be a signed event");
