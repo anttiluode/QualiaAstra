@@ -22,10 +22,13 @@ jobs:
       - run: node tests/gate3_confirm.cjs
       - run: node tests/gate4.cjs
       - run: node tests/gate4_confirm.cjs
+      - run: node tests/gate5.cjs
+      - run: node tests/gate5_confirm.cjs
       - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/browser_smoke.cjs
       - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/gate2_browser.cjs
       - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/gate3_browser.cjs
       - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/gate4_browser.cjs
+      - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/gate5_browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
