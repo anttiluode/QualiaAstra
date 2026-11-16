@@ -1,0 +1,811 @@
+{
+  "label": "confirmation",
+  "seeds": [
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009,
+    1010,
+    1011,
+    1012
+  ],
+  "protocol": "PROTOCOL.md",
+  "hashes": {
+    "PROTOCOL.md": "8d40acef049a17b406ef731b09bdd11ea3b50e62208277ab66f21aa658593400",
+    "lab.py": "ca60e043056a7e0fbe96beff7db2e5c3e6e48f80a6065668e9eb4fb7ef8617c7",
+    "benchmark.py": "88c2aee3b942c2a4cd86b1352e3ed81f214a31fb5365e0fdc12594bee02cf456"
+  },
+  "git_head": "0a9760b352878ae1bf4f3adeb4a2b758fcaad21b",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "summary": {
+    "metrics": {
+      "shared": {
+        "remote_relative_mse": 0.17234364345943945,
+        "total_wave_nrmse": 0.4131712339448878,
+        "source_accuracy": 0.9410264756944445,
+        "unresolved_fraction": 0.0
+      },
+      "disconnected": {
+        "remote_relative_mse": 1.0,
+        "total_wave_nrmse": 0.8508227623135775,
+        "source_accuracy": 0.3138563368055555,
+        "unresolved_fraction": 0.6666666666666666
+      },
+      "cut": {
+        "remote_relative_mse": 1.0,
+        "total_wave_nrmse": 0.8508227623135775,
+        "source_accuracy": 0.3138563368055555,
+        "unresolved_fraction": 0.6666666666666666
+      },
+      "shuffled": {
+        "remote_relative_mse": 1.8142622547202791,
+        "total_wave_nrmse": 1.1261531392459077,
+        "source_accuracy": 0.6484917534722222,
+        "unresolved_fraction": 0.0
+      },
+      "exact": {
+        "remote_relative_mse": 0.17234364345943945,
+        "total_wave_nrmse": 0.4131712339448878,
+        "source_accuracy": 0.9410264756944445,
+        "unresolved_fraction": 0.0
+      },
+      "oracle": {
+        "remote_relative_mse": 0.000543497888707446,
+        "total_wave_nrmse": 0.02327342985763528,
+        "source_accuracy": 1.0,
+        "unresolved_fraction": 0.0
+      }
+    },
+    "improvements": {
+      "disconnected": {
+        "paired_error_difference": 0.8276563565405605,
+        "ci95": [
+          0.8144244507578369,
+          0.8425098050829956
+        ],
+        "relative_reduction": 0.8276563565405606
+      },
+      "shuffled": {
+        "paired_error_difference": 1.64191861126084,
+        "ci95": [
+          1.6007382114739621,
+          1.6794915613864525
+        ],
+        "relative_reduction": 0.9050062122986673
+      }
+    },
+    "checks": {
+      "ambiguity_max_mean": 0.0,
+      "global_flip_p_difference": 0.0,
+      "cut_remote_update": 0.0,
+      "bayes_max_difference": 8.326672684688674e-16,
+      "reversal_max_difference": 0.0,
+      "suppression_remote_mean": 0.0,
+      "output_removal_remote_change": 0.0
+    },
+    "gates": {
+      "A": true,
+      "B": true,
+      "C": true,
+      "D": true
+    },
+    "all_pass": true,
+    "joint": {
+      "map_accuracy": 0.9401041666666666,
+      "mean_entropy_bits": 0.22625779448703176,
+      "before_entropy_bits": 1.0046317545869237,
+      "mean_negative_log_score": 0.1487369569818703
+    }
+  },
+  "raw_receipt": {
+    "path": "confirmation.json.gz",
+    "sha256": "35b8fa9a150aae03c0185ca5175c068bfcce86b8fca066d822036e9768116e00",
+    "uncompressed_sha256": "56d670a26866a93090e6641b7d2e464c1bbd4a2b5d77045373f03aea672299e9"
+  },
+  "per_seed": [
+    {
+      "seed": 1001,
+      "test_seed": 101002,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.12789362268796428,
+          "total_wave_nrmse": 0.3551683827793355,
+          "source_accuracy": 0.958984375,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8428094366938363,
+          "source_accuracy": 0.3203125,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8428094366938363,
+          "source_accuracy": 0.3203125,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.749040757666698,
+          "total_wave_nrmse": 1.1021286146832516,
+          "source_accuracy": 0.666015625,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.12789362268796428,
+          "total_wave_nrmse": 0.3551683827793355,
+          "source_accuracy": 0.958984375,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005312930230712757,
+          "total_wave_nrmse": 0.022738089793860362,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.95703125,
+        "mean_entropy_bits": 0.22882273317345742,
+        "before_entropy_bits": 1.0041158407922137,
+        "mean_negative_log_score": 0.11730356691049149
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 5.551115123125783e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1002,
+      "test_seed": 101003,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.16707830591962716,
+          "total_wave_nrmse": 0.4055250621105688,
+          "source_accuracy": 0.94921875,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.850237800262112,
+          "source_accuracy": 0.31640625,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.850237800262112,
+          "source_accuracy": 0.31640625,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.8922235207460114,
+          "total_wave_nrmse": 1.1492195092379314,
+          "source_accuracy": 0.64453125,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.1670783059196272,
+          "total_wave_nrmse": 0.4055250621105688,
+          "source_accuracy": 0.94921875,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005943625210951235,
+          "total_wave_nrmse": 0.023778905888219074,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.94921875,
+        "mean_entropy_bits": 0.1969179530288026,
+        "before_entropy_bits": 1.001607579314574,
+        "mean_negative_log_score": 0.14823670763127342
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 5.551115123125783e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1003,
+      "test_seed": 101004,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.19540056482473855,
+          "total_wave_nrmse": 0.4430474860096122,
+          "source_accuracy": 0.935546875,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8545694542876352,
+          "source_accuracy": 0.3118489583333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8545694542876352,
+          "source_accuracy": 0.3118489583333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.8360851734085089,
+          "total_wave_nrmse": 1.1320085610307238,
+          "source_accuracy": 0.6373697916666666,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.19540056482473858,
+          "total_wave_nrmse": 0.4430474860096122,
+          "source_accuracy": 0.935546875,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005147952712139977,
+          "total_wave_nrmse": 0.022565331820000725,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.935546875,
+        "mean_entropy_bits": 0.24189686398793933,
+        "before_entropy_bits": 1.0036747016009038,
+        "mean_negative_log_score": 0.17733160987162844
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 4.440892098500626e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1004,
+      "test_seed": 101005,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.18081365432084062,
+          "total_wave_nrmse": 0.42678990468137074,
+          "source_accuracy": 0.9303385416666666,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.847663977848258,
+          "source_accuracy": 0.310546875,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.847663977848258,
+          "source_accuracy": 0.310546875,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.7212758994700816,
+          "total_wave_nrmse": 1.0976865392282262,
+          "source_accuracy": 0.6555989583333334,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.18081365432084062,
+          "total_wave_nrmse": 0.42678990468137074,
+          "source_accuracy": 0.9303385416666666,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005433071620187723,
+          "total_wave_nrmse": 0.023077125727783577,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.927734375,
+        "mean_entropy_bits": 0.2595684703967483,
+        "before_entropy_bits": 1.0072844589274328,
+        "mean_negative_log_score": 0.15879059984945953
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 5.551115123125783e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1005,
+      "test_seed": 101006,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.18650917106482223,
+          "total_wave_nrmse": 0.4294843195774179,
+          "source_accuracy": 0.9368489583333334,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.854423685165046,
+          "source_accuracy": 0.3125,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.854423685165046,
+          "source_accuracy": 0.3125,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.7792674530457533,
+          "total_wave_nrmse": 1.1194296005915378,
+          "source_accuracy": 0.6438802083333334,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.1865091710648222,
+          "total_wave_nrmse": 0.4294843195774179,
+          "source_accuracy": 0.9368489583333334,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0004233199801641587,
+          "total_wave_nrmse": 0.021615143921718094,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.935546875,
+        "mean_entropy_bits": 0.2762927025236668,
+        "before_entropy_bits": 1.0030003624772355,
+        "mean_negative_log_score": 0.16357425071408416
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 6.106226635438361e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1006,
+      "test_seed": 101007,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.1546708724690942,
+          "total_wave_nrmse": 0.3911638958667231,
+          "source_accuracy": 0.94921875,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8498461582666336,
+          "source_accuracy": 0.31640625,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8498461582666336,
+          "source_accuracy": 0.31640625,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.8023598359697224,
+          "total_wave_nrmse": 1.1267290193908486,
+          "source_accuracy": 0.6549479166666666,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.1546708724690942,
+          "total_wave_nrmse": 0.39116389586672307,
+          "source_accuracy": 0.94921875,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0007114046543453007,
+          "total_wave_nrmse": 0.025741499351450828,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.94921875,
+        "mean_entropy_bits": 0.20439092600763104,
+        "before_entropy_bits": 1.0069224703618542,
+        "mean_negative_log_score": 0.1247977837800681
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 4.579669976578771e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1007,
+      "test_seed": 101008,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.18633609377864985,
+          "total_wave_nrmse": 0.43226418843055514,
+          "source_accuracy": 0.935546875,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8529698187198895,
+          "source_accuracy": 0.3118489583333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8529698187198895,
+          "source_accuracy": 0.3118489583333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.6878523960532457,
+          "total_wave_nrmse": 1.0886291802605084,
+          "source_accuracy": 0.6725260416666666,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.18633609377864985,
+          "total_wave_nrmse": 0.43226418843055514,
+          "source_accuracy": 0.935546875,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0006036741359727231,
+          "total_wave_nrmse": 0.024174715802962907,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.935546875,
+        "mean_entropy_bits": 0.22697798500322036,
+        "before_entropy_bits": 1.0052985623594513,
+        "mean_negative_log_score": 0.15463304491238863
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 8.326672684688674e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1008,
+      "test_seed": 101009,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.20372662078454723,
+          "total_wave_nrmse": 0.45125191978647855,
+          "source_accuracy": 0.9212239583333334,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8568734023630529,
+          "source_accuracy": 0.3072916666666667,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8568734023630529,
+          "source_accuracy": 0.3072916666666667,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.865070621418774,
+          "total_wave_nrmse": 1.1451907536504553,
+          "source_accuracy": 0.630859375,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.20372662078454723,
+          "total_wave_nrmse": 0.45125191978647855,
+          "source_accuracy": 0.9212239583333334,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.00045683817581489215,
+          "total_wave_nrmse": 0.022122088981129825,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.919921875,
+        "mean_entropy_bits": 0.20350373633413815,
+        "before_entropy_bits": 1.0074759812500926,
+        "mean_negative_log_score": 0.17077231715320434
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 5.551115123125783e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1009,
+      "test_seed": 101010,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.1893138001624973,
+          "total_wave_nrmse": 0.43472877679637106,
+          "source_accuracy": 0.9407552083333334,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.851893375437701,
+          "source_accuracy": 0.3138020833333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.851893375437701,
+          "source_accuracy": 0.3138020833333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.9123687964011555,
+          "total_wave_nrmse": 1.1522569134288243,
+          "source_accuracy": 0.6334635416666666,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.1893138001624973,
+          "total_wave_nrmse": 0.43472877679637106,
+          "source_accuracy": 0.9407552083333334,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0004489503552745527,
+          "total_wave_nrmse": 0.022380015386932028,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.939453125,
+        "mean_entropy_bits": 0.2001079584200564,
+        "before_entropy_bits": 1.0048776436916347,
+        "mean_negative_log_score": 0.1576741596267154
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 4.440892098500626e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1010,
+      "test_seed": 101011,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.13069826336228785,
+          "total_wave_nrmse": 0.3579844009140152,
+          "source_accuracy": 0.94921875,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8430570522446136,
+          "source_accuracy": 0.31640625,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8430570522446136,
+          "source_accuracy": 0.31640625,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.8436255295982311,
+          "total_wave_nrmse": 1.1297506521224103,
+          "source_accuracy": 0.6536458333333334,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.13069826336228785,
+          "total_wave_nrmse": 0.3579844009140152,
+          "source_accuracy": 0.94921875,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005409404392630982,
+          "total_wave_nrmse": 0.022901219800617666,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.94921875,
+        "mean_entropy_bits": 0.21076299285276623,
+        "before_entropy_bits": 1.0017817421100332,
+        "mean_negative_log_score": 0.11295782676916157
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 5.551115123125783e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1011,
+      "test_seed": 101012,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.19626694497359828,
+          "total_wave_nrmse": 0.44093507097692164,
+          "source_accuracy": 0.9283854166666666,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8558596921403385,
+          "source_accuracy": 0.3098958333333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8558596921403385,
+          "source_accuracy": 0.3098958333333333,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.8208321949594175,
+          "total_wave_nrmse": 1.1311357673375604,
+          "source_accuracy": 0.63671875,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.1962669449735983,
+          "total_wave_nrmse": 0.44093507097692164,
+          "source_accuracy": 0.9283854166666666,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005683925511857464,
+          "total_wave_nrmse": 0.023638085925381098,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.92578125,
+        "mean_entropy_bits": 0.2750337902474019,
+        "before_entropy_bits": 1.0086085542347072,
+        "mean_negative_log_score": 0.1653172248946076
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 5.551115123125783e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    },
+    {
+      "seed": 1012,
+      "test_seed": 101013,
+      "cases": 512,
+      "metrics": {
+        "shared": {
+          "remote_relative_mse": 0.1494158071646057,
+          "total_wave_nrmse": 0.38971139940928323,
+          "source_accuracy": 0.95703125,
+          "unresolved_fraction": 0.0
+        },
+        "disconnected": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8496692943338121,
+          "source_accuracy": 0.3190104166666667,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "cut": {
+          "remote_relative_mse": 1.0,
+          "total_wave_nrmse": 0.8496692943338121,
+          "source_accuracy": 0.3190104166666667,
+          "unresolved_fraction": 0.6666666666666666
+        },
+        "shuffled": {
+          "remote_relative_mse": 1.861144877905752,
+          "total_wave_nrmse": 1.1396725599886126,
+          "source_accuracy": 0.65234375,
+          "unresolved_fraction": 0.0
+        },
+        "exact": {
+          "remote_relative_mse": 0.1494158071646057,
+          "total_wave_nrmse": 0.3897113994092832,
+          "source_accuracy": 0.95703125,
+          "unresolved_fraction": 0.0
+        },
+        "oracle": {
+          "remote_relative_mse": 0.0005846963950697105,
+          "total_wave_nrmse": 0.02454893589156721,
+          "source_accuracy": 1.0,
+          "unresolved_fraction": 0.0
+        }
+      },
+      "joint": {
+        "map_accuracy": 0.95703125,
+        "mean_entropy_bits": 0.19081742186855305,
+        "before_entropy_bits": 1.0009331579229535,
+        "mean_negative_log_score": 0.13345439166936104
+      },
+      "checks": {
+        "ambiguity_max_mean": 0.0,
+        "global_flip_p_difference": 0.0,
+        "cut_remote_update": 0.0,
+        "bayes_max_difference": 4.440892098500626e-16,
+        "reversal_max_difference": 0.0,
+        "suppression_remote_mean": 0.0,
+        "output_removal_remote_change": 0.0
+      }
+    }
+  ]
+}

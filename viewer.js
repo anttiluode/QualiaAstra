@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id),E=QualiaEngine,M=QUALIA_MODEL;
 let scene=0,truth=[1,1,-1],relations=[1,-1],shown=false,actualClue=1;
 const colors=['#ffb36b','#8edac1','#b8afff'];
-function rng(seed){return ()=>{seed=(1664525*seed+1013904223)>>>0;return (seed+.5)/4294967296;};}
+function rng(seed){return ()=>{let t=seed+=0x6D2B79F5;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return (((t^(t>>>14))>>>0)+.5)/4294967296;};}
 function normal(r){return Math.sqrt(-2*Math.log(r()))*Math.cos(2*Math.PI*r());}
 function sum(rows){return rows[0].map((_,j)=>rows.reduce((s,row)=>s+row[j],0));}
 function wave(signs){return sum(E.sources(M,signs));}
@@ -22,7 +22,7 @@ function newScene(){
  scene++;const r=rng(701+scene);truth=Array.from({length:3},()=>r()>.5?1:-1);
  relations=[truth[0]*truth[1]+.3*normal(r),truth[1]*truth[2]+.3*normal(r)];
  actualClue=Math.max(-2,Math.min(2,truth[0]+.65*normal(r)));
- $('clue').value=actualClue;shown=false;$('mode').value='shared';$('remove').checked=false;
+ $('clue').value=0;shown=false;$('mode').value='shared';$('remove').checked=false;
  $('seed').textContent=`Illustrative scene ${scene} · seed ${701+scene}`;render();
 }
 function render(){
@@ -41,15 +41,15 @@ function render(){
  const explanations={shared:shown?'The signed clue at A updates B and C through their learned relationships. Hidden-source traces remain unseen.':'The relation sensors constrain the world, but its global sign is unknown. A zero mean conceals opposing alternatives.',cut:'A can use its clue. The cut prevents B and C from learning its sign; their relationship still exists.',uniform:'A → B carries no sign evidence. Downstream units recompute; their predictions become unresolved.',reverse:'Only A → B is reversed. A keeps its belief; B and C revise together in the opposite direction. Coherence alone does not ensure truth.',independent:'Each unit has only its own evidence. B and C have no local signed clue, so they remain unresolved.'};
  $('explanation').textContent=explanations[mode]+($('remove').checked?' A is omitted from the combined drawing only.':'');
  draw('parts',parts,colors);const total=[sum(renderParts)],palette=['#edf0ed'];
- if($('truth').checked){total.push(wave(truth));palette.push('#687c94');}draw('total',total,palette,[1]);
- $('entropy').textContent=`${out.entropy.toFixed(2)} bits uncertainty`;
- const order=out.posterior.map((p,i)=>({p,i})).sort((a,b)=>b.p-a.p);
+ if($('truth').checked){total.push(sum(QUALIA_TRUTH.map((row,i)=>row.map(v=>v*truth[i]))));palette.push('#687c94');}draw('total',total,palette,[1]);
+ $('entropy').textContent=`Evidence: ${out.referenceEntropy.toFixed(2)} bits`;
+ const order=out.referencePosterior.map((p,i)=>({p,i})).sort((a,b)=>b.p-a.p);
  for(let k=0;k<2;k++){const x=order[k];$('world'+(k+1)).textContent=signs(E.worlds[x.i]);$('prob'+(k+1)).textContent=(x.p*100).toFixed(1)+'%';draw('alt'+(k+1),[wave(E.worlds[x.i])],[k?'#8c9eb8':'#8edac1']);}
- $('posterior').replaceChildren(...out.posterior.map((p,i)=>{const d=document.createElement('div');d.className='bar';d.style.height=(p*100)+'%';d.title=signs(E.worlds[i])+': '+(p*100).toFixed(2)+'%';const label=document.createElement('i');label.textContent=signs(E.worlds[i]).replaceAll(' ','');d.append(label);return d;}));
+ $('posterior').replaceChildren(...out.referencePosterior.map((p,i)=>{const d=document.createElement('div');d.className='bar';d.style.height=(p*100)+'%';d.title=signs(E.worlds[i])+': '+(p*100).toFixed(2)+'%';const label=document.createElement('i');label.textContent=signs(E.worlds[i]).replaceAll(' ','');d.append(label);return d;}));
  const effect=Math.sqrt(parts.slice(1).flatMap((row,k)=>row.map((v,i)=>(v-originalParts[k+1][i])**2)).reduce((a,b)=>a+b,0)/128);
  $('effect').innerHTML=`${effect.toFixed(3)} <small>remote waveform RMS</small>`;
  if(window.QUALIA_RESULTS){const s=QUALIA_RESULTS,rows=['shared','disconnected','shuffled','exact'].map(n=>`<tr><td>${{shared:'Shared messages',disconnected:'Disconnected',shuffled:'Shuffled relations',exact:'Exact Bayes'}[n]}</td><td>${s.metrics[n].remote_relative_mse.toFixed(3)}</td></tr>`).join('');$('results').innerHTML=`<table><thead><tr><th>Method</th><th>Remote error ↓</th></tr></thead><tbody>${rows}</tbody></table><p class="small">Zero prediction = 1. Exact Bayes ties. ${s.all_pass?'All four specified mechanism gates passed.':'Some mechanism gates failed.'} <a href="https://github.com/anttiluode/QualiaAstra/blob/main/RESULTS.md">Read the limits ↗</a></p>`;}
 }
-$('new').addEventListener('click',newScene);$('reveal').addEventListener('click',()=>{shown=!shown;render();});
+$('new').addEventListener('click',newScene);$('reveal').addEventListener('click',()=>{if(shown){actualClue=Number($('clue').value);shown=false;$('clue').value=0;}else{shown=true;$('clue').value=actualClue;}render();});
 ['mode','remove','truth'].forEach(id=>$(id).addEventListener('change',render));$('clue').addEventListener('input',render);
 window.addEventListener('resize',render);newScene();
