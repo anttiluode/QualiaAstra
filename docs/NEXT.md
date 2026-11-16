@@ -104,3 +104,33 @@ attribution. If both conditions are observationally identical on *all*
 available channels, nothing can distinguish them. Separately, Claude's
 physical chain still has incomplete second-hop strength despite solving
 clock resets; no result here makes that physical weakness disappear.
+
+## Gate 6 completed: physical-source signatures, calibrated without a test tag
+
+[Interactive Gate 6](../gate6.html) · [Frozen protocol](GATE6_PROTOCOL.md) ·
+[Results with limits](GATE6_RESULTS.md) · [Complete 12-seed receipt](../results/gate6_confirmation.json).
+
+A three-node Markov receiver now infers whether a signed B-like message came
+from a genuine B observation or a model-generated replay by examining a
+**synthetic 48-sample waveform**. It is **not given a provenance flag** with
+the test packet. Nevertheless, source-specific physical waveform shapes
+are built into the simulator and an isolated calibration procedure explicitly
+indicates which pathway generated each known-source training pulse.
+
+Across twelve independent trained/evaluated populations, all six registered
+checks passed. Cable-shape C prediction error was 0.7337, compared to
+0.7389 for an optimal receiver without waveform or source information and
+0.7317 for the known-origin oracle. On trials where z=A, cable-based source
+classification reached 93.5%; subtler state-dependent-spike-like shapes
+yielded 68.2%. Matching source energies, equalizing their waveform shapes,
+and swapping the shapes after calibration isolated the importance of the
+source-specific response profile.
+
+The gap is computationally real in this toy, **but its biological
+interpretation is conditional**. There is no physical cable PDE,
+conductance-based spike, autonomous provenance discovery, or neural
+hallucination mechanism. The next fork is more demanding: duplicated
+message identities under recurrent replay versus truly independent new
+sensory events. A source signature does not itself tell a receiving
+neuron that eight waves belong to one event. Test causal event/latch
+mechanisms while retaining sensitivity to contradictory real evidence.
