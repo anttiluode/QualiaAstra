@@ -17,6 +17,23 @@ To use the viewer: **Code → Download ZIP**, extract it, then double-click
 `index.html`. Keep the four `viewer*.js` files beside it. No server, installation,
 GPU or network is needed. The GitHub file page itself displays source, not the app.
 
+## Gate 2: learn relationships from raw sensor traces (development)
+
+**[Open the Gate 2 offline/hosted lab](gate2.html)** · **[Protocol and limits](docs/GATE2.md)**
+
+Gate 1 supplies noisy AB/BC relation measurements directly. Gate 2 instead presents
+48-sample noisy interference sensor traces, calibrates their likelihoods on a
+separate labelled set, and scores predicted B/C sensor recordings withheld at test.
+The supplied three-node inference chain remains fixed, so this tests **supervised
+observation learning**, not spontaneous world-factor discovery.
+
+On one deterministic *development* seed (256 calibration and 512 test cases),
+relative withheld-wave MSE was **0.574** for the learned model, **1.000** with
+A→B cut, **1.483** with shuffled raw sensors, and **0.536** with true relation
+labels given to an oracle control. These exploratory results were inspected
+during implementation: no confirmation claim is made. See [Gate 2's
+methods and caveats](docs/GATE2.md). All Gate 1 receipts remain unchanged.
+
 ## What to try
 
 1. Start without revealing A. Two opposite worlds fit the relation sensors.
