@@ -17,6 +17,33 @@ To use the viewer: **Code → Download ZIP**, extract it, then double-click
 `index.html`. Keep the four `viewer*.js` files beside it. No server, installation,
 GPU or network is needed. The GitHub file page itself displays source, not the app.
 
+## Gate 4: grow the predictive wiring (two hypotheses, one failure)
+
+**[Open Gate 4 live](https://anttiluode.github.io/QualiaAstra/gate4.html)** ·
+**[Precommitted protocol](docs/GATE4_PROTOCOL.md)** ·
+**[Results and limitations](docs/GATE4_RESULTS.md)** ·
+**[Complete twelve-seed receipt](results/gate4_confirmation.json)**
+
+Gate 4 no longer supplies the A→B→C links: every directed pair in a four-channel
+synthetic world competes at twelve delays under an equal **two-edge budget**.
+The learner selects links from full observed waveforms during training, then
+predicts B and C at test using **A alone**, with the predicted B state accessible
+to C even if the somatic residual is small. The cable is a fixed, engineered
+three-tap damping approximation, **not** a biological dendrite simulation.
+
+On 12 independent held-out populations, the residual-based learner recovered
+A→B and B→C at the correct five-tick delays in **12/12**. Median relative B/C
+prediction MSE was **0.464** versus **1.000** disconnected. But delay-aware signed
+correlation and unsigned coactivity—given the **same** possible delays, budget
+and weight-fitting procedure—discovered **exactly the same route in all twelve**
+and tied the residual learner and correct-anatomy oracle. The proposed *special
+advantage of residual growth* therefore **failed 0/12**, and the negative
+comparison is included deliberately.
+
+The experiment tests an engineered predictive wiring idea, **not** spontaneous
+biological axon targeting, a realistic action potential, or subjective experience.
+[Read the complete verdict](docs/GATE4_RESULTS.md).
+
 ## Gate 3: drop the sign teacher (12-seed confirmation)
 
 **[Open Gate 3 live](https://anttiluode.github.io/QualiaAstra/gate3.html)** ·
