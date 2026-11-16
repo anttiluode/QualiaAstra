@@ -1,5 +1,7 @@
 # QualiaAstra — a shared possible world
 
+Compressed version by Opus: https://github.com/anttiluode/QualeX 
+
 **One local clue changes what three units jointly expect. Cut a message, and the
 remote prediction disappears. Reverse it, and the remote predictions reverse
 together. Removing a waveform from the final drawing does neither.**
