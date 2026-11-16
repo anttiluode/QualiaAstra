@@ -1,0 +1,1151 @@
+{
+  "date": "2026-11-16",
+  "predeclaredProtocol": "docs/GATE6_PROTOCOL.md",
+  "engine": "gate6_engine.js",
+  "detail": "Waveform source signatures deliberately engineered; calibration uses known isolated source probes. No provenance flag supplied to inference.",
+  "protocol": "docs/GATE6_PROTOCOL.md",
+  "rows": [
+    {
+      "trainSeed": 760001,
+      "testSeed": 860001,
+      "result": {
+        "seed": 860001,
+        "n": 4096,
+        "trainSeed": 760001,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7478585387995136,
+          "spike": 0.7518282164100817,
+          "combined": 0.7486208887106557,
+          "equalized": 0.7547029000315127,
+          "energy": 0.7545344111571554,
+          "swapped": 0.7648953583256144,
+          "blind": 0.7544366821680688,
+          "oracle": 0.7479234875611349,
+          "naive": 0.7573858878149673
+        },
+        "ambiguousMse": {
+          "cable": 0.7223912751298798,
+          "spike": 0.727116587391694,
+          "combined": 0.7232987395983604,
+          "equalized": 0.7305384717605921,
+          "energy": 0.7303379107523446,
+          "swapped": 0.7426710812266308,
+          "blind": 0.7302215788897206,
+          "oracle": 0.722468586994924,
+          "naive": 0.7337321706740029
+        },
+        "ambiguousN": 3441,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.9521484375,
+            "ambiguous": 0.943039814007556,
+            "nAmbiguous": 3441
+          },
+          "spike": {
+            "all": 0.740966796875,
+            "ambiguous": 0.6916594013368207,
+            "nAmbiguous": 3441
+          },
+          "combined": {
+            "all": 0.857666015625,
+            "ambiguous": 0.8305725079918629,
+            "nAmbiguous": 3441
+          },
+          "equalized": {
+            "all": 0.634033203125,
+            "ambiguous": 0.5643708224353385,
+            "nAmbiguous": 3441
+          },
+          "energy": {
+            "all": 0.65478515625,
+            "ambiguous": 0.5890729439116535,
+            "nAmbiguous": 3441
+          },
+          "swapped": {
+            "all": 0.217041015625,
+            "ambiguous": 0.06800348735832606,
+            "nAmbiguous": 3441
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9909652321140928,
+          "pRealReplayWave": 0.03054483102593764,
+          "CFromActualShape": 0.6307869754214802,
+          "CFromReplayShape": 0.4537800917674892,
+          "CWithoutShape": 0.5307904411764706
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760002,
+      "testSeed": 860002,
+      "result": {
+        "seed": 860002,
+        "n": 4096,
+        "trainSeed": 760002,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7018119844976194,
+          "spike": 0.7058707549279244,
+          "combined": 0.703005526258321,
+          "equalized": 0.7064788010414669,
+          "energy": 0.7068733959245017,
+          "swapped": 0.7184575901716164,
+          "blind": 0.7068779769260385,
+          "oracle": 0.6995279120949104,
+          "naive": 0.7094524422812775
+        },
+        "ambiguousMse": {
+          "cable": 0.6750269824421868,
+          "spike": 0.6798014579397537,
+          "combined": 0.6764309879137066,
+          "equalized": 0.6805167241319043,
+          "energy": 0.6809809000770272,
+          "swapped": 0.6946077983068301,
+          "blind": 0.6809862888714859,
+          "oracle": 0.6723401471287149,
+          "naive": 0.6840147237063571
+        },
+        "ambiguousN": 3482,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.93359375,
+            "ambiguous": 0.9218839747271683,
+            "nAmbiguous": 3482
+          },
+          "spike": {
+            "all": 0.7197265625,
+            "ambiguous": 0.6703044227455486,
+            "nAmbiguous": 3482
+          },
+          "combined": {
+            "all": 0.885498046875,
+            "ambiguous": 0.8653072946582424,
+            "nAmbiguous": 3482
+          },
+          "equalized": {
+            "all": 0.615478515625,
+            "ambiguous": 0.5476737507179782,
+            "nAmbiguous": 3482
+          },
+          "energy": {
+            "all": 0.642822265625,
+            "ambiguous": 0.5798391728891442,
+            "nAmbiguous": 3482
+          },
+          "swapped": {
+            "all": 0.23876953125,
+            "ambiguous": 0.10453762205628948,
+            "nAmbiguous": 3482
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.980713226603468,
+          "pRealReplayWave": 0.0337954742542426,
+          "CFromActualShape": 0.6789330857189324,
+          "CFromReplayShape": 0.4954404497995021,
+          "CWithoutShape": 0.5759879032258064
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760003,
+      "testSeed": 860003,
+      "result": {
+        "seed": 860003,
+        "n": 4096,
+        "trainSeed": 760003,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7348121447776065,
+          "spike": 0.7387855920547047,
+          "combined": 0.7354662272608388,
+          "equalized": 0.7391576753979875,
+          "energy": 0.7394515258772111,
+          "swapped": 0.7507216441595074,
+          "blind": 0.7393085445947343,
+          "oracle": 0.7327127366216564,
+          "naive": 0.7425906265615773
+        },
+        "ambiguousMse": {
+          "cable": 0.7086136952863079,
+          "spike": 0.7133476220015501,
+          "combined": 0.7093929628405037,
+          "equalized": 0.7137909185036118,
+          "energy": 0.7141410091269087,
+          "swapped": 0.7275681192154168,
+          "blind": 0.7139706626077077,
+          "oracle": 0.7061124806828266,
+          "naive": 0.7178809033686676
+        },
+        "ambiguousN": 3438,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.940185546875,
+            "ambiguous": 0.928737638161722,
+            "nAmbiguous": 3438
+          },
+          "spike": {
+            "all": 0.723876953125,
+            "ambiguous": 0.6710296684118674,
+            "nAmbiguous": 3438
+          },
+          "combined": {
+            "all": 0.900634765625,
+            "ambiguous": 0.8816172193135544,
+            "nAmbiguous": 3438
+          },
+          "equalized": {
+            "all": 0.63671875,
+            "ambiguous": 0.5671902268760908,
+            "nAmbiguous": 3438
+          },
+          "energy": {
+            "all": 0.648193359375,
+            "ambiguous": 0.5808609656777196,
+            "nAmbiguous": 3438
+          },
+          "swapped": {
+            "all": 0.239501953125,
+            "ambiguous": 0.0939499709133217,
+            "nAmbiguous": 3438
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9834703486000026,
+          "pRealReplayWave": 0.024336593999598536,
+          "CFromActualShape": 0.6491537933579405,
+          "CFromReplayShape": 0.4739582656731235,
+          "CWithoutShape": 0.5517090315823396
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760004,
+      "testSeed": 860004,
+      "result": {
+        "seed": 860004,
+        "n": 4096,
+        "trainSeed": 760004,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7113351617035831,
+          "spike": 0.7155641618294617,
+          "combined": 0.7132334370696882,
+          "equalized": 0.7164452288016284,
+          "energy": 0.7160819248587933,
+          "swapped": 0.7255123212757582,
+          "blind": 0.7160943530144763,
+          "oracle": 0.7102893828098449,
+          "naive": 0.7180614220681569
+        },
+        "ambiguousMse": {
+          "cable": 0.6748085946328048,
+          "spike": 0.6798440552478039,
+          "combined": 0.6770688666966326,
+          "equalized": 0.6808931396425706,
+          "energy": 0.6804605544827306,
+          "swapped": 0.6916893055652562,
+          "blind": 0.6804753526587978,
+          "oracle": 0.6735633881360693,
+          "naive": 0.682817537206428
+        },
+        "ambiguousN": 3440,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.943603515625,
+            "ambiguous": 0.9328488372093023,
+            "nAmbiguous": 3440
+          },
+          "spike": {
+            "all": 0.730712890625,
+            "ambiguous": 0.6793604651162791,
+            "nAmbiguous": 3440
+          },
+          "combined": {
+            "all": 0.844970703125,
+            "ambiguous": 0.815406976744186,
+            "nAmbiguous": 3440
+          },
+          "equalized": {
+            "all": 0.628662109375,
+            "ambiguous": 0.5578488372093023,
+            "nAmbiguous": 3440
+          },
+          "energy": {
+            "all": 0.656982421875,
+            "ambiguous": 0.5915697674418605,
+            "nAmbiguous": 3440
+          },
+          "swapped": {
+            "all": 0.232421875,
+            "ambiguous": 0.08604651162790698,
+            "nAmbiguous": 3440
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9889598585314451,
+          "pRealReplayWave": 0.02196613631458761,
+          "CFromActualShape": 0.6690084481045953,
+          "CFromReplayShape": 0.5288789685504491,
+          "CWithoutShape": 0.592194435637286
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760005,
+      "testSeed": 860005,
+      "result": {
+        "seed": 860005,
+        "n": 4096,
+        "trainSeed": 760005,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.723544937533795,
+          "spike": 0.7261519878714361,
+          "combined": 0.7241523449773655,
+          "equalized": 0.7275127485376633,
+          "energy": 0.7265778448151631,
+          "swapped": 0.7390881906186593,
+          "blind": 0.7266013475362135,
+          "oracle": 0.7222422674448865,
+          "naive": 0.733501384197407
+        },
+        "ambiguousMse": {
+          "cable": 0.7027326704882908,
+          "spike": 0.7058413977613529,
+          "combined": 0.7034569618678701,
+          "equalized": 0.7074640107712116,
+          "energy": 0.706349202722492,
+          "swapped": 0.7212669251129187,
+          "blind": 0.7063772280923427,
+          "oracle": 0.7011793264754322,
+          "naive": 0.7146050447340467
+        },
+        "ambiguousN": 3435,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.94091796875,
+            "ambiguous": 0.9295487627365356,
+            "nAmbiguous": 3435
+          },
+          "spike": {
+            "all": 0.75341796875,
+            "ambiguous": 0.7059679767103348,
+            "nAmbiguous": 3435
+          },
+          "combined": {
+            "all": 0.899169921875,
+            "ambiguous": 0.8797671033478893,
+            "nAmbiguous": 3435
+          },
+          "equalized": {
+            "all": 0.621826171875,
+            "ambiguous": 0.5490538573508006,
+            "nAmbiguous": 3435
+          },
+          "energy": {
+            "all": 0.66796875,
+            "ambiguous": 0.604075691411936,
+            "nAmbiguous": 3435
+          },
+          "swapped": {
+            "all": 0.23388671875,
+            "ambiguous": 0.08646288209606987,
+            "nAmbiguous": 3435
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9857565264654756,
+          "pRealReplayWave": 0.023499423628235684,
+          "CFromActualShape": 0.6925560594420199,
+          "CFromReplayShape": 0.4746513180386274,
+          "CWithoutShape": 0.5697699298989239
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760006,
+      "testSeed": 860006,
+      "result": {
+        "seed": 860006,
+        "n": 4096,
+        "trainSeed": 760006,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7238462471254293,
+          "spike": 0.7291052095521117,
+          "combined": 0.7260017459279071,
+          "equalized": 0.7291857754223202,
+          "energy": 0.7294382664348346,
+          "swapped": 0.7433050774850436,
+          "blind": 0.7294367006645097,
+          "oracle": 0.7234642491863954,
+          "naive": 0.7353036375619525
+        },
+        "ambiguousMse": {
+          "cable": 0.7036055661053092,
+          "spike": 0.7097972045358032,
+          "combined": 0.7061433422176859,
+          "equalized": 0.7098920587480424,
+          "energy": 0.7101893289944504,
+          "swapped": 0.7265154163936027,
+          "blind": 0.7101874855350545,
+          "oracle": 0.703155820903157,
+          "naive": 0.7170949225951009
+        },
+        "ambiguousN": 3479,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.9462890625,
+            "ambiguous": 0.936763437769474,
+            "nAmbiguous": 3479
+          },
+          "spike": {
+            "all": 0.708251953125,
+            "ambiguous": 0.6565104915205519,
+            "nAmbiguous": 3479
+          },
+          "combined": {
+            "all": 0.860595703125,
+            "ambiguous": 0.8358723771198621,
+            "nAmbiguous": 3479
+          },
+          "equalized": {
+            "all": 0.620849609375,
+            "ambiguous": 0.5536073584363322,
+            "nAmbiguous": 3479
+          },
+          "energy": {
+            "all": 0.65576171875,
+            "ambiguous": 0.5947111238861742,
+            "nAmbiguous": 3479
+          },
+          "swapped": {
+            "all": 0.22216796875,
+            "ambiguous": 0.08421960333429146,
+            "nAmbiguous": 3479
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9879825748174997,
+          "pRealReplayWave": 0.03131178352213358,
+          "CFromActualShape": 0.6706715652676287,
+          "CFromReplayShape": 0.4659297056727017,
+          "CWithoutShape": 0.5543849658314352
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760007,
+      "testSeed": 860007,
+      "result": {
+        "seed": 860007,
+        "n": 4096,
+        "trainSeed": 760007,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7439455100157848,
+          "spike": 0.7459636322837973,
+          "combined": 0.7445462788857061,
+          "equalized": 0.7462361799917611,
+          "energy": 0.7463446132293697,
+          "swapped": 0.7577357827732024,
+          "blind": 0.7463143325895176,
+          "oracle": 0.7425270417760895,
+          "naive": 0.7505413368512065
+        },
+        "ambiguousMse": {
+          "cable": 0.7176438839957,
+          "spike": 0.7200295200158365,
+          "combined": 0.7183540569513129,
+          "equalized": 0.7203517005098687,
+          "energy": 0.7204798801754522,
+          "swapped": 0.7339454589493452,
+          "blind": 0.7204440852257222,
+          "oracle": 0.7159671030693557,
+          "naive": 0.7254408556314603
+        },
+        "ambiguousN": 3465,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.943115234375,
+            "ambiguous": 0.9327561327561328,
+            "nAmbiguous": 3465
+          },
+          "spike": {
+            "all": 0.732177734375,
+            "ambiguous": 0.6834054834054835,
+            "nAmbiguous": 3465
+          },
+          "combined": {
+            "all": 0.872314453125,
+            "ambiguous": 0.8490620490620491,
+            "nAmbiguous": 3465
+          },
+          "equalized": {
+            "all": 0.642578125,
+            "ambiguous": 0.5774891774891775,
+            "nAmbiguous": 3465
+          },
+          "energy": {
+            "all": 0.667724609375,
+            "ambiguous": 0.6072150072150072,
+            "nAmbiguous": 3465
+          },
+          "swapped": {
+            "all": 0.2255859375,
+            "ambiguous": 0.08455988455988456,
+            "nAmbiguous": 3465
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9902347193038986,
+          "pRealReplayWave": 0.024609314887500632,
+          "CFromActualShape": 0.6702533414929313,
+          "CFromReplayShape": 0.45399768230925686,
+          "CWithoutShape": 0.5475743221169552
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760008,
+      "testSeed": 860008,
+      "result": {
+        "seed": 860008,
+        "n": 4096,
+        "trainSeed": 760008,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7070287236927896,
+          "spike": 0.7095709163188014,
+          "combined": 0.707755398039213,
+          "equalized": 0.7110279920479384,
+          "energy": 0.7108549692924426,
+          "swapped": 0.7206206328735911,
+          "blind": 0.7108337904584536,
+          "oracle": 0.7071173480102281,
+          "naive": 0.7123693348883848
+        },
+        "ambiguousMse": {
+          "cable": 0.6800001235630584,
+          "spike": 0.6830297485255654,
+          "combined": 0.6808661282540522,
+          "equalized": 0.6847661995545288,
+          "energy": 0.6845600019384368,
+          "swapped": 0.6961981043615916,
+          "blind": 0.6845347623387588,
+          "oracle": 0.6801057404394697,
+          "naive": 0.6863647274202452
+        },
+        "ambiguousN": 3437,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.9609375,
+            "ambiguous": 0.953447774221705,
+            "nAmbiguous": 3437
+          },
+          "spike": {
+            "all": 0.732177734375,
+            "ambiguous": 0.6808263020075648,
+            "nAmbiguous": 3437
+          },
+          "combined": {
+            "all": 0.84912109375,
+            "ambiguous": 0.8201920279313355,
+            "nAmbiguous": 3437
+          },
+          "equalized": {
+            "all": 0.637939453125,
+            "ambiguous": 0.568519057317428,
+            "nAmbiguous": 3437
+          },
+          "energy": {
+            "all": 0.65869140625,
+            "ambiguous": 0.5932499272621472,
+            "nAmbiguous": 3437
+          },
+          "swapped": {
+            "all": 0.201416015625,
+            "ambiguous": 0.048297934244981085,
+            "nAmbiguous": 3437
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9965494912617254,
+          "pRealReplayWave": 0.018110250855039475,
+          "CFromActualShape": 0.6775632169353271,
+          "CFromReplayShape": 0.4816684820454512,
+          "CWithoutShape": 0.5677091758330638
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760009,
+      "testSeed": 860009,
+      "result": {
+        "seed": 860009,
+        "n": 4096,
+        "trainSeed": 760009,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7324900748519833,
+          "spike": 0.7376404251616838,
+          "combined": 0.7343857431170018,
+          "equalized": 0.7389474824083047,
+          "energy": 0.7384248246591728,
+          "swapped": 0.7514959636709013,
+          "blind": 0.7384374836230456,
+          "oracle": 0.7307421409674636,
+          "naive": 0.7417529730856882
+        },
+        "ambiguousMse": {
+          "cable": 0.7037685034402679,
+          "spike": 0.7098779256437246,
+          "combined": 0.7060171733544072,
+          "equalized": 0.7114283764060053,
+          "energy": 0.7108083920039088,
+          "swapped": 0.7263135716714573,
+          "blind": 0.7108234082552864,
+          "oracle": 0.7016950782473954,
+          "naive": 0.7147562912089513
+        },
+        "ambiguousN": 3453,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.948974609375,
+            "ambiguous": 0.9394729220967275,
+            "nAmbiguous": 3453
+          },
+          "spike": {
+            "all": 0.73486328125,
+            "ambiguous": 0.685490877497828,
+            "nAmbiguous": 3453
+          },
+          "combined": {
+            "all": 0.877685546875,
+            "ambiguous": 0.8549087749782798,
+            "nAmbiguous": 3453
+          },
+          "equalized": {
+            "all": 0.62890625,
+            "ambiguous": 0.5598030697943817,
+            "nAmbiguous": 3453
+          },
+          "energy": {
+            "all": 0.66552734375,
+            "ambiguous": 0.6032435563278309,
+            "nAmbiguous": 3453
+          },
+          "swapped": {
+            "all": 0.215576171875,
+            "ambiguous": 0.06950477845351868,
+            "nAmbiguous": 3453
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9862189401984695,
+          "pRealReplayWave": 0.028711291725427777,
+          "CFromActualShape": 0.6532584044713616,
+          "CFromReplayShape": 0.47501037364416754,
+          "CWithoutShape": 0.5533366935483871
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760010,
+      "testSeed": 860010,
+      "result": {
+        "seed": 860010,
+        "n": 4096,
+        "trainSeed": 760010,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7421259089653809,
+          "spike": 0.7461811523063702,
+          "combined": 0.743949854543549,
+          "equalized": 0.7474419898264406,
+          "energy": 0.7467669314946729,
+          "swapped": 0.7615407001300084,
+          "blind": 0.7468059340462837,
+          "oracle": 0.7402749568703284,
+          "naive": 0.7542976963683462
+        },
+        "ambiguousMse": {
+          "cable": 0.7113556642156981,
+          "spike": 0.71615771010315,
+          "combined": 0.7135155026337924,
+          "equalized": 0.7176507400199509,
+          "energy": 0.7168513647881147,
+          "swapped": 0.7343458303360562,
+          "blind": 0.7168975499431793,
+          "oracle": 0.7091638458342848,
+          "naive": 0.7257689747686322
+        },
+        "ambiguousN": 3459,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.943115234375,
+            "ambiguous": 0.9326394911824226,
+            "nAmbiguous": 3459
+          },
+          "spike": {
+            "all": 0.734375,
+            "ambiguous": 0.6854582249204972,
+            "nAmbiguous": 3459
+          },
+          "combined": {
+            "all": 0.869384765625,
+            "ambiguous": 0.8453310205261636,
+            "nAmbiguous": 3459
+          },
+          "equalized": {
+            "all": 0.625732421875,
+            "ambiguous": 0.5568083261058109,
+            "nAmbiguous": 3459
+          },
+          "energy": {
+            "all": 0.655517578125,
+            "ambiguous": 0.5920786354437699,
+            "nAmbiguous": 3459
+          },
+          "swapped": {
+            "all": 0.219970703125,
+            "ambiguous": 0.07632263660017347,
+            "nAmbiguous": 3459
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9915210626756472,
+          "pRealReplayWave": 0.022075593182427765,
+          "CFromActualShape": 0.6934007899202409,
+          "CFromReplayShape": 0.46888809450093916,
+          "CWithoutShape": 0.5662416285527605
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760011,
+      "testSeed": 860011,
+      "result": {
+        "seed": 860011,
+        "n": 4096,
+        "trainSeed": 760011,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7567667873629739,
+          "spike": 0.7599404392154857,
+          "combined": 0.7581464839753965,
+          "equalized": 0.7605422980838217,
+          "energy": 0.7600678379599651,
+          "swapped": 0.7725351238568157,
+          "blind": 0.7600957283128088,
+          "oracle": 0.7560178090336838,
+          "naive": 0.7734902549472947
+        },
+        "ambiguousMse": {
+          "cable": 0.7281701091257439,
+          "spike": 0.7319055338349079,
+          "combined": 0.7297940278971491,
+          "equalized": 0.7326139286408571,
+          "energy": 0.7320554836215155,
+          "swapped": 0.7467296224242447,
+          "blind": 0.7320883108873919,
+          "oracle": 0.7272885530232251,
+          "naive": 0.747853822696258
+        },
+        "ambiguousN": 3480,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.948486328125,
+            "ambiguous": 0.9393678160919541,
+            "nAmbiguous": 3480
+          },
+          "spike": {
+            "all": 0.73486328125,
+            "ambiguous": 0.6879310344827586,
+            "nAmbiguous": 3480
+          },
+          "combined": {
+            "all": 0.867919921875,
+            "ambiguous": 0.8445402298850575,
+            "nAmbiguous": 3480
+          },
+          "equalized": {
+            "all": 0.61669921875,
+            "ambiguous": 0.5488505747126436,
+            "nAmbiguous": 3480
+          },
+          "energy": {
+            "all": 0.650634765625,
+            "ambiguous": 0.5887931034482758,
+            "nAmbiguous": 3480
+          },
+          "swapped": {
+            "all": 0.210205078125,
+            "ambiguous": 0.07040229885057471,
+            "nAmbiguous": 3480
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9896288049983862,
+          "pRealReplayWave": 0.02927937391296688,
+          "CFromActualShape": 0.719362504136056,
+          "CFromReplayShape": 0.5279311341037756,
+          "CWithoutShape": 0.6119003541532517
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    },
+    {
+      "trainSeed": 760012,
+      "testSeed": 860012,
+      "result": {
+        "seed": 860012,
+        "n": 4096,
+        "trainSeed": 760012,
+        "trainedEpisodes": 512,
+        "calibrationProbesPerSource": 320,
+        "mse": {
+          "cable": 0.7494040468974431,
+          "spike": 0.7523632902254929,
+          "combined": 0.750000384514993,
+          "equalized": 0.7530263252675322,
+          "energy": 0.752934577244226,
+          "swapped": 0.7622285296316168,
+          "blind": 0.7529353816821279,
+          "oracle": 0.7493783501449499,
+          "naive": 0.7586465945747922
+        },
+        "ambiguousMse": {
+          "cable": 0.7244637071787429,
+          "spike": 0.7279719736539083,
+          "combined": 0.7251706822529768,
+          "equalized": 0.7287580204070727,
+          "energy": 0.7286492505363162,
+          "swapped": 0.7396674933666361,
+          "blind": 0.7286502042201424,
+          "oracle": 0.7244332429534921,
+          "naive": 0.7354210082746513
+        },
+        "ambiguousN": 3455,
+        "sourceAccuracy": {
+          "cable": {
+            "all": 0.946533203125,
+            "ambiguous": 0.9366136034732272,
+            "nAmbiguous": 3455
+          },
+          "spike": {
+            "all": 0.71630859375,
+            "ambiguous": 0.6636758321273517,
+            "nAmbiguous": 3455
+          },
+          "combined": {
+            "all": 0.87109375,
+            "ambiguous": 0.847178002894356,
+            "nAmbiguous": 3455
+          },
+          "equalized": {
+            "all": 0.627197265625,
+            "ambiguous": 0.5580318379160637,
+            "nAmbiguous": 3455
+          },
+          "energy": {
+            "all": 0.6611328125,
+            "ambiguous": 0.5982633863965268,
+            "nAmbiguous": 3455
+          },
+          "swapped": {
+            "all": 0.2236328125,
+            "ambiguous": 0.07959479015918958,
+            "nAmbiguous": 3455
+          }
+        },
+        "note": "No per-trial provenance supplied to physical decoder; oracle alone uses truth after scoring."
+      },
+      "mechanism": {
+        "checks": {
+          "waveformDiscriminates": true,
+          "noTruthOrTagLeakage": true,
+          "waveformChangesOutcome": true,
+          "cutPreservesB": true,
+          "heldPredictionNonzero": true,
+          "probabilityBounded": true,
+          "noTagIsStatisticallyAmbiguous": true
+        },
+        "values": {
+          "pRealActualWave": 0.9899454101729237,
+          "pRealReplayWave": 0.0231007210169744,
+          "CFromActualShape": 0.6594436820038665,
+          "CFromReplayShape": 0.49728269886697274,
+          "CWithoutShape": 0.5695022407170295
+        }
+      },
+      "checks": {
+        "cableBeatsBlind": true,
+        "cableBeatsEnergy": true,
+        "nullNearBlind": true,
+        "swapDamages": true,
+        "spikeShapeContainsSignal": true,
+        "mechanism": true
+      }
+    }
+  ],
+  "counts": {
+    "cableBeatsBlind": 12,
+    "cableBeatsEnergy": 12,
+    "nullNearBlind": 12,
+    "swapDamages": 12,
+    "spikeShapeContainsSignal": 12,
+    "mechanism": 12
+  },
+  "medians": {
+    "cable": 0.7336511098147949,
+    "spike": 0.7382130086081943,
+    "combined": 0.7349259851889203,
+    "equalized": 0.7390525789031461,
+    "energy": 0.7389381752681919,
+    "swapped": 0.7511088039152043,
+    "blind": 0.73887301410889,
+    "oracle": 0.73172743879456,
+    "naive": 0.7421717998236328
+  },
+  "passed": true,
+  "scope": "Waveform source signature is engineered and calibration probes have known origins, but individual test packets contain only A,z,p and noisy waveforms. No biological claim.",
+  "mediansAdditional": {
+    "cableSourceAccuracyOnAmbiguous": 0.9347312203412648,
+    "spikeSourceAccuracyOnAmbiguous": 0.6821158927065241,
+    "blindMinusCableMedianPaired": 0.004588212449015305
+  }
+}
