@@ -36,3 +36,6 @@ above. No modification of concurrent StateShapedPingRecall or QualiaClaude work.
 Final verification: 13 tests pass; exact raw confirmation replay matches.
 Review fixes and browser limitation documented in docs/REVIEW.md. GitHub browser
 check is configured separately; completion is not assumed before CI succeeds.
+
+Hosted Chromium verification completed successfully in run 43814686560; all
+13 tests and offline/control/mobile checks passed. Screenshots archived.

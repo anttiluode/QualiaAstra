@@ -24,7 +24,9 @@
   parity, ambiguity, intervention semantics and UI control flow.
 - JavaScript syntax checks pass. Actual Chromium rendering could not be checked:
   bundled Playwright browser was absent; installed Chromium failed at sandboxed
-  socket creation. No visual-QA or desktop/mobile-rendering success is claimed.
+  socket creation. A hosted Chromium run subsequently passed all offline/control/mobile-width
+  checks with no page errors: run 43814686560, job 133123938806. Desktop/mobile
+  screenshots are in artifact 14201792621. They were not manually visually reviewed.
 
 ## Decisions and costs
 
@@ -39,4 +41,5 @@
   evidence reference separately. Its entropy must not be read as entropy of
   an arbitrarily intervened message system.
 
-No scientific finding is deferred. Rendered browser validation remains open.
+No scientific finding is deferred. Automated hosted browser checks passed;
+manual visual review remains open.

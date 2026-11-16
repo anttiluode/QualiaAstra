@@ -74,7 +74,8 @@ unintervened exact posteriors and separately recomputed message marginals.
 
 An exact full numerical replay matched the original receipt, including trial
 inputs/outputs. All 13 tests pass. Node verifies 101 cross-language inference
-cases and a control-flow harness. Full rendered-browser validation is still
-unverified because Chromium launch was blocked in this environment.
+cases and a control-flow harness. Hosted Chromium subsequently passed offline/control/mobile-width checks with
+no page errors. [CI run and screenshot artifact](https://github.com/anttiluode/QualiaAstra/actions/runs/43814686560).
+Screenshots were captured but not manually visually reviewed.
 
 [Compact receipt](results/confirmation.json) · [Complete compressed receipt](results/confirmation.json.gz).

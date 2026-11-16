@@ -116,9 +116,11 @@ with gzip.open('results/confirmation.json.gz', 'rt') as f:
 ambiguity, directed interventions, browser/Python numerical parity and a minimal
 DOM control-flow harness. Full confirmation replay matches the raw receipt
 exactly. A fresh reviewer checked the mechanism and caught a joint-posterior UI
-error, now corrected. **Actual browser rendering was not verified here:** local
-Chromium was blocked by the execution environment at socket creation. DOM tests
-are not a substitute for visual/browser validation. [Review record](docs/REVIEW.md).
+error, now corrected. **Hosted Chromium checks also passed:** offline loading, reveal/cut/reverse
+controls, output removal, reference-posterior invariance, mobile width and reset,
+with no page errors. [Successful CI and screenshots](https://github.com/anttiluode/QualiaAstra/actions/runs/43814686560).
+Screenshots were captured but not manually visually reviewed in this session.
+[Review record](docs/REVIEW.md).
 
 ## Relationship to the other projects
 
