@@ -42,6 +42,17 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;b
 <div class="box"><div class="label">Held prediction energy</div><div class="metric" id="energy">—</div><div class="small">Can be nonzero when residual is small</div></div></div><p class="small" id="meaning"></p></section>
 <section class="panel"><div class="eyebrow">Fair five-policy evaluation</div><h2>Did complementary learning really win?</h2><div id="results"><p class="small">Run the comparison. Unlike a zero-delay-only baseline, both Hebbian controls get the entire delay bank and the same two-edge budget as the residue rule.</p></div></section>
 </div></div>
+<section class="panel" style="margin-top:18px">
+<div class="eyebrow">Frozen twelve-seed confirmation / independent training populations</div>
+<h2>They all learned the route. None proved the residual rule superior.</h2>
+<div class="cols">
+<div class="box"><div class="label">H1 · correct A→B→C wiring with five-tick delays</div><div class="metric" style="color:var(--mint)">12/12 <small>pass</small></div><p class="small">All systems recovered both links from candidate routes and predicted withheld B/C waves.</p></div>
+<div class="box"><div class="label">H2 · residual method beats delay-aware correlations</div><div class="metric" style="color:var(--gold)">0/12 <small>fail</small></div><p class="small">Both delay-aware Hebbian controls selected the same edges and tied the residual learner.</p></div>
+</div>
+<table><thead><tr><th>Method</th><th>Median relative B+C MSE ↓</th></tr></thead><tbody>
+<tr><td>Residual-guided</td><td>0.464</td></tr><tr><td>Delayed signed correlation</td><td>0.464</td></tr><tr><td>Unsigned coactivity</td><td>0.464</td></tr><tr><td>Correct-anatomy oracle</td><td>0.464</td></tr><tr><td>Disconnected</td><td>1.000</td></tr>
+</tbody></table>
+<p class="small">These results were obtained using 12 predeclared training seeds and independent evaluation seeds, not the one demo seed chosen above. This simple synthetic task does not distinguish residual-specific selection from delay-matched correlation. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE4_RESULTS.md">Full report</a> · <a href="https://github.com/anttiluode/QualiaAstra/blob/main/results/gate4_confirmation.json">Complete numerical receipt</a>.</p></section>
 <p class="foot">This laboratory is an engineering toy: signed synthetic waves, known four-channel observations in training, three-tap delayed filters and two selected edges. It does not model a growing physical axon, a detailed dendrite, or subjective experience. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE4_PROTOCOL.md">Read the frozen protocol</a>.</p>
 </main>
 <script src="gate4_engine.js"></script><script>
