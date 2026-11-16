@@ -1,0 +1,34 @@
+/* Gate 2 headless GUI checks */
+const {chromium}=require("playwright");
+const assert=require("node:assert/strict");
+const path=require("path");
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ const page=await browser.newPage({viewport:{width:1400,height:1100}});
+ const errors=[];page.on("pageerror",e=>errors.push(e.message));
+ await page.goto("file://"+path.resolve("gate2.html"));
+ assert.equal(await page.locator("#beliefC").textContent(),"50.0% +");
+ const before=await page.locator("#beliefB").textContent();
+ await page.locator("#reveal").click();
+ const learned=await page.locator("#beliefB").textContent();
+ assert.notEqual(learned,before);
+ await page.locator("#mode").selectOption("cut");
+ assert.equal(await page.locator("#beliefB").textContent(),"50.0% +");
+ assert.equal(await page.locator("#beliefC").textContent(),"50.0% +");
+ await page.locator("#mode").selectOption("reverse");
+ assert.notEqual(await page.locator("#beliefB").textContent(),learned);
+ await page.locator("#truth").check();
+ assert.match(await page.locator("#error").textContent(),/Withheld-wave squared error/);
+ await page.locator("#benchmark").click();
+ assert.match(await page.locator("#results").textContent(),/512 test cases/);
+ assert.match(await page.locator("#results").textContent(),/Oracle relation signs/);
+ await page.screenshot({path:"/tmp/qualia-gate2-desktop.png",fullPage:true});
+ await page.setViewportSize({width:390,height:840});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,"Gate 2 mobile horizontal overflow");
+ await page.screenshot({path:"/tmp/qualia-gate2-mobile.png",fullPage:true});
+ await page.locator("#new").click();
+ assert.equal(await page.locator("#beliefC").textContent(),"50.0% +");
+ assert.deepEqual(errors,[]);
+ await browser.close();
+ console.log("Gate 2 browser checks pass: offline, cue, cut, reverse, truth, benchmark, mobile, reset");
+})().catch(e=>{console.error(e);process.exit(1);});
