@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QualiaAstra / Gate 3 — Learning Without Labels</title>
+<style>
+:root{color-scheme:dark;--bg:#09111b;--panel:#122032;--panel2:#0c1929;--border:#293d52;--fg:#edf3f5;--sub:#abc0d1;--orange:#ffb777;--cyan:#89e4c8;--violet:#beb3ff}
+*{box-sizing:border-box}body{margin:0;color:var(--fg);background:radial-gradient(ellipse at 70% -20%,#17334c 0%,var(--bg) 55%);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1400px;margin:auto;padding:26px 32px 60px}a{color:var(--cyan)}a:hover{text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--border);padding-bottom:19px}.brand{font-size:12px;letter-spacing:.20em;text-transform:uppercase}.nav{font-size:12px;display:flex;flex-wrap:wrap;gap:18px}
+h1{font-size:clamp(32px,4vw,53px);letter-spacing:-.04em;line-height:1.1;font-weight:640;margin:8px 0 10px}h2{font-size:20px;font-weight:620;margin:4px 0 13px}h3{font-size:15px;font-weight:600;margin:0 0 8px}.eyebrow{color:var(--orange);font-size:11px;letter-spacing:.16em;text-transform:uppercase}p{margin:5px 0 13px}.muted{color:var(--sub)}.small{color:var(--sub);font-size:12px}.intro{margin:32px 0 26px;max-width:900px}.intro p{font-size:16px;color:var(--sub)}
+.badge{border:1px solid var(--border);border-radius:50px;padding:5px 10px;color:var(--sub);font-size:11px}
+.layout{display:grid;grid-template-columns:295px minmax(0,1fr);gap:18px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:15px;padding:21px;min-width:0}.controls{align-self:start}.section{padding:20px 0 0;margin:20px 0 0;border-top:1px solid var(--border)}label{display:block;margin:10px 0 7px;font-size:13px}.inline{display:flex;align-items:center;gap:10px}.inline label{margin:0}button,select{border:1px solid #43576e;background:#1c3149;color:var(--fg);font:inherit;padding:9px 13px;border-radius:8px;cursor:pointer}button:hover{background:#27405b}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.primary{background:var(--orange);border-color:var(--orange);color:#101b2a;font-weight:700}.primary:hover{background:#ffcfa3}
+.full,select{width:100%}input[type=range]{width:100%;accent-color:var(--orange)}input[type=checkbox]{accent-color:var(--cyan)}output{float:right;font-variant-numeric:tabular-nums;color:var(--orange)}
+.workspace{display:grid;gap:18px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:15px}.box{padding:13px;background:var(--panel2);border:1px solid #243951;border-radius:9px;min-width:0}.box p{margin:0 0 6px}.box canvas{display:block;width:100%;height:145px}.score{font-size:29px;font-weight:650;letter-spacing:-.03em}.score small{font-size:13px;color:var(--sub);font-weight:400}.meter{height:9px;border-radius:9px;background:#253850;overflow:hidden}.meter>span{display:block;height:100%;width:50%;background:var(--cyan);transition:width .18s}.network{width:100%;height:auto;max-height:170px}svg text{fill:var(--fg);font-size:15px;font-family:system-ui,sans-serif}
+.rowhead{display:flex;justify-content:space-between;gap:10px;align-items:start}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--sub);margin-top:3px}.swatch{display:inline-block;height:3px;width:17px;margin:0 5px 4px 0;vertical-align:middle}.note{padding:13px 15px;background:#0d1a2a;border-left:3px solid var(--orange);font-size:12px;color:#bbcbda;margin-top:15px}
+table{width:100%;font-size:13px;border-collapse:collapse}th,td{padding:9px 6px;border-bottom:1px solid var(--border);text-align:left}th:last-child,td:last-child{text-align:right}td{font-variant-numeric:tabular-nums}.foot{font-size:12px;color:var(--sub);margin-top:24px;max-width:900px}
+@media(max-width:880px){main{padding:20px 15px}.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}.controls>.section{margin:0;padding:0;border:0}.controls>.note{grid-column:1/-1}.cols{grid-template-columns:1fr}}@media(max-width:540px){.controls{grid-template-columns:1fr}.panel{padding:16px}.nav{gap:9px}.rowhead{display:block}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">Qualia<span style="color:var(--orange)">Astra</span> <span style="color:var(--sub)">/ Gate 02</span></div><nav class="nav"><a href="./index.html">Gate 1</a><a href="./gate2.html">Gate 2</a><a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE3_PROTOCOL.md">Protocol & limits</a><a href="https://github.com/anttiluode/QualiaAstra">Source</a></nav></header>
+<section class="intro"><div class="eyebrow">Unlabelled traces → predictive error → hidden sensor reconstruction</div><h1>Can a world learn without labels?</h1>
+<p>Two interference sensors discover two states from their own raw waveforms, without source-sign labels. When B and C are actually observed during training, their future-minus-prediction errors shape the internal decoder. At test, only raw sensors and a clue at A remain.</p>
+<span class="badge">Self-supervised development · no labels or sign teachers</span></section>
+<div class="layout">
+<aside class="panel controls">
+<div><div class="eyebrow">01 / Calibration</div><h2>Learn from consequences</h2><p class="small">256 unlabelled episodes form two clusters per interference sensor. Each delayed B/C waveform then trains its own prediction through a local error. The test worlds are separate.</p><button id="recalibrate" class="full">Train another population</button><p class="small" id="calibration"></p></div>
+<div class="section"><div class="eyebrow">02 / Observe</div><h2>Open a hidden world</h2><button id="new" class="full">New raw trial</button><p class="small" id="trial"></p><button class="primary full" id="reveal">Reveal late clue at A</button><label for="clue">Noisy signed clue <output id="clueValue">not observed</output></label><input type="range" id="clue" min="-2.5" max="2.5" step=".05" value="0" disabled><p class="small">Drag to introduce weak, wrong-sign or contradictory evidence.</p></div>
+<div class="section"><div class="eyebrow">03 / Causality</div><h2>Change the message</h2><label for="mode">Inference condition</label><select id="mode"><option value="learned">Learned unlabelled-state relay</option><option value="cut">Cut A → B</option><option value="reverse">Reverse A → B message</option><option value="cutBC">Cut imagined B → C</option><option value="disconnected">Disconnect both links</option></select><label class="inline"><input type="checkbox" id="truth"> Show withheld sensors (evaluation only)</label><p class="small">During learning the later B/C recordings provide prediction errors; during testing these recordings are strictly withheld. A cut or reversal acts only on an internal message.</p></div>
+<div class="section"><div class="eyebrow">04 / Score</div><h2>Unseen cases</h2><p class="small">Compare 512 unseen trials against message cuts, shuffled raw sensors, mispaired training outcomes, and Gate 2’s labelled learner.</p><button id="benchmark" class="full">Run held-out benchmark</button><p class="small">This button runs a development sample. A separate preregistered twelve-seed confirmation is recorded in the repo.</p></div>
+<div class="note"><strong>What is still supplied:</strong> Sensor locations, A→B→C chain, two-state bottlenecks, clue mapping, and the relay equation. Future sensory recordings teach prediction without source-sign labels. No dendrites, physical wave tanks or subjective experience are simulated.</div>
+</aside>
+<div class="workspace">
+<section class="panel"><div class="rowhead"><div><div class="eyebrow">Raw, observed sensors</div><h2>What the learner actually receives</h2></div><span class="badge">No sign labels at calibration or test</span></div>
+<div class="cols"><div class="box"><h3>Interference sensor 1</h3><canvas id="rawAB" aria-label="First raw interference trace"></canvas><p class="small">Raw A/B interference; two learned prototypes shown as dashed traces.</p></div><div class="box"><h3>Interference sensor 2</h3><canvas id="rawBC" aria-label="Second raw interference trace"></canvas><p class="small">Raw B/C interference; two learned prototypes shown as dashed traces.</p></div></div></section>
+<section class="panel"><div class="rowhead"><div><div class="eyebrow">Fixed chain, discovered internal states</div><h2>Causal relay through unlabelled tokens</h2></div><span class="badge" id="status">Ambiguous</span></div>
+<svg class="network" viewBox="0 0 700 156" role="img" aria-label="A to B to C inference chain">
+<path id="wireAB" d="M133 75 H334" stroke="#5a7897" stroke-width="4" fill="none"/><path id="wireBC" d="M366 75 H567" stroke="#5a7897" stroke-width="4" fill="none"/>
+<circle cx="116" cy="75" r="38" fill="#302b2b" stroke="#ffb777" stroke-width="2"/><circle cx="350" cy="75" r="38" fill="#1a3440" stroke="#89e4c8" stroke-width="2"/><circle cx="584" cy="75" r="38" fill="#272b46" stroke="#beb3ff" stroke-width="2"/>
+<text x="116" y="80" text-anchor="middle">A</text><text x="350" y="80" text-anchor="middle">B</text><text x="584" y="80" text-anchor="middle">C</text>
+<text id="edgeAB" x="232" y="58" text-anchor="middle">evidence —</text><text id="edgeBC" x="468" y="58" text-anchor="middle">evidence —</text>
+<text id="beliefA" x="116" y="133" text-anchor="middle">50.0% +</text><text id="beliefB" x="350" y="133" text-anchor="middle">50.0% +</text><text id="beliefC" x="584" y="133" text-anchor="middle">50.0% +</text>
+</svg><p class="small" id="interpretation">Before a signed clue, the two pairwise states do not decide the global orientation.</p></section>
+<section class="panel"><div class="eyebrow">Withheld measurements</div><h2>Predict the two unseen waveforms</h2><div class="cols">
+<div class="box"><h3>Predicted sensor B · latent gauge arbitrary</h3><div class="score" id="scoreB">0.00 <small>internal B activation</small></div><div class="meter"><span id="meterB"></span></div><canvas id="predB" aria-label="B predicted waveform"></canvas></div>
+<div class="box"><h3>Predicted sensor C · latent gauge arbitrary</h3><div class="score" id="scoreC">0.00 <small>internal C activation</small></div><div class="meter"><span id="meterC"></span></div><canvas id="predC" aria-label="C predicted waveform"></canvas></div></div>
+<div class="legend"><span><i class="swatch" style="background:var(--cyan)"></i>Prediction</span><span><i class="swatch" style="background:#90a3bc"></i>Withheld actual (reveal checkbox)</span></div>
+<p class="small" id="error">The meaningful target is the predicted waveform; cluster polarity is arbitrary and may flip between training seeds.</p></section>
+<section class="panel"><div class="eyebrow">Independent evaluation</div><h2>Gate 3 label-free development ledger</h2><div id="results"><p class="small">Run the benchmark against cut branches, mismatched future targets, shuffled raw traces and a supervised Gate 2 model.</p></div></section>
+</div></div>
+<p class="foot">The learned sensor prototypes use raw data without labels; future B/C waveforms provide ordinary self-supervised error targets only during training. The three-node chain, K=2 and relay rule remain supplied. No actual dendritic cable equation, active neurons or physical prediction field is claimed. Compare <a href="./gate2.html">labelled Gate 2</a> and <a href="https://github.com/anttiluode/QualiaClaude/tree/main/chain">QualiaClaude/chain</a>.</p>
+</main>
+<script src="./gate2_engine.js"></script><script src="./gate3_engine.js"></script><script>
+"use strict";
+const $=id=>document.getElementById(id),E=globalThis.Gate3,W=globalThis.Gate2;
+let calibrationSeed=1401,model=E.train(calibrationSeed),trialNumber=0,trial,shown=false,prediction;
+function createTrial(){
+ trialNumber++;trial=W.newCase(W.rng(81001+trialNumber*31));shown=false;
+ $("clue").value=0;$("clue").disabled=true;$("truth").checked=false;$("mode").value="learned";
+ $("trial").textContent="New hidden world "+trialNumber+" · seed "+(81001+trialNumber*31);
+ render();
+}
+function draw(id,series,colors,dashes=[]){
+ const canvas=$(id),r=canvas.getBoundingClientRect(),w=Math.max(1,r.width),h=Math.max(1,r.height),dpr=window.devicePixelRatio||1,ctx=canvas.getContext("2d");
+ canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);ctx.scale(dpr,dpr);
+ ctx.clearRect(0,0,w,h);
+ let vmax=.2;for(const arr of series)for(const v of arr)vmax=Math.max(vmax,Math.abs(v));
+ vmax=Math.max(1.1,vmax*1.16);
+ ctx.strokeStyle="#29415a";ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+ for(let k=0;k<series.length;k++){
+  ctx.beginPath();ctx.strokeStyle=colors[k];ctx.lineWidth=k===0?1.9:1.25;ctx.setLineDash(dashes.includes(k)?[5,4]:[]);
+  series[k].forEach((v,i)=>{const x=8+i/(E.N-1)*(w-16),y=h/2-(v/vmax)*(h*.46);i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();
+ }
+ ctx.setLineDash([]);
+}
+
+function render(){
+ const mode=$("mode").value,q=shown?Number($("clue").value):null;
+ prediction=E.infer(model,trial.raw,q,mode);
+ const m=prediction.means,e=prediction.relations;
+ $("reveal").textContent=shown?"Hide the clue":"Reveal late clue at A";
+ $("clue").disabled=!shown;$("clueValue").textContent=shown?q.toFixed(2):"not observed";
+ $("calibration").textContent="Seed "+calibrationSeed+" · "+model.n+" unlabelled episodes · cluster sizes ["+
+ model.enc.map(c=>c.counts.join("/")).join("] and [")+"]";
+ $("status").textContent=shown?(mode==="learned"?"Self-trained messages":"Causal intervention"):"Two opposite possible worlds";
+ for(let k=0;k<3;k++)$("belief"+["A","B","C"][k]).textContent=(m[k]>=0?"+":"")+m[k].toFixed(2);
+ for(let k=0;k<2;k++){
+  const z=m[k+1],suffix=["B","C"][k],p=(z+1)*50;
+  $("score"+suffix).innerHTML=(z>=0?"+":"")+z.toFixed(2)+' <small>internal '+suffix+' activation</small>';
+  $("meter"+suffix).style.width=Math.max(0,Math.min(100,p))+"%";
+  draw(k?"rawBC":"rawAB",[trial.raw[k],model.enc[k].prototypes[0],model.enc[k].prototypes[1]],
+       ["#ffb777","#89e4c8","#beb3ff"],[1,2]);
+  const curves=[prediction.prediction[k]],colors=["#89e4c8"];
+  if($("truth").checked){curves.push(trial.withheld[k]);colors.push("#90a3bc");}
+  draw(k?"predC":"predB",curves,colors,[1]);
+ }
+ $("edgeAB").textContent=(mode==="cut"||mode==="disconnected"?"cut · ":"token · ")+e[0].toFixed(2);
+ $("edgeBC").textContent=(mode==="cutBC"||mode==="disconnected"?"cut · ":"token · ")+e[1].toFixed(2);
+ $("wireAB").setAttribute("stroke-dasharray",mode==="cut"||mode==="disconnected"?"7 7":"none");
+ $("wireBC").setAttribute("stroke-dasharray",mode==="cutBC"||mode==="disconnected"?"7 7":"none");
+ const msg=mode==="reverse"?"We reversed the A→B latent message: both downstream predicted waveforms flip sign, but the world did not change.":
+ mode==="cut"?"A still hears the clue, but its predicted consequences are blocked at B.":
+ mode==="cutBC"?"The internal B prediction survives; its continuation toward C is blocked.":
+ mode==="disconnected"?"Both messages are cut. Remote waveforms return to zero predictions.":
+ shown?"A signed clue selects one of two otherwise symmetric worlds. Unlabelled sensor clusters relay that internal choice into learned future waveforms.":
+ "The learned clusters distinguish different interference patterns, but a global sign flip remains invisible without a clue.";
+ $("interpretation").textContent=msg;
+ $("error").textContent=$("truth").checked?
+ "Withheld-wave squared error: "+E.mse(prediction.prediction,trial.withheld).toFixed(1)+
+ " · the target was used for self-supervised calibration only on earlier episodes, never this trial.":
+ "The hidden future has not been shown to inference. Token signs are gauge-dependent; compare waveforms, not token names.";
+}
+$("recalibrate").addEventListener("click",()=>{calibrationSeed+=109;model=E.train(calibrationSeed);$("results").innerHTML='<p class="small">Model retrained with no source-sign labels. Run benchmark again.</p>';render();});
+$("new").addEventListener("click",createTrial);
+$("reveal").addEventListener("click",()=>{shown=!shown;if(shown)$("clue").value=trial.q;render();});
+$("clue").addEventListener("input",render);$("truth").addEventListener("change",render);$("mode").addEventListener("change",render);
+$("benchmark").addEventListener("click",()=>{
+ const s=E.benchmark(model,20261116,512),
+ names={learned:"Gate 3 · unlabelled prototypes",cut:"Cut A → B",cutBC:"Cut B → C",disconnected:"Both messages cut",shuffled:"Shuffled raw sensor cases",unpaired:"Future training events mispaired",supervised:"Gate 2 · supervised reference"};
+ const order=["learned","cut","cutBC","shuffled","unpaired","supervised"];
+ const rows=order.map(mode=>"<tr><td>"+names[mode]+"</td><td>"+s.relativeMSE[mode].toFixed(3)+"</td></tr>").join("");
+ $("results").innerHTML='<table><thead><tr><th>Control</th><th>Relative withheld-wave MSE ↓</th></tr></thead><tbody>'+rows+
+ '</tbody></table><p class="small">Zero prediction = 1.000. No source-sign labels enter Gate 3 calibration. All later B/C waveforms ARE sensory prediction-error targets during training. 512 independent test episodes; seeded development numbers. The supervised reference has the original Gate 2 labels. See <a href="docs/GATE3_PROTOCOL.md">frozen confirmation protocol</a>.</p>';
+});
+window.addEventListener("resize",render);
+createTrial();
+</script></body></html>
