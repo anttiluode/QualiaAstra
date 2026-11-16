@@ -17,6 +17,37 @@ To use the viewer: **Code → Download ZIP**, extract it, then double-click
 `index.html`. Keep the four `viewer*.js` files beside it. No server, installation,
 GPU or network is needed. The GitHub file page itself displays source, not the app.
 
+## Gate 5: evidence is not an echo (12-seed confirmation)
+
+**[Open Gate 5 live](https://anttiluode.github.io/QualiaAstra/gate5.html)** ·
+**[Precommitted protocol](docs/GATE5_PROTOCOL.md)** ·
+**[Full results and limitations](docs/GATE5_RESULTS.md)** ·
+**[Every confirmation seed](results/gate5_confirmation.json)**
+
+Gate 5 isolates the information problem that appears when an internally
+**imagined B** is passed onward like a fresh B observation. Both carry the same
+signed value, but only an independently observed B should revise C's posterior
+expectation. A model with an explicit origin tag can preserve the prediction
+without counting its own echo twice. The no-tag baseline is **Bayes-optimal
+given missing provenance**, not a deliberately naive comparator.
+
+A learner first estimates two A/B and B/C correlations from 512 *fully
+observed* calibration episodes. On 12 independently trained populations, each
+tested on 4096 separate signed-event cases, its median relative C error was
+**0.723** vs **0.727 for the optimal no-origin receiver**, **0.732 for naive
+echo counting**, and **0.722 for exact known-parameter Bayes**. All five
+predeclared checks passed; the comparison with naive echo counting achieved the
+required margin in **11/12**, not all 12. The learned model was **explicitly
+given the provenance bit, known chain and Bayesian update formula**. It did
+not learn how to identify external versus internal waves or discover new causal
+structure.
+
+The interactive viewer also illustrates repeated self-replay, contradictory
+real evidence, cutting B→C without erasing the held B state, and an optional
+hidden-C waveform overlay. The primary confirmation metric measures signed-C
+error, not raw waveform reconstruction or biological spikes. It does **not**
+establish qualia. See the [Gate 5 report](docs/GATE5_RESULTS.md).
+
 ## Gate 4: grow the predictive wiring (two hypotheses, one failure)
 
 **[Open Gate 4 live](https://anttiluode.github.io/QualiaAstra/gate4.html)** ·
