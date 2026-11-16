@@ -17,6 +17,47 @@ To use the viewer: **Code → Download ZIP**, extract it, then double-click
 `index.html`. Keep the four `viewer*.js` files beside it. No server, installation,
 GPU or network is needed. The GitHub file page itself displays source, not the app.
 
+## Gate 6: physical wave signatures instead of a source bit (12-seed confirmation)
+
+**[Open the live Gate 6 waveform laboratory](https://anttiluode.github.io/QualiaAstra/gate6.html)** ·
+**[Frozen protocol](docs/GATE6_PROTOCOL.md)** ·
+**[Scientific report](docs/GATE6_RESULTS.md)** ·
+**[Every confirmation population](results/gate6_confirmation.json)**
+
+Gate 5 required the receiver to be **told** whether a B-like message was a
+genuine observation or an imagined internal replay. Gate 6 removes this
+per-message Boolean input. At test the receiver sees **only A, B-like signed
+report z, reliability p, and a noisy 48-sample waveform**, from which a
+known-source-calibrated discriminator estimates how likely the message is
+to be external or internal. The same Bayes posterior computation then decides
+how much to revise the internally held B and predicted C states.
+
+The source-specific waveform is deliberately **engineered** into the
+simulator: a fast/short cable response versus a slow/damped response, or a
+subtler spike-shape-kinetics analogue. Calibration uses **known isolated
+source probes** and a fully observed A/B/C training set. The physical
+source code therefore does not emerge from unlabelled experience, and the
+pulses are not fitted to biological dendrites or action potentials.
+
+**Independent confirmation:** all six predeclared checks passed in all
+**12 independently calibrated populations** (4096 unseen signed-C trials
+each). Median C error was **0.7337** for cable-wave decoding versus
+**0.7389** for optimal no-wave, origin-blind inference and **0.7317**
+for an oracle given actual source identity. On the ambiguous cases where
+the signed report alone cannot reveal its origin, cable-shape source
+classification was **93.5%**, but a deliberately subtle spike-shape
+analogue achieved only **68.2%**. A source-equalized waveform and an
+energy-only decoder both fell back near the origin-blind error; reversing
+source-specific response shapes **hurt** performance (0.7511 median).
+
+This is a clean computation/information result: when the physical waveform
+contains recognizable source information, a receiver can use it without a
+Boolean origin field at test. It is **not** proof that real neurons can
+read sensory-vs-imagined origin from regenerated axonal spikes. Nor does it
+solve **eight repeated copies of the same echo** being counted as fresh
+independent events; source identity and event identity are different.
+[Read the full Gate 6 limits](docs/GATE6_RESULTS.md).
+
 ## Gate 5: evidence is not an echo (12-seed confirmation)
 
 **[Open Gate 5 live](https://anttiluode.github.io/QualiaAstra/gate5.html)** ·
