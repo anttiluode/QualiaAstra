@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QualiaAstra / Gate 5 — Evidence versus Echo</title>
+<style>
+:root{color-scheme:dark;--bg:#09111b;--panel:#132235;--inset:#0d192a;--edge:#2c3e55;--fg:#edf4f5;--sub:#b0c0d1;--amber:#ffc18b;--mint:#86e0bc;--violet:#bfafff;--pink:#ed9da5}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);background:radial-gradient(ellipse at 78% -9%,#21384c 0%,var(--bg) 60%);font:15px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1370px;margin:auto;padding:22px 28px 56px}
+header{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid var(--edge);padding-bottom:20px}
+a{color:var(--mint)}a:hover{text-decoration:none}
+.brand{font-size:12px;letter-spacing:.17em;text-transform:uppercase}
+.nav{display:flex;flex-wrap:wrap;gap:14px;font-size:12px}
+h1{font-size:clamp(34px,4vw,54px);letter-spacing:-.045em;line-height:1.08;font-weight:650;margin:9px 0 13px}
+h2{font-size:20px;letter-spacing:-.01em;font-weight:600;margin:4px 0 11px}
+h3{font-size:15px;font-weight:600;margin:0 0 9px}
+p{margin:5px 0 13px}.intro{margin:30px 0 26px;max-width:990px}.intro p{color:var(--sub);font-size:16px}
+.eyebrow{color:var(--amber);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.small{color:var(--sub);font-size:12px}
+.badge{border:1px solid var(--edge);border-radius:30px;padding:5px 10px;color:var(--sub);font-size:11px}
+.layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:16px}
+.panel{background:var(--panel);border:1px solid var(--edge);border-radius:14px;padding:20px;min-width:0}
+.controls{align-self:start}.controls>.section{border-top:1px solid var(--edge);margin-top:18px;padding-top:17px}
+.workspace{display:grid;gap:17px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.box{background:var(--inset);border:1px solid #2a3a51;border-radius:10px;padding:14px;min-width:0}
+button,select,input[type=number]{font:inherit;background:#1c3047;color:var(--fg);border:1px solid #4a647f;border-radius:8px;padding:9px 12px}
+button{cursor:pointer}button:hover{background:#28435c}
+button.primary{background:var(--amber);border-color:var(--amber);color:#152135;font-weight:700}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+select,input[type=number],button.full{width:100%}
+label{display:block;font-size:12px;margin:11px 0 6px}
+input[type=range]{width:100%;accent-color:var(--amber)}
+input[type=checkbox]{accent-color:var(--mint)}
+.metric{font-size:30px;font-weight:650;letter-spacing:-.04em}
+.metric small{font-weight:400;color:var(--sub);font-size:12px}
+.row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.meter{border-radius:10px;height:9px;overflow:hidden;background:#27394f}
+.meter>span{display:block;height:100%;background:var(--mint)}
+.score-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.chart{display:block;width:100%;height:170px}
+.legend{display:flex;gap:15px;flex-wrap:wrap;font-size:11px;color:var(--sub)}
+.swatch{display:inline-block;width:17px;height:3px;vertical-align:middle;margin:0 6px 3px 0}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;border-bottom:1px solid var(--edge);padding:9px 6px}td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}th{color:var(--sub);font-size:11px;font-weight:500}
+.note{border-left:3px solid var(--amber);padding:10px 13px;background:#0c192a;color:var(--sub);font-size:12px;margin:11px 0}
+.graph{display:block;width:100%;height:auto;max-height:190px}.graph text{font:14px system-ui;fill:var(--fg)}.graph .node{stroke-width:2;fill:#1a2e44}.graph .outline{stroke:#5a7595}.graph .arrow{stroke:var(--mint);stroke-width:2;fill:none}
+.foot{font-size:12px;color:var(--sub);margin-top:22px}
+@media(max-width:920px){main{padding:20px 15px}.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.controls>.section{margin:0;padding:0;border:0}.controls>.note{grid-column:1/-1}}
+@media(max-width:540px){.controls,.cols,.score-grid{grid-template-columns:1fr}header{align-items:start}.nav{gap:8px}.panel{padding:16px}}
+</style></head>
+<body><main>
+<header><div class="brand">Qualia<span style="color:var(--amber)">Astra</span> / Gate 05</div><nav class="nav"><a href="index.html">Gate 1</a><a href="gate2.html">Gate 2</a><a href="gate3.html">Gate 3</a><a href="gate4.html">Gate 4</a><a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE5_PROTOCOL.md">Protocol</a><a href="https://github.com/anttiluode/QualiaAstra">Source</a></nav></header>
+<section class="intro"><div class="eyebrow">Held predictive state / observed world / provenance</div><h1>Evidence versus echo.</h1><p>A neuron imagines B. Does the next neuron treat that imagined state as fresh evidence? Send exactly the same signed message from two different origins and watch C's expectation change—or remain correctly uncertain.</p><span class="badge">Gate 5 · Markov chain · provenance accounting · causal controls</span></section>
+<div class="layout"><aside class="panel controls">
+<div><div class="eyebrow">01 / Calibrate</div><h2>Learn two transitions</h2><p class="small">Learn the A→B and B→C correlations from 512 fully observed training episodes. Their true transition probabilities are not supplied to the learner.</p><button class="full" id="retrain">Recalibrate</button><p class="small" id="fit"></p></div>
+<div class="section"><div class="eyebrow">02 / Same signal</div><h2>Change its origin</h2><button id="next" class="full">New hidden world</button><p id="trial" class="small"></p><label for="signA">Actually observed A</label><select id="signA"><option value="1">A is positive (+)</option><option value="-1">A is negative (−)</option></select><label for="signZ">B-like message arriving</label><select id="signZ"><option value="1">z is positive (+)</option><option value="-1">z is negative (−)</option></select><label for="provenance">Where did the message originate?</label><select id="provenance"><option value="replay">Imagined B · internal replay</option><option value="actual">Measured B · actual new observation</option></select><label for="reliability">Apparent B reading reliability <output id="pValue">95%</output></label><input id="reliability" type="range" min=".55" max=".95" step=".05" value=".95"></div>
+<div class="section"><div class="eyebrow">03 / Echo chamber</div><h2>Repeat the same report</h2><label for="copies">Number of identical messages <output id="copyValue">1</output></label><input id="copies" type="range" min="1" max="8" step="1" value="1"><p class="small">The naive model counts each repeated report as independent. The provenance-aware model does not treat its own replay as new evidence.</p><label><input type="checkbox" id="cutBC"> Cut B → C</label><label><input type="checkbox" id="truth"> Reveal the withheld C waveform</label></div>
+<div class="section"><div class="eyebrow">04 / Evaluate</div><h2>Unseen worlds</h2><p class="small">Compare seven policies on 4096 separate seeded trials. Lower relative C squared error means better predictions.</p><button id="benchmark" class="full primary">Run benchmark</button><p class="small" id="benchStatus">Development seed; separate from the twelve-seed confirmation.</p></div>
+<div class="note"><strong>What we supply:</strong> the chain topology, binary sign variables, reliability values, a Bayesian update rule and a trustworthy provenance flag. No physical neuronal circuit for producing that flag is learned here.</div>
+</aside>
+<div class="workspace">
+<section class="panel"><div class="row"><div><div class="eyebrow">Same content ≠ same evidence</div><h2>One prediction travels, but must not endorse itself</h2></div><span class="badge" id="status">Imagined event</span></div>
+<svg class="graph" viewBox="0 0 760 195" role="img" aria-label="A prior flows through held B state to predicted C, while a separate B report is classified as observed or replayed.">
+<defs><marker id="arrow5" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#86e0bc" stroke-width="1.5"/></marker></defs>
+<path class="arrow" d="M122 91 H308 M433 91 H623" marker-end="url(#arrow5)"/>
+<path d="M366 10 V45" stroke="#ffc18b" stroke-width="2.5" stroke-dasharray="5 5"/>
+<text x="366" y="9" text-anchor="middle" font-size="11">B-like message: provenance matters</text>
+<circle class="node" cx="102" cy="91" r="38" stroke="#ffc18b"/><circle class="node" cx="366" cy="91" r="43" stroke="#86e0bc"/><circle class="node" cx="660" cy="91" r="43" stroke="#bfafff"/>
+<text x="102" y="95" text-anchor="middle" font-size="23">A</text><text x="366" y="95" text-anchor="middle" font-size="23">B</text><text x="660" y="95" text-anchor="middle" font-size="23">C</text>
+<text x="102" y="146" text-anchor="middle" font-size="12">Real cue</text><text x="366" y="150" text-anchor="middle" font-size="12">Held prediction</text><text x="660" y="150" text-anchor="middle" font-size="12">Next expectation</text>
+<text x="212" y="77" text-anchor="middle" font-size="11">Prior, not evidence</text>
+<text x="550" y="77" text-anchor="middle" font-size="11">Revised state</text>
+</svg>
+<div class="score-grid">
+<div class="box"><div class="small">Before the B-like message</div><div class="metric" id="prior">+0.70</div><div class="small">Held B expectation</div></div>
+<div class="box"><div class="small">After provenance accounting</div><div class="metric" id="beliefB">+0.70</div><div class="small">Posterior B expectation</div></div>
+<div class="box"><div class="small">Projected state at C</div><div class="metric" id="beliefC">+0.49</div><div class="small" id="cProbability">74.5% probability C+</div></div>
+</div>
+<div class="note" id="interpretation">An internally predicted B does not count as a new B observation.</div>
+</section>
+<section class="panel"><div class="eyebrow">The causal distinction</div><h2>Identical z, different histories</h2><p class="small">These two predictions use the exact same A, z and reliability. Only the provenance differs.</p>
+<div class="cols">
+<div class="box"><h3 style="color:var(--mint)">Imagined B · self-replay</h3><div class="metric" id="replayC">+0.49 <small>C expectation</small></div><div class="small" id="replayDetail">No independent evidence</div></div>
+<div class="box"><h3 style="color:var(--amber)">Measured B · genuine observation</h3><div class="metric" id="actualC">+0.69 <small>C expectation</small></div><div class="small" id="actualDetail">A new observation updates B and C</div></div></div>
+<div class="box" style="margin-top:14px"><div class="small">Optimal receiver that never receives a provenance tag</div><div class="metric" id="blindC">+0.56 <small>C expectation</small></div><p class="small" id="blindDetail">Without provenance, the optimal policy must average over both possible causes of an identical report.</p></div>
+</section>
+<section class="panel"><div class="eyebrow">Same evidence, repeated</div><h2>Confidence from a real observation versus an echo</h2>
+<div class="cols">
+<div class="box"><h3>Origin-aware B state</h3><div class="meter"><span id="awareBar" style="width:84%"></span></div><div class="row"><span class="small">P(B positive)</span><strong id="awareConf">85%</strong></div></div>
+<div class="box"><h3>Naive repeated-likelihood B state</h3><div class="meter"><span id="naiveBar" style="width:98%"></span></div><div class="row"><span class="small">P(B positive)</span><strong id="naiveConf">98%</strong></div></div></div><p class="small" id="repeatNote">Increasing duplicate count creates false confidence for a model that mistakes self-replay for independent observations.</p>
+</section>
+<section class="panel"><div class="eyebrow">C waveform withheld from inference</div><h2>What should the unseen world sound like?</h2>
+<canvas class="chart" id="cWave" aria-label="Predicted C waveform, optionally overlaid with true held-out waveform"></canvas>
+<div class="legend"><span><i class="swatch" style="background:var(--mint)"></i>Predicted C waveform</span><span><i class="swatch" style="background:#94a7ba"></i>Actual C waveform (reveal)</span></div>
+<p class="small" id="waveError">Ground truth is withheld until evaluation.</p></section>
+<section class="panel"><div class="eyebrow">Development comparison</div><h2>Does the source tag improve prediction?</h2><div id="results"><p class="small">Run the benchmark to compare the evidence-aware learner, naive replay, the optimal no-provenance receiver, an exact-parameter Bayes reference, shuffled tags, ignored B and cut B→C.</p></div></section>
+</div></div>
+<p class="foot">Every result on this page concerns an engineered three-event Bayesian chain, not a spiking neuron or subjective experience. The distinction between a predicted event and fresh evidence is a mathematical requirement once correlated messages can be replayed. Whether a real dendritic circuit learns trustworthy provenance is a separate unsolved task. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE5_PROTOCOL.md">Frozen protocol and limitations</a>.</p>
+</main>
+<script src="gate5_engine.js"></script><script>
+"use strict";
+const $=id=>document.getElementById(id),G=globalThis.Gate5;
+let trainingSeed=17001,model=G.train(trainingSeed),trialCount=0,caseData=null;
+function signed(x){return (x>=0?"+":"")+x.toFixed(3);}
+function trial(){
+trialCount++;caseData=G.newCase(G.rng(61001+trialCount*13));
+$("signA").value=String(caseData.A);$("signZ").value=String(caseData.z);
+$("provenance").value=caseData.provenance;
+$("reliability").value=caseData.p;
+$("copies").value="1";$("cutBC").checked=false;$("truth").checked=false;
+$("trial").textContent="Trial "+trialCount+" · hidden B/C created, not shown to inference";
+render();
+}
+function plot(series,colors,dashed=[]){
+const el=$("cWave"),rect=el.getBoundingClientRect(),w=Math.max(1,rect.width),h=Math.max(1,rect.height),dpr=window.devicePixelRatio||1,ctx=el.getContext("2d");
+el.width=Math.ceil(w*dpr);el.height=Math.ceil(h*dpr);ctx.scale(dpr,dpr);
+ctx.clearRect(0,0,w,h);
+let max=1;for(const x of series)for(const v of x)max=Math.max(max,Math.abs(v));max*=1.15;
+ctx.strokeStyle="#2e4258";ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+for(let k=0;k<series.length;k++){ctx.strokeStyle=colors[k];ctx.lineWidth=k===0?2.25:1.15;ctx.setLineDash(dashed.includes(k)?[5,5]:[]);
+ctx.beginPath();for(let t=0;t<series[k].length;t++){const x=8+(w-16)*t/(G.N-1),y=h/2-series[k][t]*h*.44/max;t?ctx.lineTo(x,y):ctx.moveTo(x,y);}
+ctx.stroke();}ctx.setLineDash([]);
+}
+function render(){
+if(!caseData)return;
+const A=Number($("signA").value),z=Number($("signZ").value),p=Number($("reliability").value),copies=Number($("copies").value);
+const provenance=$("provenance").value,obs={A,z,p,provenance};
+const strategy=$("cutBC").checked?"cut":"aware";
+const m=G.infer(model,obs,strategy),naive=G.infer(model,obs,"naive",{copies});
+const replay=G.infer(model,{...obs,provenance:"replay"}),actual=G.infer(model,{...obs,provenance:"actual"}),blind=G.infer(model,obs,"blind");
+$("pValue").textContent=Math.round(p*100)+"%";$("copyValue").textContent=String(copies);
+$("fit").textContent="Calibration seed "+trainingSeed+" · rho(A,B) = "+model.rho1.toFixed(3)+" · rho(B,C) = "+model.rho2.toFixed(3);
+$("status").textContent=provenance==="replay"?"Predicted event, not evidence":"Genuine sensory observation";
+$("prior").textContent=signed(m.mPriorB);$("beliefB").textContent=signed(m.mB);$("beliefC").textContent=signed(m.mC);
+$("cProbability").textContent=(((m.mC+1)/2)*100).toFixed(1)+"% probability C positive";
+$("interpretation").textContent=$("cutBC").checked?"B still holds its internally computed expectation, but the message B→C was cut; C reverts to zero signed prediction.":
+provenance==="replay"?"This message came from the predictor itself. The model keeps its original B state and does not treat the echo as corroboration.":
+"A real B measurement supplies independent evidence, so the B expectation and C prediction are revised in proportion to reliability.";
+$("replayC").innerHTML=signed(replay.mC)+' <small>C expectation</small>';
+$("actualC").innerHTML=signed(actual.mC)+' <small>C expectation</small>';
+$("blindC").innerHTML=signed(blind.mC)+' <small>C expectation</small>';
+$("replayDetail").textContent="B held at "+signed(replay.mB)+"; no change from replay";
+$("actualDetail").textContent="B revised to "+signed(actual.mB)+" from a new reading";
+$("blindDetail").textContent=z!==A?"Because the replay generator only repeats A, a conflicting z proves this was a real observation. No provenance ambiguity remains.":
+"Identical A and z could be real evidence or a self-generated echo. A tag-blind optimal receiver must average the two explanations.";
+const awarePct=(m.mB+1)*50,naivePct=(naive.mB+1)*50;
+$("awareBar").style.width=Math.min(100,Math.max(0,awarePct))+"%";$("naiveBar").style.width=Math.min(100,Math.max(0,naivePct))+"%";
+$("awareConf").textContent=awarePct.toFixed(1)+"%";$("naiveConf").textContent=naivePct.toFixed(1)+"%";
+$("repeatNote").textContent="With "+copies+" identical reports, naive B confidence approaches certainty as though independent sensors had agreed. The aware model preserves B's state when the repeated message is replayed.";
+const curves=[m.cPrediction],colors=["#86e0bc"];if($("truth").checked){curves.push(caseData.cTrace);colors.push("#94a7ba");}
+plot(curves,colors,[1]);
+$("waveError").textContent=$("truth").checked?
+"Withheld C waveform squared error: "+m.cPrediction.reduce((s,v,t)=>s+(v-caseData.cTrace[t])**2,0).toFixed(2)+
+" · the actual waveform has NOT been passed into inference.":
+"The true C waveform remains hidden. Displayed predictions depend only on A, z, reliability and origin.";
+}
+$("next").addEventListener("click",trial);
+$("retrain").addEventListener("click",()=>{trainingSeed+=13;model=G.train(trainingSeed);$("results").innerHTML='<p class="small">Recalibrated. Run the benchmark again to score this model.</p>';render();});
+for(const id of ["signA","signZ","provenance","reliability","copies","cutBC","truth"])$(id).addEventListener("input",render);
+$("benchmark").addEventListener("click",()=>{
+const s=G.benchmark(model,20001,4096),names={aware:"Origin-aware, learned relations",naive:"Every echo counted as real",blind:"Optimal receiver without origin",oracle:"Exact Bayes (known relations)",shuffledTag:"Incorrectly reassigned provenance",ignore:"Ignore B entirely",cut:"Cut B→C"};
+const order=["aware","naive","blind","oracle","shuffledTag","ignore","cut"];
+const rows=order.map(name=>"<tr><td>"+names[name]+"</td><td>"+s.relativeCError[name].toFixed(3)+"</td></tr>").join("");
+$("results").innerHTML='<table><thead><tr><th>Prediction policy</th><th>Relative C error ↓</th></tr></thead><tbody>'+rows+
+'</tbody></table><p class="small">Zero prediction = 1.000. These 4096 development cases are separate from 512 calibration cases; the 12-seed confirmation is recorded independently. The provenance-aware method is given an EXTRA origin tag; the no-tag Bayesian mixture is the appropriate information-limited comparison. This is a signed-event task, not an inference model learned from raw wave fields.</p>';
+$("benchStatus").textContent="Development evaluation seed 20001; "+s.n+" independent test episodes.";
+});
+window.addEventListener("resize",render);
+trial();
+</script></body></html>
