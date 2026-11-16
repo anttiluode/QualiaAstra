@@ -17,6 +17,29 @@ To use the viewer: **Code → Download ZIP**, extract it, then double-click
 `index.html`. Keep the four `viewer*.js` files beside it. No server, installation,
 GPU or network is needed. The GitHub file page itself displays source, not the app.
 
+## Gate 3: drop the sign teacher (12-seed confirmation)
+
+**[Open Gate 3 live](https://anttiluode.github.io/QualiaAstra/gate3.html)** ·
+**[Frozen protocol](docs/GATE3_PROTOCOL.md)** ·
+**[Scientific report and limits](docs/GATE3_RESULTS.md)** ·
+**[12-seed receipt](results/gate3_confirmation.json)**
+
+Gate 3 preserves Gate 2's synthetic world but **discards ground-truth source signs
+and AB/BC relation labels before training**. Each raw interference sensor learns
+two waveform prototypes by unlabelled clustering. After B/C sensory recordings
+arrive in the training episodes, their prediction errors adjust small output
+waveform templates. Later B/C waveforms are withheld entirely at test.
+
+All five predeclared checks passed on **12 independent training seeds** (256
+calibration episodes and 512 test cases per seed). Median relative withheld-wave
+MSE: **0.577 Gate 3**, **0.572 labelled Gate 2**, **1.000 A→B cut**, **1.456
+shuffled raw test sensors**, **1.026 deliberately mispaired training futures**.
+The binary bottlenecks, chain topology and recurrence formula remain supplied.
+This is **self-supervised sensory prediction**, not automatically discovered
+neuronal anatomy, biological predictive coding or evidence of qualia. Internal
+cluster sign labels can switch between populations without changing their
+predicted waveforms. See the [full interpretation](docs/GATE3_RESULTS.md).
+
 ## Gate 2: learn relationships from raw sensor traces (development)
 
 **[Open the Gate 2 offline/hosted lab](gate2.html)** · **[Protocol and limits](docs/GATE2.md)**
