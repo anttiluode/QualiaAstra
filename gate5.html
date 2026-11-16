@@ -95,7 +95,24 @@ table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;b
 <p class="small" id="waveError">Ground truth is withheld until evaluation.</p></section>
 <section class="panel"><div class="eyebrow">Development comparison</div><h2>Does the source tag improve prediction?</h2><div id="results"><p class="small">Run the benchmark to compare the evidence-aware learner, naive replay, the optimal no-provenance receiver, an exact-parameter Bayes reference, shuffled tags, ignored B and cut B→C.</p></div></section>
 </div></div>
-<p class="foot">Every result on this page concerns an engineered three-event Bayesian chain, not a spiking neuron or subjective experience. The distinction between a predicted event and fresh evidence is a mathematical requirement once correlated messages can be replayed. Whether a real dendritic circuit learns trustworthy provenance is a separate unsolved task. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE5_PROTOCOL.md">Frozen protocol and limitations</a>.</p>
+<section class="panel" style="margin-top:18px">
+<div class="eyebrow">Frozen confirmation · twelve independent populations</div>
+<h2>When the same message arrives, its history matters.</h2>
+<div class="cols">
+<div class="box"><div class="small">Evidence-aware C error</div><div class="metric" style="color:var(--mint)">0.723 <small>relative MSE ↓</small></div><div class="small">Near exact Bayes at 0.722</div></div>
+<div class="box"><div class="small">Predeclared engineering checks</div><div class="metric" style="color:var(--amber)">5/5 <small>passed</small></div><div class="small">One naive comparison missed its margin: 11/12 versus 12/12</div></div>
+</div>
+<table style="margin-top:12px"><thead><tr><th>Confirmation policy</th><th>Median C error ↓</th></tr></thead><tbody>
+<tr><td>Evidence-aware, learned transitions</td><td>0.723</td></tr>
+<tr><td>Exact provenance-aware Bayes</td><td>0.722</td></tr>
+<tr><td>Optimal origin-blind mixture</td><td>0.727</td></tr>
+<tr><td>Naive replay counted as new evidence</td><td>0.732</td></tr>
+<tr><td>Provenance labels shuffled between trials</td><td>0.744</td></tr>
+<tr><td>Ignore B reports completely</td><td>0.758</td></tr>
+<tr><td>Cut B→C</td><td>1.000</td></tr>
+</tbody></table>
+<p class="small">512 fully observed calibration episodes and 4096 unseen signed-C evaluation cases per population; 12 separately trained models. The learner was explicitly given message provenance, the binary Markov structure and the inference rule. The extra source tag makes the aware and blind inputs **unequal** by design; the result measures the value of that information, not a superior neural architecture. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE5_RESULTS.md">Read the interpretation</a> · <a href="https://github.com/anttiluode/QualiaAstra/blob/main/results/gate5_confirmation.json">See the complete twelve-seed receipt</a>.</p>
+</section><p class="foot">Every result on this page concerns an engineered three-event Bayesian chain, not a spiking neuron or subjective experience. The distinction between a predicted event and fresh evidence is a mathematical requirement once correlated messages can be replayed. Whether a real dendritic circuit learns trustworthy provenance is a separate unsolved task. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE5_PROTOCOL.md">Frozen protocol and limitations</a>.</p>
 </main>
 <script src="gate5_engine.js"></script><script>
 "use strict";
