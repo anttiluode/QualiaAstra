@@ -1,0 +1,819 @@
+{
+  "date": "2026-11-16",
+  "protocol": "docs/GATE5_PROTOCOL.md",
+  "engine": "gate5_engine.js",
+  "source_ci_run": "https://github.com/anttiluode/QualiaAstra/actions/runs/43861394126",
+  "scientific_scope": "Provenance tag was provided by simulator; tests evidence attribution, not learning where real observations originate or consciousness.",
+  "rows": [
+    {
+      "calibrationSeed": 750001,
+      "testSeed": 850001,
+      "result": {
+        "seed": 850001,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.72265625,
+          0.7265625
+        ],
+        "relativeCError": {
+          "aware": 0.7215334777120755,
+          "naive": 0.7334774495294925,
+          "blind": 0.7242969158571697,
+          "oracle": 0.7213425291318871,
+          "ignore": 0.7455002600327134,
+          "cut": 1,
+          "shuffledTag": 0.7386866684264967
+        },
+        "waveformCError": {
+          "aware": 0.7620317069001132,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2057,
+            "aware": 0.6985646119119877,
+            "naive": 0.6985646119119877,
+            "blind": 0.6982759500034549
+          },
+          "replay": {
+            "n": 2039,
+            "aware": 0.7447051093701224,
+            "naive": 0.7686984926776925,
+            "blind": 0.7505475910710326
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.72265625,
+          "replayC": 0.525054931640625,
+          "actualC": 0.7143528106508875,
+          "contradictoryActualC": -0.36855796089385445,
+          "naiveFiveB": 0.9999998699585744,
+          "blindC": 0.6106390449438203
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750002,
+      "testSeed": 850002,
+      "result": {
+        "seed": 850002,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.7109375,
+          0.65625
+        ],
+        "relativeCError": {
+          "aware": 0.7240040376068064,
+          "naive": 0.7306906769054506,
+          "blind": 0.7290358048144534,
+          "oracle": 0.7228906186578201,
+          "ignore": 0.7656984925270081,
+          "cut": 1,
+          "shuffledTag": 0.7446378101452709
+        },
+        "waveformCError": {
+          "aware": 0.762797183541132,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2031,
+            "aware": 0.6764501694823535,
+            "naive": 0.6764501694823535,
+            "blind": 0.6847576905137649
+          },
+          "replay": {
+            "n": 2065,
+            "aware": 0.7707749364739758,
+            "naive": 0.7840381202837393,
+            "blind": 0.772584884787609
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.7109375,
+          "replayC": 0.466552734375,
+          "actualC": 0.6446819914244879,
+          "contradictoryActualC": -0.34449566160520584,
+          "naiveFiveB": 0.999999863535537,
+          "blindC": 0.5468045717965229
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750003,
+      "testSeed": 850003,
+      "result": {
+        "seed": 850003,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.68359375,
+          0.73828125
+        ],
+        "relativeCError": {
+          "aware": 0.7442251612469358,
+          "naive": 0.7636342313668365,
+          "blind": 0.7485783953430671,
+          "oracle": 0.7433128310133507,
+          "ignore": 0.785014713415876,
+          "cut": 1,
+          "shuffledTag": 0.775125504949766
+        },
+        "waveformCError": {
+          "aware": 0.7810367481540281,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 1999,
+            "aware": 0.7121399427786179,
+            "naive": 0.7121399427786179,
+            "blind": 0.7102592929372841
+          },
+          "replay": {
+            "n": 2097,
+            "aware": 0.7748109274453887,
+            "naive": 0.8127220152904564,
+            "blind": 0.7851067147084265
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.68359375,
+          "replayC": 0.5046844482421875,
+          "actualC": 0.7238191505441354,
+          "contradictoryActualC": -0.41523635786802005,
+          "naiveFiveB": 0.9999998482007217,
+          "blindC": 0.6025906604538087
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750004,
+      "testSeed": 850004,
+      "result": {
+        "seed": 850004,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.609375,
+          0.67578125
+        ],
+        "relativeCError": {
+          "aware": 0.7105968673503414,
+          "naive": 0.7157911486201338,
+          "blind": 0.7203445355297887,
+          "oracle": 0.7034867680965239,
+          "ignore": 0.748528990894556,
+          "cut": 1,
+          "shuffledTag": 0.7289178400399562
+        },
+        "waveformCError": {
+          "aware": 0.7530160398475488,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2033,
+            "aware": 0.6479321289320161,
+            "naive": 0.6479321289320161,
+            "blind": 0.6706638445812237
+          },
+          "replay": {
+            "n": 2063,
+            "aware": 0.7723503395774182,
+            "naive": 0.7826633672463984,
+            "blind": 0.7693027733864989
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.609375,
+          "replayC": 0.41180419921875,
+          "actualC": 0.6587332870837538,
+          "contradictoryActualC": -0.43493187716262954,
+          "naiveFiveB": 0.9999998039509544,
+          "blindC": 0.5195570508586526
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750005,
+      "testSeed": 850005,
+      "result": {
+        "seed": 850005,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.74609375,
+          0.73828125
+        ],
+        "relativeCError": {
+          "aware": 0.7068037753487476,
+          "naive": 0.7187352573566892,
+          "blind": 0.709724527073191,
+          "oracle": 0.7067733400062968,
+          "ignore": 0.7407492122147232,
+          "cut": 1,
+          "shuffledTag": 0.7312107866685272
+        },
+        "waveformCError": {
+          "aware": 0.7475293273045169,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2062,
+            "aware": 0.6771394873881592,
+            "naive": 0.6771394873881592,
+            "blind": 0.676738767249821
+          },
+          "replay": {
+            "n": 2034,
+            "aware": 0.7368764212556942,
+            "naive": 0.7609036337947841,
+            "blind": 0.7431643681527614
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.74609375,
+          "replayC": 0.5508270263671875,
+          "actualC": 0.7270664144659967,
+          "contradictoryActualC": -0.34587730380499376,
+          "naiveFiveB": 0.9999998825460034,
+          "blindC": 0.6310619813278009
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750006,
+      "testSeed": 850006,
+      "result": {
+        "seed": 850006,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.7265625,
+          0.73046875
+        ],
+        "relativeCError": {
+          "aware": 0.7466945125563658,
+          "naive": 0.7665715110466854,
+          "blind": 0.7540615745458029,
+          "oracle": 0.7434874928621666,
+          "ignore": 0.7784138927236199,
+          "cut": 1,
+          "shuffledTag": 0.7747655598877728
+        },
+        "waveformCError": {
+          "aware": 0.7837649669428428,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2016,
+            "aware": 0.6875517200387824,
+            "naive": 0.6875517200387824,
+            "blind": 0.689776474811063
+          },
+          "replay": {
+            "n": 2080,
+            "aware": 0.8040175268426537,
+            "naive": 0.8431599238697537,
+            "blind": 0.8163686712117698
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.7265625,
+          "replayC": 0.530731201171875,
+          "actualC": 0.7183920347189419,
+          "contradictoryActualC": -0.3660588318284422,
+          "naiveFiveB": 0.9999998720802112,
+          "blindC": 0.6156741100064144
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750007,
+      "testSeed": 850007,
+      "result": {
+        "seed": 850007,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.671875,
+          0.74609375
+        ],
+        "relativeCError": {
+          "aware": 0.7169292564971869,
+          "naive": 0.7269741370115312,
+          "blind": 0.7216808003895049,
+          "oracle": 0.7168915324947331,
+          "ignore": 0.7480435110628605,
+          "cut": 1,
+          "shuffledTag": 0.7400878594892848
+        },
+        "waveformCError": {
+          "aware": 0.7566480924754573,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2046,
+            "aware": 0.6744819944814661,
+            "naive": 0.6744819944814661,
+            "blind": 0.6822865086845894
+          },
+          "replay": {
+            "n": 2050,
+            "aware": 0.7592936945870156,
+            "naive": 0.779363855848841,
+            "blind": 0.7609982251837974
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.671875,
+          "replayC": 0.50128173828125,
+          "actualC": 0.7308376947419669,
+          "contradictoryActualC": -0.4305521245059286,
+          "naiveFiveB": 0.9999998414751053,
+          "blindC": 0.6034724479843953
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750008,
+      "testSeed": 850008,
+      "result": {
+        "seed": 850008,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.6796875,
+          0.7265625
+        ],
+        "relativeCError": {
+          "aware": 0.7642986958038718,
+          "naive": 0.7829523968731962,
+          "blind": 0.770137354066024,
+          "oracle": 0.7637291269524793,
+          "ignore": 0.8021222092211246,
+          "cut": 1,
+          "shuffledTag": 0.7914820129780056
+        },
+        "waveformCError": {
+          "aware": 0.7982544704136805,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2117,
+            "aware": 0.7344745841142695,
+            "naive": 0.7344745841142695,
+            "blind": 0.7358010247910041
+          },
+          "replay": {
+            "n": 1979,
+            "aware": 0.7962025080559499,
+            "naive": 0.8348106735839568,
+            "blind": 0.8068680307083839
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.6796875,
+          "replayC": 0.49383544921875,
+          "actualC": 0.7121228187106156,
+          "contradictoryActualC": -0.412254778672032,
+          "naiveFiveB": 0.9999998459692768,
+          "blindC": 0.5912455386112914
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750009,
+      "testSeed": 850009,
+      "result": {
+        "seed": 850009,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.72265625,
+          0.75390625
+        ],
+        "relativeCError": {
+          "aware": 0.7151265177254723,
+          "naive": 0.7290670935109922,
+          "blind": 0.7181430604023148,
+          "oracle": 0.7134885748928281,
+          "ignore": 0.749880206072703,
+          "cut": 1,
+          "shuffledTag": 0.7408267677602328
+        },
+        "waveformCError": {
+          "aware": 0.7565845585814631,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2073,
+            "aware": 0.6988453321598972,
+            "naive": 0.6988453321598972,
+            "blind": 0.6976340723587484
+          },
+          "replay": {
+            "n": 2023,
+            "aware": 0.7318101053070222,
+            "naive": 0.7600358089241914,
+            "blind": 0.7391589438498686
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.72265625,
+          "replayC": 0.5448150634765625,
+          "actualC": 0.7412370562130177,
+          "contradictoryActualC": -0.3824284217877092,
+          "naiveFiveB": 0.9999998699585744,
+          "blindC": 0.633620084269663
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750010,
+      "testSeed": 850010,
+      "result": {
+        "seed": 850010,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.703125,
+          0.6953125
+        ],
+        "relativeCError": {
+          "aware": 0.7187470412468937,
+          "naive": 0.7255770476243952,
+          "blind": 0.7215227516508083,
+          "oracle": 0.7187237024302855,
+          "ignore": 0.7544202953577042,
+          "cut": 1,
+          "shuffledTag": 0.7430905087785691
+        },
+        "waveformCError": {
+          "aware": 0.7582049345601931,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 1976,
+            "aware": 0.7019083548785011,
+            "naive": 0.7019083548785011,
+            "blind": 0.7065900461086105
+          },
+          "replay": {
+            "n": 2120,
+            "aware": 0.7344419677864831,
+            "naive": 0.747638055579991,
+            "blind": 0.7354411602127892
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.703125,
+          "replayC": 0.4888916015625,
+          "actualC": 0.6826704545454545,
+          "contradictoryActualC": -0.37280585106382946,
+          "naiveFiveB": 0.9999998592044064,
+          "blindC": 0.5759879032258064
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750011,
+      "testSeed": 850011,
+      "result": {
+        "seed": 850011,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.640625,
+          0.671875
+        ],
+        "relativeCError": {
+          "aware": 0.7378847176348367,
+          "naive": 0.7411464366490385,
+          "blind": 0.7396453900502031,
+          "oracle": 0.734813352637474,
+          "ignore": 0.7640886902809143,
+          "cut": 1,
+          "shuffledTag": 0.7511420702157154
+        },
+        "waveformCError": {
+          "aware": 0.7753885938131307,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2085,
+            "aware": 0.7171947027669663,
+            "naive": 0.7171947027669663,
+            "blind": 0.7241063704888342
+          },
+          "replay": {
+            "n": 2011,
+            "aware": 0.7593360756654042,
+            "naive": 0.7659795371682047,
+            "blind": 0.7557562084417784
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.640625,
+          "replayC": 0.430419921875,
+          "actualC": 0.6565597125867194,
+          "contradictoryActualC": -0.41155442804428033,
+          "naiveFiveB": 0.9999998230704025,
+          "blindC": 0.5301032110091742
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": false,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    },
+    {
+      "calibrationSeed": 750012,
+      "testSeed": 850012,
+      "result": {
+        "seed": 850012,
+        "n": 4096,
+        "calibration_n": 512,
+        "rho": [
+          0.73828125,
+          0.6875
+        ],
+        "relativeCError": {
+          "aware": 0.7334708952292271,
+          "naive": 0.7434488267797491,
+          "blind": 0.7370450928788604,
+          "oracle": 0.7334427274614539,
+          "ignore": 0.7614577412605286,
+          "cut": 1,
+          "shuffledTag": 0.7514306608338411
+        },
+        "waveformCError": {
+          "aware": 0.770975231504203,
+          "zero": 1
+        },
+        "byMode": {
+          "actual": {
+            "n": 2061,
+            "aware": 0.7069965643838252,
+            "naive": 0.7069965643838252,
+            "blind": 0.7090439359697173
+          },
+          "replay": {
+            "n": 2035,
+            "aware": 0.760283473053494,
+            "naive": 0.7803668183266874,
+            "blind": 0.7654040041269381
+          }
+        },
+        "note": "C is signed ground truth scored only after inference; cTrace is never an inference input."
+      },
+      "mechanism": {
+        "checks": {
+          "noSelfConfirmation": true,
+          "naiveFalseConfidence": true,
+          "actualRevises": true,
+          "cutPreservesB": true,
+          "indistinguishableInput": true,
+          "truthIsHidden": true
+        },
+        "values": {
+          "replayB": 0.73828125,
+          "replayC": 0.507568359375,
+          "actualC": 0.6766897441915043,
+          "contradictoryActualC": -0.33134458672875416,
+          "naiveFiveB": 0.9999998783879088,
+          "blindC": 0.5843859929645027
+        }
+      },
+      "checks": {
+        "nearOracle": true,
+        "beatNaive": true,
+        "beatBlind": true,
+        "tagMatters": true,
+        "mechanism": true
+      }
+    }
+  ],
+  "counts": {
+    "nearOracle": 12,
+    "beatNaive": 11,
+    "beatBlind": 12,
+    "tagMatters": 12,
+    "mechanism": 12
+  },
+  "medians": {
+    "aware": 0.722768757659441,
+    "naive": 0.7320840632174715,
+    "blind": 0.7266663603358116,
+    "oracle": 0.7221165738948536,
+    "ignore": 0.7579390183091164,
+    "cut": 1,
+    "shuffledTag": 0.74386415946192
+  },
+  "passed": true,
+  "interpretation": "Origin-aware Bayes beats a provenance-removed information bound; provenance itself is supplied, not learned."
+}
