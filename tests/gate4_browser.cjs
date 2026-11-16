@@ -6,6 +6,8 @@ const assert=require("node:assert/strict"),path=require("path");
  const page=await browser.newPage({viewport:{width:1360,height:1050}});
  const errors=[];page.on("pageerror",e=>errors.push(e.message));
  await page.goto("file://"+path.resolve("gate4.html"));
+ console.log("Gate4 initial DOM diagnostics",JSON.stringify({errors,loaded:await page.evaluate(()=>!!globalThis.Gate4),route:await page.locator("#route").textContent(),edges:await page.locator("#edges").textContent()}));
+ assert.deepEqual(errors,[],"Gate4 initial browser JavaScript exceptions");
  assert.match(await page.title(),/Gate 4/);
  assert.equal(await page.locator("#links path").count(),2);
  assert.match(await page.locator("#edges").textContent(),/B → C, delay 5/);
