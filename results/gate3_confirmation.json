@@ -1,0 +1,269 @@
+{
+  "protocol": "docs/GATE3_PROTOCOL.md",
+  "calendarDate": "2026-11-16",
+  "engine": "gate3_engine.js",
+  "status": "held-out confirmation",
+  "rows": [
+    {
+      "seed": 700101,
+      "testSeed": 880101,
+      "relativeMSE": {
+        "learned": 0.5941568822871123,
+        "cut": 1,
+        "cutBC": 0.7865815097356513,
+        "disconnected": 1,
+        "shuffled": 1.4654532879981614,
+        "unpaired": 1.018853790897557,
+        "supervised": 0.5875859014387168
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700102,
+      "testSeed": 880102,
+      "relativeMSE": {
+        "learned": 0.5882266864038572,
+        "cut": 1,
+        "cutBC": 0.7809386542207177,
+        "disconnected": 1,
+        "shuffled": 1.4233622486914308,
+        "unpaired": 1.0780614124654186,
+        "supervised": 0.5856129576851663
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700103,
+      "testSeed": 880103,
+      "relativeMSE": {
+        "learned": 0.5613031143330308,
+        "cut": 1,
+        "cutBC": 0.7636944603111193,
+        "disconnected": 1,
+        "shuffled": 1.3296680705608108,
+        "unpaired": 0.9520155061674173,
+        "supervised": 0.5449321723167185
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700104,
+      "testSeed": 880104,
+      "relativeMSE": {
+        "learned": 0.5678704273437597,
+        "cut": 1,
+        "cutBC": 0.7700017489121938,
+        "disconnected": 1,
+        "shuffled": 1.381536820329655,
+        "unpaired": 0.9212770641802972,
+        "supervised": 0.5687400209649102
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700105,
+      "testSeed": 880105,
+      "relativeMSE": {
+        "learned": 0.6283767725778049,
+        "cut": 1,
+        "cutBC": 0.799403999338601,
+        "disconnected": 1,
+        "shuffled": 1.3754656756518475,
+        "unpaired": 0.9916429208512721,
+        "supervised": 0.6252288241852666
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700106,
+      "testSeed": 880106,
+      "relativeMSE": {
+        "learned": 0.565547655287625,
+        "cut": 1,
+        "cutBC": 0.7705013018008591,
+        "disconnected": 1,
+        "shuffled": 1.4577473122233586,
+        "unpaired": 1.0335384508928147,
+        "supervised": 0.5580063195024566
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700107,
+      "testSeed": 880107,
+      "relativeMSE": {
+        "learned": 0.5887837025683187,
+        "cut": 1,
+        "cutBC": 0.7869317005835401,
+        "disconnected": 1,
+        "shuffled": 1.3992245364877578,
+        "unpaired": 1.0563025446223424,
+        "supervised": 0.5892962423747196
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700108,
+      "testSeed": 880108,
+      "relativeMSE": {
+        "learned": 0.5733634290892136,
+        "cut": 1,
+        "cutBC": 0.7706574179580487,
+        "disconnected": 1,
+        "shuffled": 1.4715026275922232,
+        "unpaired": 1.1209414682426178,
+        "supervised": 0.5673034720176686
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700109,
+      "testSeed": 880109,
+      "relativeMSE": {
+        "learned": 0.5775025179980076,
+        "cut": 1,
+        "cutBC": 0.7785815248743427,
+        "disconnected": 1,
+        "shuffled": 1.5319884365498968,
+        "unpaired": 0.9757847637828019,
+        "supervised": 0.5671990815608311
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700110,
+      "testSeed": 880110,
+      "relativeMSE": {
+        "learned": 0.5480495214675877,
+        "cut": 1,
+        "cutBC": 0.7613757902422587,
+        "disconnected": 1,
+        "shuffled": 1.4541933788046546,
+        "unpaired": 1.0334504101469364,
+        "supervised": 0.5382211392624875
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700111,
+      "testSeed": 880111,
+      "relativeMSE": {
+        "learned": 0.5764842573796679,
+        "cut": 1,
+        "cutBC": 0.766744709906529,
+        "disconnected": 1,
+        "shuffled": 1.48578787373964,
+        "unpaired": 1.0549801148851732,
+        "supervised": 0.5746729821341208
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    },
+    {
+      "seed": 700112,
+      "testSeed": 880112,
+      "relativeMSE": {
+        "learned": 0.5909422944321777,
+        "cut": 1,
+        "cutBC": 0.7827069068355459,
+        "disconnected": 1,
+        "shuffled": 1.462736197700908,
+        "unpaired": 1.0191325291090796,
+        "supervised": 0.5888737287090161
+      },
+      "checks": {
+        "primary": true,
+        "shuffle": true,
+        "unpaired": true,
+        "supervised": true,
+        "cut": true
+      }
+    }
+  ],
+  "gates": {
+    "primary": 12,
+    "shuffle": 12,
+    "unpaired": 12,
+    "supervised": 12,
+    "cut": 12
+  },
+  "median": {
+    "learned": 0.5769933876888378,
+    "cut": 1,
+    "cutBC": 0.7746194714161957,
+    "disconnected": 1,
+    "shuffled": 1.4559703455140065,
+    "unpaired": 1.026291469628008,
+    "supervised": 0.5717065015495155
+  },
+  "pass": true,
+  "confirmSeeds": "700101..700112",
+  "testSeeds": "880101..880112",
+  "source_ci_run": "https://github.com/anttiluode/QualiaAstra/actions/runs/43832196581",
+  "interpretation": "PASS of preregistered engineering gates, not a finding about consciousness or autonomous causal discovery."
+}
