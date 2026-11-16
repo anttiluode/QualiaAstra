@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QualiaAstra / Gate 7 — Screen Off the Shortcut, Keep the World</title>
+<style>
+:root{color-scheme:dark;--bg:#0a111d;--panel:#132336;--inset:#0b1a2a;--edge:#30435b;--ink:#edf4f6;--muted:#b1c0d0;--orange:#ffbd82;--mint:#87e0c0;--violet:#baa9fb;--red:#fa9b9d}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 88% -14%,#234053 0%,var(--bg) 60%);color:var(--ink);font:15px/1.52 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+main{max-width:1410px;margin:auto;padding:24px 30px 55px}
+header{display:flex;justify-content:space-between;gap:13px;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--edge)}
+.brand{letter-spacing:.16em;text-transform:uppercase;font-size:12px}.nav{display:flex;flex-wrap:wrap;gap:13px;font-size:12px}
+a{color:var(--mint)}a:hover{text-decoration:none}
+.intro{margin:32px 0 26px;max-width:990px}.intro p{color:var(--muted);font-size:16px}
+h1{font-size:clamp(34px,4.2vw,57px);line-height:1.07;letter-spacing:-.052em;font-weight:650;margin:11px 0 15px}
+h2{font-size:21px;font-weight:600;letter-spacing:-.01em;margin:6px 0 11px}
+h3{font-size:14px;font-weight:600;margin:2px 0 9px}
+.eyebrow{font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase}
+.badge{border-radius:50px;border:1px solid var(--edge);font-size:11px;color:var(--muted);padding:4px 9px}
+.small{font-size:12px;color:var(--muted)}
+.layout{display:grid;grid-template-columns:278px minmax(0,1fr);gap:17px}
+.panel{border:1px solid var(--edge);border-radius:14px;background:var(--panel);padding:20px;min-width:0}
+.workspace{display:grid;gap:17px}.controls{align-self:start}
+.controls .section{margin-top:18px;padding-top:18px;border-top:1px solid var(--edge)}
+.box{border:1px solid #293d54;border-radius:10px;background:var(--inset);padding:14px;min-width:0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+label{display:block;margin:11px 0 6px;font-size:12px;color:var(--muted)}
+input[type=number],select,button{width:100%;min-width:0;padding:9px 11px;font:inherit;background:#20354d;border:1px solid #556b82;border-radius:8px;color:var(--ink)}
+button{cursor:pointer}button:hover{background:#2c4861}button.primary{background:var(--orange);border-color:var(--orange);color:#192639;font-weight:700}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--mint);outline-offset:2px}
+input[type=checkbox]{accent-color:var(--mint)}input[type=range]{width:100%;accent-color:var(--orange)}
+.metric{font-size:31px;letter-spacing:-.042em;font-weight:650;line-height:1.2}
+.metric small{font-size:12px;color:var(--muted);font-weight:400}
+.note{font-size:12px;color:var(--muted);background:#0a1b2d;padding:13px 15px;border-left:2px solid var(--orange);margin:15px 0}
+.rail{height:9px;border-radius:8px;background:#273b52;overflow:hidden}.rail span{display:block;height:100%;background:var(--mint)}
+.diagram{width:100%;height:auto;max-height:250px;display:block}
+.diagram text{font-family:system-ui,Arial,sans-serif;fill:var(--ink);font-size:13px}.diagram .node{fill:#183047;stroke-width:2.5}.diagram .direct{stroke:var(--orange);fill:none}.diagram .relay{stroke:var(--mint);fill:none}.diagram .faint{stroke:#526278;fill:none;stroke-dasharray:5 5}
+canvas{display:block;width:100%;height:158px}.smallPlot{height:132px}
+.legend{display:flex;flex-wrap:wrap;gap:15px;font-size:11px;color:var(--muted)}
+.key{display:inline-block;width:18px;height:3px;vertical-align:middle;margin:0 6px 4px 0}
+table{width:100%;border-collapse:collapse;font-size:12px}
+td,th{border-bottom:1px solid var(--edge);padding:8px 6px;text-align:left}
+td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}
+th{font-weight:500;color:var(--muted)}
+.foot{font-size:12px;color:var(--muted);margin-top:22px}
+@media(max-width:940px){main{padding:18px 15px}.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.controls>.section{margin:0;padding:0;border:0}.controls>.note{grid-column:1/-1}}
+@media(max-width:570px){.controls,.grid2,.grid3{grid-template-columns:1fr}.panel{padding:15px}header{align-items:flex-start}.nav{gap:8px}}
+</style></head><body><main>
+<header><div class="brand">Qualia<span style="color:var(--orange)">Astra</span> / Gate 07</div>
+<nav class="nav"><a href="index.html">Gate 1</a><a href="gate2.html">Gate 2</a><a href="gate3.html">Gate 3</a><a href="gate4.html">Gate 4</a><a href="gate5.html">Gate 5</a><a href="gate6.html">Gate 6</a><a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE7_PROTOCOL.md">Protocol</a><a href="https://github.com/anttiluode/QualiaAstra">Source</a></nav></header>
+<section class="intro">
+<div class="eyebrow">Conditional wiring / imagined relay / physical-source evidence</div>
+<h1>Screen off the shortcut. Keep the world.</h1>
+<p>Once B explains C, the direct A→C connection should fade. But when B is missing, an A-only cue still needs to predict C. This laboratory combines conditional residual wiring with an internally reconstructed B state, while a noisy wave distinguishes new evidence from replay without a digital source tag at test.</p>
+<span class="badge">Claude screen/ → Gate 7 integration</span> <span class="badge">A→C should vanish</span> <span class="badge">A→imagined B→C must survive</span>
+</section>
+<div class="layout"><aside class="panel controls">
+<div><div class="eyebrow">01 / Learn</div><h2>Two competing axons</h2>
+<p class="small">Both learning rules see the same 512 fully observed A/B/C training episodes. One fits the remainder; the other fits the full C signal independently. A separate isolated-pathway session calibrates source waveforms.</p>
+<button id="retrain">Calibrate another population</button><p class="small" id="training">Loading coefficients</p>
+<label for="policy">Which C wiring rule?</label>
+<select id="policy"><option value="residual">Residual → complementary wiring</option><option value="similarity">Similarity → independent correlations</option><option value="similarityGain">Similarity with calibrated global gain</option><option value="noRelay">Residual, but no imagined B relay</option><option value="blind">Residual with no waveform source cue</option><option value="knownSource">Known-source oracle (diagnostic)</option><option value="shortcut">A-only shortcut (diagnostic)</option></select></div>
+<div class="section"><div class="eyebrow">02 / World</div><h2>A single sensory cue</h2>
+<button id="newWorld">New independent hidden world</button><p class="small" id="world"></p>
+<label for="A">Actual observation A</label><select id="A"><option value="1">A is positive</option><option value="-1">A is negative</option></select>
+<label for="z">B-like report</label><select id="z"><option value="1">Incoming z positive</option><option value="-1">Incoming z negative</option></select>
+<label for="origin">Generator only: where was z produced?</label>
+<select id="origin"><option value="replay">Imagined B (no new evidence)</option><option value="actual">Real B sensor (new evidence)</option></select>
+<label for="p">Sensor reliability <output id="pValue">95%</output></label><input type="range" id="p" min=".55" max=".95" step=".05" value=".95">
+</div>
+<div class="section"><div class="eyebrow">03 / Causal cuts</div><h2>Break or distort the circuit</h2>
+<label><input type="checkbox" id="cutBC"> Cut B→C, leave direct A→C intact</label>
+<label><input type="checkbox" id="swap"> Reverse real/replay waveform paths</label>
+<label><input type="checkbox" id="truth"> Reveal withheld C waveform</label>
+<button id="noise">Resample wave interference noise</button>
+<div class="note">The origin selector is used ONLY by the waveform generator, except in the explicitly labeled known-source oracle. The real physical receiver sees A, z, reliability and noisy waveform—not the origin flag.</div>
+</div>
+<div class="section"><div class="eyebrow">04 / Benchmark</div><h2>Compare the failures</h2>
+<button class="primary" id="benchmark">Evaluate all matched policies</button><p class="small" id="benchStatus">Development scenes only. Independent results appear below.</p></div>
+</aside>
+<div class="workspace">
+<section class="panel"><div class="row"><div><div class="eyebrow">Two possible ways to explain C</div><h2>Does the direct A shortcut have a job left?</h2></div><span class="badge" id="routeStatus">Weights from training</span></div>
+<svg viewBox="0 0 750 260" class="diagram" role="img" aria-label="A connects to B and C, B connects to C; direct A to C is pruned under residual screening">
+<defs><marker id="arrow7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L10 5 L0 10" fill="none" stroke="currentColor" stroke-width="1.5"/></marker></defs>
+<path class="faint" d="M135 84 H305 M437 84 H616"/>
+<path id="directLink" class="direct" d="M105 124 C140 224 622 224 661 124" stroke-width="1.5"/>
+<path class="relay" d="M133 83 H314 M433 83 H618" stroke-width="3"/>
+<circle class="node" cx="100" cy="83" r="36" stroke="#ffbd82"/>
+<circle class="node" cx="374" cy="83" r="40" stroke="#87e0c0"/>
+<circle class="node" cx="673" cy="83" r="40" stroke="#baa9fb"/>
+<text x="100" y="90" text-anchor="middle" font-size="21">A</text><text x="374" y="90" text-anchor="middle" font-size="21">B</text><text x="673" y="90" text-anchor="middle" font-size="21">C</text>
+<text x="230" y="67" text-anchor="middle">Imagined B when missing</text>
+<text x="526" y="67" text-anchor="middle">B→C selected</text>
+<text x="374" y="243" text-anchor="middle" id="directGraphLabel">Direct A→C: nearly zero</text>
+</svg>
+<div class="grid3">
+<div class="box"><div class="small">Direct A→C coefficient</div><div class="metric" id="directWeight">—</div><div class="small">Should vanish when B screens off A</div></div>
+<div class="box"><div class="small">B→C coefficient</div><div class="metric" id="relayWeight">—</div><div class="small">Receives real or imagined B state</div></div>
+<div class="box"><div class="small">C prediction</div><div class="metric" id="beliefC">—</div><div class="small" id="probC">B state carried onward</div></div>
+</div><p class="note" id="interpret">The same network must trust real B but continue predicting C when B is not externally observed.</p></section>
+<section class="panel"><div class="eyebrow">Physical origin and internal state remain separate</div><h2>What is being carried forward?</h2>
+<div class="grid3">
+<div class="box"><div class="small">Observed A</div><div class="metric" id="valueA">+1</div></div>
+<div class="box"><div class="small">Held B belief</div><div class="metric" id="beliefB">—</div><div class="small">Not an independent observation</div></div>
+<div class="box"><div class="small">Probability of new B evidence</div><div class="metric" id="physicalProb">—</div><div class="rail"><span id="physicalMeter" style="width:0"></span></div></div>
+</div>
+<div class="grid2" style="margin-top:14px">
+<div class="box"><h3 style="color:var(--orange)">Incoming physical B-like waveform</h3><canvas class="smallPlot" id="inWave" aria-label="Noisy real or replay physical waveform"></canvas></div>
+<div class="box"><h3 style="color:var(--mint)">Internally predicted C waveform</h3><canvas class="smallPlot" id="outWave" aria-label="Predicted and optionally true withheld C waveform"></canvas></div>
+</div>
+<div class="legend" style="margin-top:13px"><span><i class="key" style="background:var(--orange)"></i>Input wave</span><span><i class="key" style="background:var(--mint)"></i>Held C prediction</span><span><i class="key" style="background:#98a8bd"></i>Real withheld C (optional)</span></div>
+<p class="small" id="truthNote">The true C waveform is hidden until explicitly revealed; signed C error is the primary measurement.</p></section>
+<section class="panel"><div class="eyebrow">Same A and message, different origin</div><h2>B really happened — or B was imagined</h2>
+<div class="grid2">
+<div class="box"><h3>Genuine B-like sensory event</h3><div class="metric" id="realC">—</div><div class="small" id="realMeaning">C expectation after a new physical event</div></div>
+<div class="box"><h3>Internally replayed B expectation</h3><div class="metric" id="replayC">—</div><div class="small" id="replayMeaning">C expectation from retained state</div></div>
+</div>
+<p class="small">Both candidate histories use the same A and signed z, the same sensor reliability and the same generated noise parameters; only the physical source response differs. A source tag is not passed to the residual or similarity network.</p></section>
+<section class="panel"><div class="eyebrow">Fair policy comparisons</div><h2>Where does double counting hurt?</h2><div id="results"><p class="small">Run the benchmark to compare residual screening with imagined relay, univariate similarity, gain-calibrated similarity, residual without imagined B, source-blind residual, a source oracle, swapped/equalized waveforms, and direct A-only prediction.</p></div></section>
+</div></div>
+<section class="panel" style="margin-top:17px">
+<div class="eyebrow">Frozen twelve-population confirmation</div>
+<h2>Explaining B away is not the same as forgetting B.</h2>
+<div class="grid2">
+<div class="box"><div class="small">Independent populations passing seven registered controls</div><div class="metric" style="color:var(--mint)">12/12 <small>all criteria</small></div><div class="small">Near-zero redundant A connection, successful imagined relay, source-wave causal controls</div></div>
+<div class="box"><div class="small">Median absolute direct A→C weight</div><div class="metric"><span style="color:var(--mint)">0.025</span> <small>residual</small></div><div class="small">Versus 0.496 for independent similarity, fitted to identical training events</div></div></div>
+<table style="margin-top:14px"><thead><tr><th>Model</th><th>Median C error ↓</th></tr></thead><tbody>
+<tr><td>Exact known-source and known-transition Bayes</td><td>0.7252</td></tr>
+<tr><td>Residual screening + imagined B + waveform provenance</td><td><strong>0.7260</strong></td></tr>
+<tr><td>Residual screening + optimal no-wave source inference</td><td>0.7308</td></tr>
+<tr><td>Similarity, with global gain refitted</td><td>0.7373</td></tr>
+<tr><td>Residual but no imagined B relay</td><td>0.8372</td></tr>
+<tr><td>Independent similarity, counting A twice</td><td>0.9538</td></tr>
+</tbody></table>
+<p class="small">A proof-of-concept for information routing, not a physical neuron. Ordinary conditional regression has exactly the same weights as the residual learner; we provide that conventional equivalence explicitly. Source-pathway identification is calibrated from isolated known-origin stimulation, not learned without a teacher. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE7_RESULTS.md">Technical results</a> · <a href="https://github.com/anttiluode/QualiaAstra/blob/main/results/gate7_confirmation.json">12-seed receipt</a>.</p>
+</section>
+<p class="foot">Gate 7 is separate from Claude's physical <a href="https://github.com/anttiluode/QualiaClaude/tree/main/screen">screen/</a> experiment: our conditional weights come from batch sufficient statistics, not the real shared wave-field DampingReturnNode. A physical circuit must still discover its useful inputs, learn stable local timing, and distinguish repeated copies of one event from independent observations. Nothing here establishes qualia.</p>
+</main>
+<script src="gate5_engine.js"></script><script src="gate6_engine.js"></script><script src="gate7_engine.js"></script><script>
+"use strict";
+const $=id=>document.getElementById(id),G5=globalThis.Gate5,G6=globalThis.Gate6,G7=globalThis.Gate7;
+let seed=17001,model=G7.train(seed,512,320),count=0,world=null,noiseSeed=0;
+const sign=x=>(x>=0?"+":"")+x.toFixed(3);
+function plot(id,lines,colors,mark=[]){
+ const canvas=$(id),size=canvas.getBoundingClientRect(),w=Math.max(1,size.width),h=Math.max(1,size.height),pixel=window.devicePixelRatio||1,ctx=canvas.getContext("2d");
+ canvas.width=Math.ceil(w*pixel);canvas.height=Math.ceil(h*pixel);ctx.scale(pixel,pixel);ctx.clearRect(0,0,w,h);
+ let max=.5;for(const v of lines)for(const x of v)max=Math.max(max,Math.abs(x));max*=1.2;
+ ctx.strokeStyle="#2b425a";ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+ for(let i=0;i<lines.length;i++){
+ ctx.strokeStyle=colors[i];ctx.lineWidth=i===0?2.5:1.25;ctx.setLineDash(mark.includes(i)?[5,4]:[]);
+ ctx.beginPath();for(let t=0;t<lines[i].length;t++){const x=9+(w-18)*t/(lines[i].length-1),y=h/2-lines[i][t]*h*.42/max;if(t)ctx.lineTo(x,y);else ctx.moveTo(x,y);}ctx.stroke();}
+ ctx.setLineDash([]);
+}
+function cue(){return {A:Number($("A").value),z:Number($("z").value),p:Number($("p").value)};}
+function packet(source,nuisance){const q=cue();return {...q,trace:G6.waveform("cable",source,q.z,nuisance,$("swap").checked)};}
+function render(){
+ if(!world)return;
+ const q=cue(),p=$("policy").value,origin=$("origin").value,nuisance=G6.nuisance(G5.rng(noiseSeed));
+ const data=packet(origin,nuisance);
+ const input=(p==="knownSource"?{...data,provenance:origin}:data);
+ const result=G7.predict(model,input,p,{cutBC:$("cutBC").checked});
+ const wA=result.wA,wB=result.wB;
+ $("training").textContent="Body "+seed+" · E[AB] = "+model.screen.correlations.ab.toFixed(3)+
+ " · 512 observed episodes; known-source pulse calibration.";
+ $("routeStatus").textContent="Direct A→C: "+Math.abs(wA)<.10?"A is mostly screened":"Residual A carries some weight";
+ $("directGraphLabel").textContent="Direct A→C weight "+sign(wA)+" · B→C "+sign(wB);
+ $("directLink").setAttribute("stroke-width",String(1+10*Math.min(1,Math.abs(wA))));
+ $("directWeight").textContent=sign(wA);$("relayWeight").textContent=sign(wB);
+ $("beliefC").textContent=sign(result.mC);$("beliefB").textContent=sign(result.mB);
+ $("valueA").textContent=q.A>0?"+1":"−1";
+ $("probC").textContent=(50*(1+result.mC)).toFixed(1)+"% implied P(C positive), unclipped";
+ $("pValue").textContent=(q.p*100).toFixed(0)+"%";
+ $("physicalProb").textContent=result.sourceProbability===null?"—":(result.sourceProbability*100).toFixed(1)+"%";
+ $("physicalMeter").style.width=result.sourceProbability===null?"0%":(result.sourceProbability*100).toFixed(1)+"%";
+ if($("cutBC").checked)$("interpret").textContent="B remains available internally, but C has lost the w_B·B contribution. Any tiny remaining C signal is the directly learned A shortcut; it was NOT forcibly set to zero.";
+ else if(p==="noRelay")$("interpret").textContent="This model receives the same physical source probability but deliberately discards the B expectation associated with replay. It loses C predictive power when the world does not supply B.";
+ else if(p==="similarity")$("interpret").textContent="Both A and B fit C independently. The direct A shortcut can double count the information already embodied in B, especially when B is imagined from A.";
+ else if(p==="knownSource")$("interpret").textContent="Diagnostic oracle only: true source identity was explicitly supplied, so this is not the waveform-only receiver.";
+ else if(p==="shortcut")$("interpret").textContent="A-only shortcut predicts C from A correlation alone, without using B. It cannot revise after a contradictory B observation.";
+ else $("interpret").textContent="C uses the internally held B state, whether B was inferred from A alone or revised by genuinely new sensory evidence. Redundant direct A input is near zero.";
+ plot("inWave",[data.trace.map(v=>v*q.z)],["#ffbd82"]);
+ const traces=[result.predictedTrace],colors=["#87e0c0"];
+ if($("truth").checked){traces.push(world.cTrace);colors.push("#98a8bd");}
+ plot("outWave",traces,colors,[1]);
+ $("truthNote").textContent=$("truth").checked?"The displayed true C wave belongs to the original generated world. If you manually changed A/z/source, this is now a counterfactual comparison; hidden C truth never affects the model.":
+ "Withheld C truth is not supplied to prediction. Our benchmark scores signed C; plotted waveforms are synthetic overlays.";
+ // Same sign and reliability, identical nuisance, but different physical source.
+ const real=G7.predict(model,{...packet("actual",nuisance),provenance:"actual"},"residual");
+ const replay=G7.predict(model,{...packet("replay",nuisance),provenance:"replay"},"residual");
+ $("realC").textContent=sign(real.mC);$("replayC").textContent=sign(replay.mC);
+ $("realMeaning").textContent="B held "+sign(real.mB)+" · C from genuine sensory updating";
+ $("replayMeaning").textContent="B held "+sign(replay.mB)+" · C from imagined B; no new evidence";
+}
+function newWorld(){
+ count++;world=G5.newCase(G5.rng(221711+count*109));
+ $("A").value=String(world.A);$("z").value=String(world.z);
+ $("p").value=String(world.p);$("origin").value=world.provenance;
+ $("cutBC").checked=false;$("swap").checked=false;$("truth").checked=false;
+ noiseSeed=33001+count*661;
+ $("world").textContent="World "+count+" generated. B/C hidden; A and wave only are observed.";
+ render();
+}
+$("newWorld").addEventListener("click",newWorld);
+$("retrain").addEventListener("click",()=>{seed+=19;model=G7.train(seed,512,320);render();});
+$("noise").addEventListener("click",()=>{noiseSeed+=121;render();});
+for(const id of ["A","z","p","origin","policy","cutBC","swap","truth"])$(id).addEventListener("input",render);
+$("benchmark").addEventListener("click",()=>{
+ const b=G7.benchmark(model,20001,2048);
+ const title={
+ residual:"Screened + imagined B + physical-source wave",
+ similarity:"Independent similarity + imagined B",
+ similarityGain:"Similarity with refitted global gain",
+ noRelay:"Screened, no imagined B",
+ blind:"Screened, source-blind",
+ knownSource:"Screened, known-source reference",
+ oracle:"Exact true-parameter and known-source Bayes",
+ swapped:"Screened, physical source wave reversed",
+ equalized:"Screened, equalized source responses",
+ shortcut:"A-only shortcut",jointOls:"Joint OLS (equivalent to conditional fit)"};
+ $("results").innerHTML='<table><thead><tr><th>Comparison policy</th><th>C error ↓</th></tr></thead><tbody>'+
+ G7.KEYS.map(k=>"<tr><td>"+title[k]+"</td><td>"+b.errors[k].toFixed(4)+"</td></tr>").join("")+
+ '</tbody></table><p class="small">When only an imagined B is present (REPLAY subset of '+b.byMode.replay.n+' worlds): residual error '+b.byMode.replay.residual.toFixed(3)+
+ ' vs '+b.byMode.replay.noRelay.toFixed(3)+' without the imagined relay. The standard joint least-squares learner ties conditional residual screening exactly, as the normal equations require. All policies use identical held-out worlds; this run uses a development seed, not the frozen confirmation batch.</p>';
+ $("benchStatus").textContent="Development test seed 20001 · "+b.n+" hidden-C cases.";
+});
+window.addEventListener("resize",render);
+newWorld();
+</script></body></html>
