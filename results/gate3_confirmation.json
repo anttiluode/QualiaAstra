@@ -264,6 +264,6 @@
   "pass": true,
   "confirmSeeds": "700101..700112",
   "testSeeds": "880101..880112",
-  "source_ci_run": "https://github.com/anttiluode/QualiaAstra/actions/runs/43832196581",
-  "interpretation": "PASS of preregistered engineering gates, not a finding about consciousness or autonomous causal discovery."
+  "source_ci_run": "https://github.com/anttiluode/QualiaAstra/actions/runs/43832754510",
+  "interpretation": "PASS of engineering gates, not autonomous causal discovery or consciousness. Final confirmation audit also verifies per-seed intervention and true absolute gap."
 }
