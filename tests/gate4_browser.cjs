@@ -1,0 +1,37 @@
+/* Gate 4 offline/browser automation */
+const {chromium}=require("playwright");
+const assert=require("node:assert/strict"),path=require("path");
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ const page=await browser.newPage({viewport:{width:1360,height:1050}});
+ const errors=[];page.on("pageerror",e=>errors.push(e.message));
+ await page.goto("file://"+path.resolve("gate4.html"));
+ assert.match(await page.title(),/Gate 4/);
+ assert.equal(await page.locator("#links path").count(),2);
+ assert.match(await page.locator("#edges").textContent(),/B → C, delay 5/);
+ assert.match(await page.locator("#edges").textContent(),/A → B, delay 5/);
+ const intact=await page.locator("#stateC").textContent();
+ assert(!/Held energy 0\.00/.test(intact),"C must retain a predicted waveform when A is given");
+ await page.locator("#intervene").selectOption("cutBC");
+ assert.match(await page.locator("#stateC").textContent(),/Held energy 0\.00/);
+ assert.doesNotMatch(await page.locator("#stateB").textContent(),/Held energy 0\.00/);
+ await page.locator("#intervene").selectOption("intact");
+ await page.locator("#method").selectOption("dead");
+ assert.equal(await page.locator("#links path").count(),0);
+ assert.equal(await page.locator("#error").textContent(),"1.000");
+ assert.match(await page.locator("#meaning").textContent(),/Zero transmitted prediction/);
+ await page.locator("#method").selectOption("hebb");
+ assert.equal(await page.locator("#links path").count(),2);
+ await page.locator("#benchmark").click();
+ assert.match(await page.locator("#results").textContent(),/Delayed signed correlation/);
+ assert.match(await page.locator("#results").textContent(),/no evidence for a unique residual-rule advantage/);
+ await page.screenshot({path:"/tmp/qualia-gate4-desktop.png",fullPage:true});
+ await page.setViewportSize({width:390,height:840});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,"Gate 4 mobile overflow");
+ await page.screenshot({path:"/tmp/qualia-gate4-mobile.png",fullPage:true});
+ await page.locator("#new").click();
+ await page.locator("#train").click();
+ assert.deepEqual(errors,[]);
+ console.log("Gate 4 browser: offline, wiring, held prediction, causal cut, dead baseline, comparisons, mobile, replay passed");
+ await browser.close();
+})().catch(e=>{console.error(e);process.exit(1);});
