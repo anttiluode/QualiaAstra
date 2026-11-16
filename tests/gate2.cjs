@@ -11,8 +11,8 @@ assert(hidden.means.every(v=>v===0),"Raw observations alone must preserve global
 const q=1.35,baseline=E.infer(a,trial.raw,q),cut=E.infer(a,trial.raw,q,"cut"),reverse=E.infer(a,trial.raw,q,"reverse");
 assert(Math.abs(baseline.means[0])>.5);
 assert.equal(cut.means[0],baseline.means[0]);
-assert.equal(cut.means[1],0);
-assert.equal(cut.means[2],0);
+assert(Math.abs(cut.means[1])===0);
+assert(Math.abs(cut.means[2])===0);
 assert.equal(reverse.means[0],baseline.means[0]);
 assert(Math.abs(reverse.means[1]+baseline.means[1])<1e-12);
 assert(Math.abs(reverse.means[2]+baseline.means[2])<1e-12);
