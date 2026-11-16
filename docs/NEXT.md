@@ -44,3 +44,19 @@ and mutual-consensus/feedback questions above remain unanswered.
 
 The new lab is not a preregistered scientific confirmation. Gate 1's numerical
 receipt, protocol and original results are unchanged.
+
+## Gate 3 completed: removing source-sign labels (16 November 2026)
+
+[Gate 3's live viewer](../gate3.html), [registered protocol](GATE3_PROTOCOL.md),
+[scientific write-up](GATE3_RESULTS.md) and [12-seed receipt](../results/gate3_confirmation.json)
+are published. Two-state raw-sensor prototypes learned without labels, while
+later observed B/C waveforms drove local predictive-error learning. Median
+relative withheld-wave MSE was 0.577 versus 0.572 for Gate 2 with sign labels;
+all five predeclared engineering gates passed across twelve independent training
+populations. The **K=2 latent size, topology, order and propagation algebra are
+still supplied**. No physical wave propagation or dendrite is implemented.
+
+Still open: learn graph topology and causal factors with no fixed A→B→C wiring;
+make recipient populations mutually revise one another through recurrent
+prediction/error exchanges; then isolate any benefit of state-shaped pings at
+matched signal/energy budget, without treating predictive success as qualia.
