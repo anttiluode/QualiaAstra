@@ -162,7 +162,7 @@ function render(){
  const wA=result.wA,wB=result.wB;
  $("training").textContent="Body "+seed+" · E[AB] = "+model.screen.correlations.ab.toFixed(3)+
  " · 512 observed episodes; known-source pulse calibration.";
- $("routeStatus").textContent="Direct A→C: "+Math.abs(wA)<.10?"A is mostly screened":"Residual A carries some weight";
+ $("routeStatus").textContent=Math.abs(wA)<.10?"A is mostly screened":"Direct A→C still contributes";
  $("directGraphLabel").textContent="Direct A→C weight "+sign(wA)+" · B→C "+sign(wB);
  $("directLink").setAttribute("stroke-width",String(1+10*Math.min(1,Math.abs(wA))));
  $("directWeight").textContent=sign(wA);$("relayWeight").textContent=sign(wB);
