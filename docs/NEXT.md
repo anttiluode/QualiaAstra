@@ -80,3 +80,27 @@ interventions and shifting contexts, predeclaring what future-error learning add
 beyond delayed correlation. Physical cable adaptation, literal local axon
 sprouting, continuous apical states and matched-cost state-shaped pings are still
 open. Do not conflate absence of emitted spikes with absence of sensory error.
+
+## Gate 5 completed: distinguish evidence from self-generated replay
+
+[Live Gate 5 viewer](../gate5.html) · [Frozen protocol](GATE5_PROTOCOL.md) ·
+[Results](GATE5_RESULTS.md) · [Full twelve-seed receipt](../results/gate5_confirmation.json).
+
+A signed Markov A→B→C chain tests a new information-accounting issue. The
+same signed B-like report can be real sensory evidence or internally generated
+replay. Given an explicit trustworthy provenance flag, the learned model
+correctly ignores self-replay as independent evidence while incorporating
+genuine B readings. It reaches median relative C error 0.723 vs 0.727 for
+a Bayes-optimal source-blind receiver, 0.732 for the naive replay counter and
+0.722 for exact Bayes. All five precommitted checks passed over 12 independent
+populations, though the naive margin reached only 11/12.
+
+This is **not** a neural discovery: the model is provided the origin tag,
+Markov chain and update algebra. The no-tag receiver is information limited,
+not structurally inferior. The next important gate would remove the explicit
+provenance bit and see whether segregated feedforward (world) and recurrent
+(prediction) channels plus causal intervention can support reliable origin
+attribution. If both conditions are observationally identical on *all*
+available channels, nothing can distinguish them. Separately, Claude's
+physical chain still has incomplete second-hop strength despite solving
+clock resets; no result here makes that physical weakness disappear.
