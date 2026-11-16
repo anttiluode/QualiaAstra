@@ -168,7 +168,7 @@ function render(){
  $("directWeight").textContent=sign(wA);$("relayWeight").textContent=sign(wB);
  $("beliefC").textContent=sign(result.mC);$("beliefB").textContent=sign(result.mB);
  $("valueA").textContent=q.A>0?"+1":"−1";
- $("probC").textContent=(50*(1+result.mC)).toFixed(1)+"% implied P(C positive), unclipped";
+ $("probC").textContent=Math.abs(result.mC)>1?"Uncalibrated signed score exceeds ±1; not a valid probability":(50*(1+result.mC)).toFixed(1)+"% implied probability C positive";
  $("pValue").textContent=(q.p*100).toFixed(0)+"%";
  $("physicalProb").textContent=result.sourceProbability===null?"—":(result.sourceProbability*100).toFixed(1)+"%";
  $("physicalMeter").style.width=result.sourceProbability===null?"0%":(result.sourceProbability*100).toFixed(1)+"%";
