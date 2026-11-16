@@ -1,0 +1,27 @@
+/* Gate 2 numeric invariants: node tests/gate2.cjs */
+const assert=require("node:assert/strict");
+require("../gate2_engine.js");
+const E=globalThis.Gate2;
+assert(E && typeof E.train==="function");
+const a=E.train(1401,256),b=E.train(1401,256);
+assert.deepEqual(a,b,"calibration must be deterministic");
+const trial=E.newCase(E.rng(8891));
+const hidden=E.infer(a,trial.raw,null);
+assert(hidden.means.every(v=>v===0),"Raw observations alone must preserve global sign ambiguity");
+const q=1.35,baseline=E.infer(a,trial.raw,q),cut=E.infer(a,trial.raw,q,"cut"),reverse=E.infer(a,trial.raw,q,"reverse");
+assert(Math.abs(baseline.means[0])>.5);
+assert.equal(cut.means[0],baseline.means[0]);
+assert.equal(cut.means[1],0);
+assert.equal(cut.means[2],0);
+assert.equal(reverse.means[0],baseline.means[0]);
+assert(Math.abs(reverse.means[1]+baseline.means[1])<1e-12);
+assert(Math.abs(reverse.means[2]+baseline.means[2])<1e-12);
+const perturbed={...trial,signs:[-1,-1,-1],relation:[-1,-1],withheld:[Array(E.N).fill(999),Array(E.N).fill(-999)]};
+assert.deepEqual(E.infer(a,perturbed.raw,q),baseline,"Test truth must not influence inference");
+const result=E.benchmark(a,20261116,512);
+assert(result.relativeMSE.learned<.75);
+assert.equal(result.relativeMSE.cut,1);
+assert.equal(result.relativeMSE.disconnected,1);
+assert(result.relativeMSE.shuffled>result.relativeMSE.learned);
+assert(result.relativeMSE.oracle<result.relativeMSE.learned);
+console.log("Gate 2 numeric checks pass:",JSON.stringify(result));
