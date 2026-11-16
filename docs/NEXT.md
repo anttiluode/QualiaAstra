@@ -134,3 +134,38 @@ message identities under recurrent replay versus truly independent new
 sensory events. A source signature does not itself tell a receiving
 neuron that eight waves belong to one event. Test causal event/latch
 mechanisms while retaining sensitivity to contradictory real evidence.
+
+## Gate 7 completed: screening-off and imagined relay can coexist
+
+[Interactive Gate 7](../gate7.html) · [Frozen protocol](GATE7_PROTOCOL.md) ·
+[Full report](GATE7_RESULTS.md) · [12-population receipt](../results/gate7_confirmation.json).
+
+Motivated by Claude's [QualiaClaude/screen/](https://github.com/anttiluode/QualiaClaude/tree/main/screen),
+which confirmed near-total suppression of redundant A→C wave-field weights
+when *real* B was available, but could not predict C from A alone after
+suppressing that shortcut. In Gate 7's deliberately engineered linear
+surrogate, A and B both compete as candidate predictors of C during training,
+while test B can be **imagined from the A cue** when a physical-source
+waveform indicates replay rather than fresh B evidence.
+
+All seven registered tests passed across twelve independent calibrated
+populations. Median absolute A→C weight fell to **0.025** for conditional
+residual fitting versus **0.496** for independent similarity fitting.
+With imagined B, relative C squared error was **0.726**, near exact
+Bayes **0.725**; disabling the B prediction raised error to **0.837**,
+and independently fitting both redundant paths gave **0.954**.
+A global gain correction improves similarity to **0.737**, and
+standard joint OLS exactly ties the residual method: conditional
+regression is known mathematics, not a novel neural learning rule.
+
+**The decisive missing integration is physical.** Gate 7 does not use
+Claude's actual wave-field clocks or growing vines. Its Markov graph,
+factor identities, Bayesian inference and full observational training
+data are supplied; its waveform-source calibration uses known isolated
+stimulation. A defensible next test should combine the *real* wave-tip
+residual screening in Claude's engine with the imagined B path and
+fade-clock latch, and compare with a conventional linear delayed
+predictor under equal signal and wiring budget. Test contradictory
+real B, duplicate internal replay, clock reset, and physical source
+swap separately. Keep packet origin and repeated event identity
+distinct; no current gate establishes qualia.
