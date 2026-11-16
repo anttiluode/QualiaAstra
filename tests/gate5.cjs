@@ -1,0 +1,37 @@
+/* Gate 5: source-tag provenance, no double-counting, and test-truth isolation. */
+const assert=require("node:assert/strict");
+require("../gate5_engine.js");
+const E=globalThis.Gate5;
+assert(E && E.N===48 && E.RHO===.7);
+const model=E.train(17001,512);
+assert.deepEqual(model,E.train(17001,512));
+assert(model.rho1>.5&&model.rho2>.5);
+const obs={A:1,z:1,p:.95,provenance:"replay"};
+const rep=E.infer(model,obs),phys=E.infer(model,{...obs,provenance:"actual"});
+const blind1=E.infer(model,obs,"blind"),blind2=E.infer(model,{...obs,provenance:"actual"},"blind");
+assert.deepEqual(blind1,blind2,"Without source tags equal reports must remain indistinguishable");
+assert(phys.mC>rep.mC);
+assert(blind1.mC>rep.mC&&blind1.mC<phys.mC,"No-tag Bayes should interpolate when signals coincide");
+const naive=E.infer(model,obs,"naive",{copies:5});
+assert(Math.abs(naive.mB)>Math.abs(rep.mB),"Naive replay becomes falsely confident");
+assert.deepEqual(E.infer(model,obs,"aware",{copies:5}),rep,"Duplicate replay cannot be new evidence");
+const cut=E.infer(model,{...obs,provenance:"actual"},"cut");
+assert.equal(cut.mC,0);assert.equal(cut.mB,phys.mB);
+const contrad=E.infer(model,{A:1,z:-1,p:.95,provenance:"actual"});
+assert(contrad.mB<0&&contrad.mC<0);
+const imagContrad=E.infer(model,{A:1,z:-1,p:.95,provenance:"replay"});
+assert(imagContrad.mC>0,"Provenance, not a synthetic negative echo, drives change");
+assert.deepEqual(E.infer(model,obs),E.infer(model,{...obs,B:999,C:999,cTrace:Array(E.N).fill(1000)}),
+ "Withheld B/C data and truth must not reach inference");
+const checks=E.mechanism(model);
+assert(Object.values(checks.checks).every(Boolean));
+const b=E.benchmark(model,20001,4096),e=b.relativeCError;
+assert(e.aware<.8);
+assert(e.naive>e.aware);
+assert(e.blind>e.aware);
+assert(e.oracle<=e.aware+.015);
+assert(e.ignore>e.aware);
+assert(e.shuffledTag>e.aware);
+assert.equal(e.cut,1);
+assert.equal(b.byMode.actual.n+b.byMode.replay.n,4096);
+console.log("Gate 5 development mechanism checks pass:",JSON.stringify({model,e,mechanism:checks}));
