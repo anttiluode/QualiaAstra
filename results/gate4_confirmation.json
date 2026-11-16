@@ -1,0 +1,1585 @@
+{
+  "date": "2026-11-16",
+  "protocol": "docs/GATE4_PROTOCOL.md",
+  "engine": "gate4_engine.js",
+  "ci_run": "https://github.com/anttiluode/QualiaAstra/actions/runs/43856979093",
+  "note": "The two hypotheses are independent. Do not misrepresent a tie as a win for residual-specific learning.",
+  "rows": [
+    {
+      "seed": 740001,
+      "n": 160,
+      "testSeed": 840001,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740001,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.04946079053862
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.063484209419629
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740001,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.04946079053862
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.063484209419629
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740001,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.04946079053862
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.063484209419629
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740001,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.063484209419629
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.04946079053862
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740001,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.5604762576919203,
+          "surpriseRate": 0.0860126201923077,
+          "baselineSurpriseRate": 0.08548677884615384,
+          "heldPredictionEnergy": 0.03537590480455148
+        },
+        "hebb": {
+          "error": 0.5604762576919203,
+          "surpriseRate": 0.0860126201923077,
+          "baselineSurpriseRate": 0.08548677884615384,
+          "heldPredictionEnergy": 0.03537590480455148
+        },
+        "coactivity": {
+          "error": 0.5604762576919203,
+          "surpriseRate": 0.0860126201923077,
+          "baselineSurpriseRate": 0.08548677884615384,
+          "heldPredictionEnergy": 0.03537590480455148
+        },
+        "oracle": {
+          "error": 0.5604762576919203,
+          "surpriseRate": 0.0860126201923077,
+          "baselineSurpriseRate": 0.08548677884615384,
+          "heldPredictionEnergy": 0.03537590480455148
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.08548677884615384,
+          "baselineSurpriseRate": 0.08548677884615384,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740002,
+      "n": 160,
+      "testSeed": 840002,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740002,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 0.9928527128722946
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9363397568201925
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740002,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 0.9928527128722946
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9363397568201925
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740002,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 0.9928527128722946
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9363397568201925
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740002,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9363397568201925
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 0.9928527128722946
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740002,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.45586796809487995,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.09510216346153846,
+          "heldPredictionEnergy": 0.02625596194671443
+        },
+        "hebb": {
+          "error": 0.45586796809487995,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.09510216346153846,
+          "heldPredictionEnergy": 0.02625596194671443
+        },
+        "coactivity": {
+          "error": 0.45586796809487995,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.09510216346153846,
+          "heldPredictionEnergy": 0.02625596194671443
+        },
+        "oracle": {
+          "error": 0.45586796809487995,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.09510216346153846,
+          "heldPredictionEnergy": 0.02625596194671443
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.09510216346153846,
+          "baselineSurpriseRate": 0.09510216346153846,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740003,
+      "n": 160,
+      "testSeed": 840003,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740003,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0526656938356336
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9946459223059573
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740003,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0526656938356336
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9946459223059573
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740003,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0526656938356336
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9946459223059573
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740003,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9946459223059573
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0526656938356336
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740003,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.45072162780552344,
+          "surpriseRate": 0.08270733173076923,
+          "baselineSurpriseRate": 0.0957782451923077,
+          "heldPredictionEnergy": 0.031003895113234318
+        },
+        "hebb": {
+          "error": 0.45072162780552344,
+          "surpriseRate": 0.08270733173076923,
+          "baselineSurpriseRate": 0.0957782451923077,
+          "heldPredictionEnergy": 0.031003895113234318
+        },
+        "coactivity": {
+          "error": 0.45072162780552344,
+          "surpriseRate": 0.08270733173076923,
+          "baselineSurpriseRate": 0.0957782451923077,
+          "heldPredictionEnergy": 0.031003895113234318
+        },
+        "oracle": {
+          "error": 0.45072162780552344,
+          "surpriseRate": 0.08270733173076923,
+          "baselineSurpriseRate": 0.0957782451923077,
+          "heldPredictionEnergy": 0.031003895113234318
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.0957782451923077,
+          "baselineSurpriseRate": 0.0957782451923077,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740004,
+      "n": 160,
+      "testSeed": 840004,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740004,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0731855606605836
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9195126518434127
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740004,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0731855606605836
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9195126518434127
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740004,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0731855606605836
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9195126518434127
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740004,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9195126518434127
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0731855606605836
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740004,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.4377151951005094,
+          "surpriseRate": 0.07549579326923077,
+          "baselineSurpriseRate": 0.09224759615384616,
+          "heldPredictionEnergy": 0.02689929683795215
+        },
+        "hebb": {
+          "error": 0.4377151951005094,
+          "surpriseRate": 0.07549579326923077,
+          "baselineSurpriseRate": 0.09224759615384616,
+          "heldPredictionEnergy": 0.02689929683795215
+        },
+        "coactivity": {
+          "error": 0.4377151951005094,
+          "surpriseRate": 0.07549579326923077,
+          "baselineSurpriseRate": 0.09224759615384616,
+          "heldPredictionEnergy": 0.02689929683795215
+        },
+        "oracle": {
+          "error": 0.4377151951005094,
+          "surpriseRate": 0.07549579326923077,
+          "baselineSurpriseRate": 0.09224759615384616,
+          "heldPredictionEnergy": 0.02689929683795215
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.09224759615384616,
+          "baselineSurpriseRate": 0.09224759615384616,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740005,
+      "n": 160,
+      "testSeed": 840005,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740005,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0108447360490165
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0245693320672813
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740005,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0108447360490165
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0245693320672813
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740005,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0108447360490165
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0245693320672813
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740005,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0245693320672813
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0108447360490165
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740005,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.43285753809593075,
+          "surpriseRate": 0.07737379807692307,
+          "baselineSurpriseRate": 0.091796875,
+          "heldPredictionEnergy": 0.03163554830778983
+        },
+        "hebb": {
+          "error": 0.43285753809593075,
+          "surpriseRate": 0.07737379807692307,
+          "baselineSurpriseRate": 0.091796875,
+          "heldPredictionEnergy": 0.03163554830778983
+        },
+        "coactivity": {
+          "error": 0.43285753809593075,
+          "surpriseRate": 0.07737379807692307,
+          "baselineSurpriseRate": 0.091796875,
+          "heldPredictionEnergy": 0.03163554830778983
+        },
+        "oracle": {
+          "error": 0.43285753809593075,
+          "surpriseRate": 0.07737379807692307,
+          "baselineSurpriseRate": 0.091796875,
+          "heldPredictionEnergy": 0.03163554830778983
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.091796875,
+          "baselineSurpriseRate": 0.091796875,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740006,
+      "n": 160,
+      "testSeed": 840006,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740006,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0324903838718784
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0249039924244796
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740006,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0324903838718784
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0249039924244796
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740006,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0324903838718784
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0249039924244796
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740006,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0249039924244796
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0324903838718784
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740006,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.4663789699334446,
+          "surpriseRate": 0.0848858173076923,
+          "baselineSurpriseRate": 0.09149639423076923,
+          "heldPredictionEnergy": 0.03261829949361746
+        },
+        "hebb": {
+          "error": 0.4663789699334446,
+          "surpriseRate": 0.0848858173076923,
+          "baselineSurpriseRate": 0.09149639423076923,
+          "heldPredictionEnergy": 0.03261829949361746
+        },
+        "coactivity": {
+          "error": 0.4663789699334446,
+          "surpriseRate": 0.0848858173076923,
+          "baselineSurpriseRate": 0.09149639423076923,
+          "heldPredictionEnergy": 0.03261829949361746
+        },
+        "oracle": {
+          "error": 0.4663789699334446,
+          "surpriseRate": 0.0848858173076923,
+          "baselineSurpriseRate": 0.09149639423076923,
+          "heldPredictionEnergy": 0.03261829949361746
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.09149639423076923,
+          "baselineSurpriseRate": 0.09149639423076923,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740007,
+      "n": 160,
+      "testSeed": 840007,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740007,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0150184560625062
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0002859587036603
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740007,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0150184560625062
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0002859587036603
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740007,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0150184560625062
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0002859587036603
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740007,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0002859587036603
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0150184560625062
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740007,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.45408330710168676,
+          "surpriseRate": 0.0811298076923077,
+          "baselineSurpriseRate": 0.09352463942307693,
+          "heldPredictionEnergy": 0.030278518842380437
+        },
+        "hebb": {
+          "error": 0.45408330710168676,
+          "surpriseRate": 0.0811298076923077,
+          "baselineSurpriseRate": 0.09352463942307693,
+          "heldPredictionEnergy": 0.030278518842380437
+        },
+        "coactivity": {
+          "error": 0.45408330710168676,
+          "surpriseRate": 0.0811298076923077,
+          "baselineSurpriseRate": 0.09352463942307693,
+          "heldPredictionEnergy": 0.030278518842380437
+        },
+        "oracle": {
+          "error": 0.45408330710168676,
+          "surpriseRate": 0.0811298076923077,
+          "baselineSurpriseRate": 0.09352463942307693,
+          "heldPredictionEnergy": 0.030278518842380437
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.09352463942307693,
+          "baselineSurpriseRate": 0.09352463942307693,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740008,
+      "n": 160,
+      "testSeed": 840008,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740008,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0022875874023514
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0261969900236922
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740008,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0022875874023514
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0261969900236922
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740008,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0022875874023514
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0261969900236922
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740008,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0261969900236922
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0022875874023514
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740008,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.50469572479317,
+          "surpriseRate": 0.08233173076923077,
+          "baselineSurpriseRate": 0.08616286057692307,
+          "heldPredictionEnergy": 0.03173379258595031
+        },
+        "hebb": {
+          "error": 0.50469572479317,
+          "surpriseRate": 0.08233173076923077,
+          "baselineSurpriseRate": 0.08616286057692307,
+          "heldPredictionEnergy": 0.03173379258595031
+        },
+        "coactivity": {
+          "error": 0.50469572479317,
+          "surpriseRate": 0.08233173076923077,
+          "baselineSurpriseRate": 0.08616286057692307,
+          "heldPredictionEnergy": 0.03173379258595031
+        },
+        "oracle": {
+          "error": 0.50469572479317,
+          "surpriseRate": 0.08233173076923077,
+          "baselineSurpriseRate": 0.08616286057692307,
+          "heldPredictionEnergy": 0.03173379258595031
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.08616286057692307,
+          "baselineSurpriseRate": 0.08616286057692307,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740009,
+      "n": 160,
+      "testSeed": 840009,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740009,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.057125192937389
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.8873718189959725
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740009,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.057125192937389
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.8873718189959725
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740009,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.057125192937389
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.8873718189959725
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740009,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.8873718189959725
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.057125192937389
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740009,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.47307546987599897,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.0926983173076923,
+          "heldPredictionEnergy": 0.024844255286818582
+        },
+        "hebb": {
+          "error": 0.47307546987599897,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.0926983173076923,
+          "heldPredictionEnergy": 0.024844255286818582
+        },
+        "coactivity": {
+          "error": 0.47307546987599897,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.0926983173076923,
+          "heldPredictionEnergy": 0.024844255286818582
+        },
+        "oracle": {
+          "error": 0.47307546987599897,
+          "surpriseRate": 0.07977764423076923,
+          "baselineSurpriseRate": 0.0926983173076923,
+          "heldPredictionEnergy": 0.024844255286818582
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.0926983173076923,
+          "baselineSurpriseRate": 0.0926983173076923,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740010,
+      "n": 160,
+      "testSeed": 840010,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740010,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.077461163645596
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9340953986805303
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740010,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.077461163645596
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9340953986805303
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740010,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.077461163645596
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9340953986805303
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740010,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9340953986805303
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.077461163645596
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740010,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.46351688903004834,
+          "surpriseRate": 0.07865084134615384,
+          "baselineSurpriseRate": 0.08834134615384616,
+          "heldPredictionEnergy": 0.027954089208405752
+        },
+        "hebb": {
+          "error": 0.46351688903004834,
+          "surpriseRate": 0.07865084134615384,
+          "baselineSurpriseRate": 0.08834134615384616,
+          "heldPredictionEnergy": 0.027954089208405752
+        },
+        "coactivity": {
+          "error": 0.46351688903004834,
+          "surpriseRate": 0.07865084134615384,
+          "baselineSurpriseRate": 0.08834134615384616,
+          "heldPredictionEnergy": 0.027954089208405752
+        },
+        "oracle": {
+          "error": 0.46351688903004834,
+          "surpriseRate": 0.07865084134615384,
+          "baselineSurpriseRate": 0.08834134615384616,
+          "heldPredictionEnergy": 0.027954089208405752
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.08834134615384616,
+          "baselineSurpriseRate": 0.08834134615384616,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740011,
+      "n": 160,
+      "testSeed": 840011,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740011,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.065931344790547
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9470664921648364
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740011,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.065931344790547
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9470664921648364
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740011,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.065931344790547
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9470664921648364
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740011,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 0.9470664921648364
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.065931344790547
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740011,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.49755253458653836,
+          "surpriseRate": 0.07647235576923077,
+          "baselineSurpriseRate": 0.08811598557692307,
+          "heldPredictionEnergy": 0.02843151960837079
+        },
+        "hebb": {
+          "error": 0.49755253458653836,
+          "surpriseRate": 0.07647235576923077,
+          "baselineSurpriseRate": 0.08811598557692307,
+          "heldPredictionEnergy": 0.02843151960837079
+        },
+        "coactivity": {
+          "error": 0.49755253458653836,
+          "surpriseRate": 0.07647235576923077,
+          "baselineSurpriseRate": 0.08811598557692307,
+          "heldPredictionEnergy": 0.02843151960837079
+        },
+        "oracle": {
+          "error": 0.49755253458653836,
+          "surpriseRate": 0.07647235576923077,
+          "baselineSurpriseRate": 0.08811598557692307,
+          "heldPredictionEnergy": 0.02843151960837079
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.08811598557692307,
+          "baselineSurpriseRate": 0.08811598557692307,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    },
+    {
+      "seed": 740012,
+      "n": 160,
+      "testSeed": 840012,
+      "testN": 256,
+      "models": {
+        "residual": {
+          "seed": 740012,
+          "n": 160,
+          "method": "residual",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0330098294656744
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0118353020579771
+            }
+          ]
+        },
+        "hebb": {
+          "seed": 740012,
+          "n": 160,
+          "method": "hebb",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0330098294656744
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0118353020579771
+            }
+          ]
+        },
+        "coactivity": {
+          "seed": 740012,
+          "n": 160,
+          "method": "coactivity",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0330098294656744
+            },
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0118353020579771
+            }
+          ]
+        },
+        "oracle": {
+          "seed": 740012,
+          "n": 160,
+          "method": "oracle",
+          "budget": 2,
+          "edges": [
+            {
+              "src": 0,
+              "dst": 1,
+              "delay": 5,
+              "weight": 1.0118353020579771
+            },
+            {
+              "src": 1,
+              "dst": 2,
+              "delay": 5,
+              "weight": 1.0330098294656744
+            }
+          ]
+        },
+        "dead": {
+          "seed": 740012,
+          "n": 160,
+          "method": "dead",
+          "budget": 2,
+          "edges": []
+        }
+      },
+      "metrics": {
+        "residual": {
+          "error": 0.46476225034701213,
+          "surpriseRate": 0.08143028846153846,
+          "baselineSurpriseRate": 0.08961838942307693,
+          "heldPredictionEnergy": 0.03125815716505506
+        },
+        "hebb": {
+          "error": 0.46476225034701213,
+          "surpriseRate": 0.08143028846153846,
+          "baselineSurpriseRate": 0.08961838942307693,
+          "heldPredictionEnergy": 0.03125815716505506
+        },
+        "coactivity": {
+          "error": 0.46476225034701213,
+          "surpriseRate": 0.08143028846153846,
+          "baselineSurpriseRate": 0.08961838942307693,
+          "heldPredictionEnergy": 0.03125815716505506
+        },
+        "oracle": {
+          "error": 0.46476225034701213,
+          "surpriseRate": 0.08143028846153846,
+          "baselineSurpriseRate": 0.08961838942307693,
+          "heldPredictionEnergy": 0.03125815716505506
+        },
+        "dead": {
+          "error": 1,
+          "surpriseRate": 0.08961838942307693,
+          "baselineSurpriseRate": 0.08961838942307693,
+          "heldPredictionEnergy": 0
+        }
+      },
+      "correctEdges": 2,
+      "correctDelays": 2,
+      "description": "Synthetic 4-channel time-lagged waves; all candidate cables supplied, but no fixed connections."
+    }
+  ],
+  "checks": {
+    "route": 12,
+    "accuracy": 12,
+    "residualAdvantage": 0,
+    "dead": 12,
+    "cut": 12
+  },
+  "medians": {
+    "residual": 0.4641395696885302,
+    "hebb": 0.4641395696885302,
+    "coactivity": 0.4641395696885302,
+    "oracle": 0.4641395696885302,
+    "dead": 1
+  },
+  "H1": true,
+  "H2": false
+}
