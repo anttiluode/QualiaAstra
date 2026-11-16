@@ -81,8 +81,8 @@ if(!model||!caseData)return;
 const mode=$("intervene").value,view=G.replay(model,caseData.world,{cut:mode==="cutBC"?"BC":"",showB:mode==="readB"});
 for(const [j,id] of [[1,"plotB"],[2,"plotC"]]){
 const curves=[view.pred[j]],colors=["#89ebc6"];
-if($("truth").checked){curves.push(view.world[j]);colors.push("#9eacc0"];}
-curves.push(view.residue[j]);colors.push("#fb9b9b"];
+if($("truth").checked){curves.push(view.world[j]);colors.push("#9eacc0");}
+curves.push(view.residue[j]);colors.push("#fb9b9b");
 draw(id,curves,colors);
 const a=view.pred[j].reduce((s,v)=>s+v*v,0),r=view.residue[j].reduce((s,v)=>s+v*v,0);
 $("state"+names[j]).textContent="Held energy "+a.toFixed(2)+" · residue energy "+r.toFixed(2)+" (arbitrary units).";
