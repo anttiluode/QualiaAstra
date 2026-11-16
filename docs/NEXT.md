@@ -31,3 +31,16 @@ map from causal removal: a timer's intervention can change other firing times.
 The wave field may be linear conditional on events while the event-generating
 closed loop is not. A learned prediction and its residual should also be measured
 separately; low residual need not mean low representational activity.
+
+## Progress note — 16 November 2026
+
+The first, deliberately narrow part of the representation gate now has an offline
+[Gate 2 development lab](../gate2.html) and [technical report](GATE2.md): relation
+likelihoods are estimated from raw noisy interference traces, and predictions
+are evaluated on withheld B/C sensor recordings. The independent test case uses
+separate seeded trials. **Calibration still has supervised relation labels** and
+the three-node topology is supplied. The harder unsupervised factor discovery
+and mutual-consensus/feedback questions above remain unanswered.
+
+The new lab is not a preregistered scientific confirmation. Gate 1's numerical
+receipt, protocol and original results are unchanged.
