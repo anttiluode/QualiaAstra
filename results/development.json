@@ -1,0 +1,98 @@
+{
+  "label": "development",
+  "seeds": [
+    1,
+    2
+  ],
+  "protocol": "PROTOCOL.md",
+  "hashes": {
+    "PROTOCOL.md": "8d40acef049a17b406ef731b09bdd11ea3b50e62208277ab66f21aa658593400",
+    "lab.py": "ca60e043056a7e0fbe96beff7db2e5c3e6e48f80a6065668e9eb4fb7ef8617c7",
+    "benchmark.py": "88c2aee3b942c2a4cd86b1352e3ed81f214a31fb5365e0fdc12594bee02cf456"
+  },
+  "git_head": "dc8ffc6fab43b6bbb109df3c4bf7641866431f61",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "summary": {
+    "metrics": {
+      "shared": {
+        "remote_relative_mse": 0.19772681184615404,
+        "total_wave_nrmse": 0.4424321279917175,
+        "source_accuracy": 0.9391276041666667,
+        "unresolved_fraction": 0.0
+      },
+      "disconnected": {
+        "remote_relative_mse": 1.0,
+        "total_wave_nrmse": 0.8551714485073199,
+        "source_accuracy": 0.31315104166666663,
+        "unresolved_fraction": 0.6666666666666666
+      },
+      "cut": {
+        "remote_relative_mse": 1.0,
+        "total_wave_nrmse": 0.8551714485073199,
+        "source_accuracy": 0.31315104166666663,
+        "unresolved_fraction": 0.6666666666666666
+      },
+      "shuffled": {
+        "remote_relative_mse": 1.8572225792016446,
+        "total_wave_nrmse": 1.1411242671594666,
+        "source_accuracy": 0.6331380208333333,
+        "unresolved_fraction": 0.0
+      },
+      "exact": {
+        "remote_relative_mse": 0.19772681184615404,
+        "total_wave_nrmse": 0.4424321279917175,
+        "source_accuracy": 0.9391276041666667,
+        "unresolved_fraction": 0.0
+      },
+      "oracle": {
+        "remote_relative_mse": 0.000515205257457569,
+        "total_wave_nrmse": 0.023054457109229366,
+        "source_accuracy": 1.0,
+        "unresolved_fraction": 0.0
+      }
+    },
+    "improvements": {
+      "disconnected": {
+        "paired_error_difference": 0.8022731881538459,
+        "ci95": [
+          0.7828880603683301,
+          0.8216583159393617
+        ],
+        "relative_reduction": 0.802273188153846
+      },
+      "shuffled": {
+        "paired_error_difference": 1.6594957673554904,
+        "ci95": [
+          1.6517630032330772,
+          1.6672285314779036
+        ],
+        "relative_reduction": 0.8935362868939759
+      }
+    },
+    "checks": {
+      "ambiguity_max_mean": 0.0,
+      "global_flip_p_difference": 0.0,
+      "cut_remote_update": 0.0,
+      "bayes_max_difference": 4.996003610813204e-16,
+      "reversal_max_difference": 0.0,
+      "suppression_remote_mean": 0.0,
+      "output_removal_remote_change": 0.0
+    },
+    "gates": {
+      "A": true,
+      "B": true,
+      "C": true,
+      "D": true
+    },
+    "all_pass": true,
+    "joint": {
+      "map_accuracy": 0.9384765625,
+      "mean_entropy_bits": 0.25644397318030143,
+      "before_entropy_bits": 1.002839088851877,
+      "mean_negative_log_score": 0.1722384476033032
+    }
+  }
+}
