@@ -18,8 +18,11 @@ jobs:
       - run: npm install --prefix /tmp/qualia-ui --no-save --package-lock=false playwright
       - run: /tmp/qualia-ui/node_modules/.bin/playwright install --with-deps chromium
       - run: node tests/gate2.cjs
+      - run: node tests/gate3.cjs
+      - run: node tests/gate3_confirm.cjs
       - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/browser_smoke.cjs
       - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/gate2_browser.cjs
+      - run: NODE_PATH=/tmp/qualia-ui/node_modules node tests/gate3_browser.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
