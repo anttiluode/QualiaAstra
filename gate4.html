@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>QualiaAstra / Gate 4 — Where Should the Vine Connect?</title>
+<style>
+:root{color-scheme:dark;--bg:#09111b;--panel:#132135;--low:#0c1728;--border:#2c3b54;--text:#eef5f5;--muted:#adbed0;--gold:#ffbd80;--mint:#89ebc6;--purple:#b9afff;--red:#fb9b9b}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#173345 0%,#09111b 62%);color:var(--text);font:15px/1.55 system-ui,Arial,sans-serif}
+main{margin:auto;max-width:1350px;padding:22px 30px 50px}header{border-bottom:1px solid var(--border);padding-bottom:17px;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{text-transform:uppercase;letter-spacing:.18em;font-size:12px}.nav{display:flex;gap:14px;flex-wrap:wrap;font-size:12px}a{color:var(--mint)}a:hover{text-decoration:none}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold)}h1{font-size:clamp(33px,4vw,55px);font-weight:650;letter-spacing:-.05em;line-height:1.12;margin:10px 0}h2{font-size:20px;font-weight:600;line-height:1.22;margin:5px 0 12px}h3{font-size:14px;margin:0 0 10px}.intro{max-width:930px;margin:30px 0 28px}.intro p{font-size:16px;color:var(--muted)}.note{font-size:12px;color:var(--muted);background:#0b1829;padding:13px 14px;border-left:2px solid var(--gold);margin:14px 0}
+.layout{display:grid;grid-template-columns:270px 1fr;gap:17px}.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px;min-width:0}.controls{align-self:start}.controls>div+div{padding-top:19px;border-top:1px solid var(--border);margin-top:19px}.workspace{display:grid;gap:17px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:15px}.box{background:var(--low);border:1px solid #263751;border-radius:9px;padding:13px;min-width:0}.small{font-size:12px;color:var(--muted)}.label{font-size:12px;color:var(--muted)}button,select,input[type=number]{background:#1c3148;color:var(--text);padding:10px 11px;border:1px solid #48617d;border-radius:8px;font:inherit;cursor:pointer}button:hover{background:#29455c}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--gold);outline-offset:2px}button.primary{background:var(--gold);color:#111b27;border-color:var(--gold);font-weight:700}.full{width:100%}select,input[type=number]{width:100%}label{font-size:12px;display:block;margin:11px 0 7px}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.badge{font-size:11px;border:1px solid var(--border);padding:4px 10px;color:var(--muted);border-radius:30px}.metric{font-size:31px;font-weight:650;letter-spacing:-.04em}.metric small{font-size:12px;font-weight:400;color:var(--muted)}.metricline{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.metricline .box{padding:14px}.meter{height:8px;border-radius:7px;background:#2b405a;overflow:hidden}.meter span{height:100%;display:block;background:var(--mint)}.network{width:100%;display:block;max-height:300px}.network text{fill:var(--text);font:12px system-ui}.network .nlabel{font-size:19px;font-weight:bold}.network .edge{stroke:#80d9c5;stroke-width:3;fill:none}.network .node{fill:#1a2d43;stroke:#52677f;stroke-width:2}.network .node-A{stroke:var(--gold)}.network .node-B{stroke:var(--mint)}.network .node-C{stroke:var(--purple)}.network .node-D{stroke:#70879e}.network .edgeLabel{font-size:11px;fill:var(--gold)}.network .missing{stroke:#53617a;stroke-width:1;stroke-dasharray:4 6;fill:none;opacity:.55}
+.plot{width:100%;height:145px;display:block}.legend{font-size:11px;color:var(--muted);display:flex;flex-wrap:wrap;gap:15px}.swatch{display:inline-block;width:16px;height:3px;margin-right:5px;vertical-align:middle}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;border-bottom:1px solid var(--border);padding:8px 6px}td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}th{font-size:11px;color:var(--muted);font-weight:500}.foot{margin-top:24px;font-size:12px;color:var(--muted)}
+@media(max-width:940px){main{padding:18px 15px}.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.controls>div+div{margin:0;padding:0;border:0}.controls .note{grid-column:1/-1}}
+@media(max-width:560px){.controls,.cols,.metricline{grid-template-columns:1fr}.panel{padding:15px}.nav{gap:7px}header{align-items:start}.network{min-height:170px}}
+</style>
+</head><body><main>
+<header><div class="brand">Qualia<span style="color:var(--gold)">Astra</span> / 04</div><nav class="nav"><a href="index.html">Gate 1</a><a href="gate2.html">Gate 2</a><a href="gate3.html">Gate 3</a><a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE4_PROTOCOL.md">Protocol</a><a href="https://github.com/anttiluode/QualiaAstra">Code</a></nav></header>
+<section class="intro"><div class="eyebrow">Damped cable · held prediction · somatic residue</div><h1>Where should the vine connect?</h1><p>Give every neuron potential connections to every other neuron, at twelve possible delays. Let two connections survive. Does a candidate axon win because it correlates with activity—or because it removes future prediction error?</p><span class="badge">Synthetic wiring competition, not a literal biological neuron</span></section>
+<div class="layout"><aside class="panel controls">
+<div><div class="eyebrow">01 / Training</div><h2>Choose the growth rule</h2><label for="method">Learning policy</label><select id="method"><option value="residual">Complementary · reduce residue</option><option value="hebb">Delayed signed correlation</option><option value="coactivity">Unsigned coactivity</option><option value="oracle">Oracle · correct connections</option><option value="dead">Disconnected / dead output</option></select><label for="seed">Training seed</label><input id="seed" type="number" min="1" max="1000000000" step="1" value="4001"><button id="train" class="primary full" style="margin-top:12px">Grow two branches</button><p id="training" class="small">No fixed wiring is supplied to the learners.</p></div>
+<div><div class="eyebrow">02 / Probe</div><h2>Replay a hidden world</h2><button id="new" class="full">Next independent world</button><p id="world" class="small"></p><label for="intervene">What the next neuron receives</label><select id="intervene"><option value="intact">Internal predicted state</option><option value="cutBC">Cut B → C only</option><option value="readB">Reveal real B to the network (diagnostic)</option></select><label class="row" style="cursor:pointer"><input type="checkbox" id="truth" checked> Show actual B/C test waves</label><p class="small">Actual B/C waves are for comparison only; without the diagnostic they do not enter replay.</p></div>
+<div><div class="eyebrow">03 / Compare</div><h2>Identical wiring budget</h2><p class="small">160 training episodes, 256 unseen A-only tests; all learners receive twelve allowed delays and a two-connection budget.</p><button id="benchmark" class="full">Compare all five policies</button><p id="benchmarkStatus" class="small"></p></div>
+<div class="note"><strong>Physical bridge:</strong> a cable is a fixed three-tap delayed filter here. A branch's held predicted wave reaches the next unit, while <em>world − prediction</em> remains available as a separate surprise signal. This is an illustrative split, not the original QualiaClaude wave tank.</div>
+</aside>
+<div class="workspace">
+<section class="panel"><div class="row" style="justify-content:space-between"><div><div class="eyebrow">Selection of surviving feelers</div><h2>Discovered routing</h2></div><span id="route" class="badge">No routes yet</span></div>
+<svg id="graph" viewBox="0 0 720 260" class="network" role="img" aria-label="Four possible neurons and their chosen two-edge delayed connections">
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7" fill="none" stroke="#80d9c5" stroke-width="1.4"/></marker></defs>
+<path d="M108 92 L346 92 L585 92" class="missing"/><path d="M350 120 V213" class="missing"/>
+<g id="links"></g>
+<circle class="node node-A" cx="100" cy="92" r="32"/><circle class="node node-B" cx="354" cy="92" r="32"/><circle class="node node-C" cx="608" cy="92" r="32"/><circle class="node node-D" cx="354" cy="213" r="30"/>
+<text class="nlabel" x="100" y="98" text-anchor="middle">A</text><text class="nlabel" x="354" y="98" text-anchor="middle">B</text><text class="nlabel" x="608" y="98" text-anchor="middle">C</text><text class="nlabel" x="354" y="219" text-anchor="middle">D</text>
+</svg><p class="small" id="edges">Every directed pair, except self, has twelve candidate delays; the source A is an externally supplied cue. D is an independent distractor.</p></section>
+<section class="panel"><div class="eyebrow">What remains after the dendrite predicts?</div><h2>Separate held state from somatic surprise</h2>
+<div class="cols">
+<div class="box"><h3>B · held predictive line</h3><canvas class="plot" id="plotB" aria-label="B world prediction and residue"></canvas><div class="small" id="stateB">The predicted B waveform remains available after its residual is small.</div></div>
+<div class="box"><h3>C · prediction two connections later</h3><canvas class="plot" id="plotC" aria-label="C world prediction and residue"></canvas><div class="small" id="stateC">C reads the predicted B waveform rather than B's residual.</div></div></div>
+<div class="legend" style="margin-top:12px"><span><i class="swatch" style="background:var(--mint)"></i>Held prediction</span><span><i class="swatch" style="background:#9eacc0"></i>Actual test world</span><span><i class="swatch" style="background:var(--red)"></i>Uncancelled residue</span></div>
+</section>
+<section class="panel"><div class="eyebrow">A-only replay, held-out worlds</div><h2>Does quiet mean understood?</h2><div class="metricline">
+<div class="box"><div class="label">Relative B+C error ↓</div><div class="metric" id="error">—</div><div class="meter"><span id="errorBar" style="width:0"></span></div></div>
+<div class="box"><div class="label">Residual threshold crossings</div><div class="metric" id="surprise">—</div><div class="small">Proxy, not a real spike simulator</div></div>
+<div class="box"><div class="label">Held prediction energy</div><div class="metric" id="energy">—</div><div class="small">Can be nonzero when residual is small</div></div></div><p class="small" id="meaning"></p></section>
+<section class="panel"><div class="eyebrow">Fair five-policy evaluation</div><h2>Did complementary learning really win?</h2><div id="results"><p class="small">Run the comparison. Unlike a zero-delay-only baseline, both Hebbian controls get the entire delay bank and the same two-edge budget as the residue rule.</p></div></section>
+</div></div>
+<p class="foot">This laboratory is an engineering toy: signed synthetic waves, known four-channel observations in training, three-tap delayed filters and two selected edges. It does not model a growing physical axon, a detailed dendrite, or subjective experience. <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE4_PROTOCOL.md">Read the frozen protocol</a>.</p>
+</main>
+<script src="gate4_engine.js"></script><script>
+"use strict";
+const $=id=>document.getElementById(id),G=globalThis.Gate4;
+let sample=0,model=null,caseData=null,report=null;
+const names=G.NAMES,points=[[100,92],[354,92],[608,92],[354,213]];
+function makeTrial(){sample++;caseData=G.cases(520001+sample,1)[0];$("world").textContent="Independent scene "+sample+" · A observed; B/C withheld";render();}
+function draw(id,series,colors){
+const el=$(id),rect=el.getBoundingClientRect(),w=Math.max(1,rect.width),h=Math.max(1,rect.height),dpr=window.devicePixelRatio||1,ctx=el.getContext("2d");
+el.width=Math.ceil(w*dpr);el.height=Math.ceil(h*dpr);ctx.scale(dpr,dpr);
+ctx.clearRect(0,0,w,h);
+let mx=1;for(const x of series)for(const v of x)mx=Math.max(mx,Math.abs(v));
+mx*=1.15;ctx.strokeStyle="#2c4159";ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+for(let k=0;k<series.length;k++){ctx.strokeStyle=colors[k];ctx.lineWidth=k===0?2:1.15;ctx.setLineDash(k===1?[5,5]:[]);
+ctx.beginPath();series[k].forEach((v,i)=>{const x=8+(w-16)*i/(v===undefined?1:G.T-1),y=h/2-v*h*.42/mx;i?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();}
+ctx.setLineDash([]);
+}
+function graph(){
+const links=$("links");links.replaceChildren();
+for(const e of model.edges){
+const [ax,ay]=points[e.src],[bx,by]=points[e.dst];let dx=bx-ax,dy=by-ay,n=Math.hypot(dx,dy),sx=ax+dx*30/n,sy=ay+dy*30/n,tx=bx-dx*36/n,ty=by-dy*36/n;
+const p=document.createElementNS("http://www.w3.org/2000/svg","path");p.setAttribute("class","edge");
+p.setAttribute("d","M"+sx+" "+sy+" L"+tx+" "+ty);
+p.setAttribute("marker-end","url(#arrow)");links.append(p);
+const txt=document.createElementNS("http://www.w3.org/2000/svg","text");txt.setAttribute("class","edgeLabel");
+txt.setAttribute("text-anchor","middle");txt.setAttribute("x",((sx+tx)/2).toFixed(1));
+txt.setAttribute("y",((sy+ty)/2-10).toFixed(1));
+txt.textContent="d"+e.delay+" · "+e.weight.toFixed(2);links.append(txt);
+}
+$("edges").textContent=model.edges.length?model.edges.map(e=>names[e.src]+" → "+names[e.dst]+", delay "+e.delay+", fitted weight "+e.weight.toFixed(2)).join(" | "):
+"No predictive connections: an externally silenced output is not evidence of understanding.";
+$("route").textContent=model.edges.length+" / "+G.BUDGET+" connections used";
+}
+function render(){
+if(!model||!caseData)return;
+const mode=$("intervene").value,view=G.replay(model,caseData.world,{cut:mode==="cutBC"?"BC":"",showB:mode==="readB"});
+for(const [j,id] of [[1,"plotB"],[2,"plotC"]]){
+const curves=[view.pred[j]],colors=["#89ebc6"];
+if($("truth").checked){curves.push(view.world[j]);colors.push("#9eacc0"];}
+curves.push(view.residue[j]);colors.push("#fb9b9b"];
+draw(id,curves,colors);
+const a=view.pred[j].reduce((s,v)=>s+v*v,0),r=view.residue[j].reduce((s,v)=>s+v*v,0);
+$("state"+names[j]).textContent="Held energy "+a.toFixed(2)+" · residue energy "+r.toFixed(2)+" (arbitrary units).";
+}
+$("meaning").textContent=mode==="cutBC"?"The B prediction remains internal, but C no longer reads it. C's residual increases without changing the world.":
+mode==="readB"?"Diagnostic: actual B is now provided to the network; this is NOT the A-only benchmark.":
+model.edges.length?"Prediction can be maintained without a somatic surprise event. Low residual is meaningful only when compared with the real sensory world.":
+"Zero transmitted prediction is not a world model. Sensor error remains measurable even when a separate output is forced quiet.";
+}
+function refresh(){
+const seed=Number($("seed").value);if(!Number.isInteger(seed)||seed<1||seed>1e9)throw Error("Enter a positive seed");
+const method=$("method").value;model=G.train(seed,160,method);
+report=G.evaluate(model,650001,256);
+$("training").textContent=model.n+" full-sensor training episodes · "+model.edges.length+" selected edges.";
+$("error").textContent=report.error.toFixed(3);$("surprise").textContent=(report.surpriseRate*100).toFixed(1)+"%";
+$("energy").textContent=report.heldPredictionEnergy.toFixed(3);
+$("errorBar").style.width=Math.max(0,Math.min(100,(1-report.error)*100))+"%";
+graph();render();
+}
+$("new").addEventListener("click",makeTrial);
+$("train").addEventListener("click",()=>{refresh();$("results").innerHTML='<p class="small">Re-trained. Run the five-policy comparison for this seed.</p>';});
+$("method").addEventListener("change",refresh);
+$("intervene").addEventListener("change",render);$("truth").addEventListener("change",render);
+$("benchmark").addEventListener("click",()=>{
+const b=G.benchmark(Number($("seed").value),160,650001,256);
+const methods=["residual","hebb","coactivity","oracle","dead"],title={residual:"Residual-aware wiring",hebb:"Delayed signed correlation",coactivity:"Unsigned coactivity",oracle:"True-route anatomy oracle",dead:"Disconnected output"};
+const rows=methods.map(k=>"<tr><td>"+title[k]+"</td><td>"+b.metrics[k].error.toFixed(3)+"</td></tr>").join("");
+$("results").innerHTML='<table><thead><tr><th>Connection selection policy</th><th>B+C error ↓</th></tr></thead><tbody>'+rows+
+'</tbody></table><p class="small">Zero-prediction error = 1.000. All non-dead policies have the same delay candidates, training cases and wiring budget. If correlation ties residual learning, there is <strong>no evidence for a unique residual-rule advantage</strong> in this world. The dead output has no selected edges, but its physical residual is not zero.</p>';
+$("benchmarkStatus").textContent="Independent test seed 650001 · "+b.testN+" episodes.";
+});
+window.addEventListener("resize",render);
+makeTrial();refresh();
+</script></body></html>
