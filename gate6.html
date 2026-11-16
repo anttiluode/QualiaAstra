@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QualiaAstra / Gate 6 — Provenance in the Wave</title>
+<style>
+:root{color-scheme:dark;--bg:#09121e;--panel:#122236;--box:#0a1728;--line:#2d4058;--fg:#eaf1f6;--muted:#a5b9cc;--amber:#ffc287;--cyan:#8edbc9;--violet:#bea9fb;--rose:#f29da4}
+*{box-sizing:border-box}
+body{margin:0;color:var(--fg);background:radial-gradient(ellipse at 80% -12%,#1b344f 0%,var(--bg) 62%);font:15px/1.53 system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+main{max-width:1380px;margin:0 auto;padding:22px 26px 54px}
+header{border-bottom:1px solid var(--line);padding-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.brand{font-size:12px;letter-spacing:.17em;text-transform:uppercase}.nav{display:flex;gap:12px;flex-wrap:wrap;font-size:12px}
+a{color:var(--cyan)}a:hover{text-decoration:none}
+.eyebrow{font-size:11px;letter-spacing:.16em;color:var(--amber);text-transform:uppercase}
+h1{font-size:clamp(34px,4.2vw,56px);font-weight:650;letter-spacing:-.052em;line-height:1.1;margin:10px 0 13px}
+h2{font-size:21px;font-weight:600;letter-spacing:-.02em;margin:3px 0 12px}h3{font-size:14px;font-weight:600;margin:2px 0 9px}
+p{margin:8px 0 13px}.intro{max-width:940px;margin:29px 0 28px}.intro p{color:var(--muted);font-size:16px}
+.layout{display:grid;grid-template-columns:274px minmax(0,1fr);gap:16px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;min-width:0}
+.workspace{display:grid;gap:16px}.section{margin-top:20px;padding-top:17px;border-top:1px solid var(--line)}
+label{font-size:12px;display:block;margin:11px 0 6px;color:var(--muted)}
+select,input[type=number],button{font:inherit;color:var(--fg);background:#1b3049;border:1px solid #506781;border-radius:7px;padding:8px 11px;width:100%;min-width:0}
+button{cursor:pointer}button:hover{background:#304763}button.primary{background:var(--amber);color:#192439;font-weight:700;border-color:var(--amber)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+input[type=range]{width:100%;accent-color:var(--amber)}input[type=checkbox]{accent-color:var(--cyan)}
+.row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.badge{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:30px;padding:5px 10px}
+.small{font-size:12px;color:var(--muted)}
+.note{background:#0b1a2b;border-left:2px solid var(--amber);padding:12px 14px;font-size:12px;color:var(--muted);margin:14px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.box{background:var(--box);border:1px solid #293d58;border-radius:10px;padding:14px;min-width:0}
+.metric{font-size:30px;font-weight:650;letter-spacing:-.04em;line-height:1.25}.metric small{font-size:12px;font-weight:400;color:var(--muted)}
+canvas{display:block;width:100%;height:165px}.plotSmall{height:125px}
+.legend{display:flex;flex-wrap:wrap;gap:15px;font-size:11px;color:var(--muted)}
+.key{display:inline-block;width:18px;height:3px;vertical-align:middle;margin:0 6px 3px 0}
+meter{width:100%}
+.track{height:9px;border-radius:6px;background:#2b3e55;overflow:hidden}.track span{display:block;height:100%;background:var(--cyan)}
+table{width:100%;border-collapse:collapse;font-size:12px}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line)}td:last-child,th:last-child{text-align:right;font-variant-numeric:tabular-nums}th{color:var(--muted);font-weight:500}
+.foot{color:var(--muted);font-size:12px;margin-top:22px}
+@media(max-width:960px){main{padding:18px 14px}.layout{grid-template-columns:1fr}.controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.controls>.section{margin:0;padding:0;border:0}.controls>.note{grid-column:1/-1}}
+@media(max-width:580px){.controls,.grid2,.grid3{grid-template-columns:1fr}.panel{padding:15px}.nav{gap:8px}header{align-items:flex-start}}
+</style></head>
+<body><main>
+<header><div class="brand">Qualia<span style="color:var(--amber)">Astra</span> / Gate 06</div>
+<nav class="nav"><a href="index.html">Gate 1</a><a href="gate2.html">Gate 2</a><a href="gate3.html">Gate 3</a><a href="gate4.html">Gate 4</a><a href="gate5.html">Gate 5</a><a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE6_PROTOCOL.md">Protocol</a><a href="https://github.com/anttiluode/QualiaAstra">Source</a></nav></header>
+<section class="intro"><div class="eyebrow">48-sample cable and state-shaped pulse analogues</div><h1>Can the wave disclose its origin?</h1>
+<p>The receiver never sees a Boolean “actual vs imagined” tag. Instead, it examines a noisy pulse after a fast or slow synthetic pathway. It must decide how much of the incoming B-like signal is real evidence and how much is an echo of its own prediction.</p>
+<span class="badge">One waveform, no test source tag</span> <span class="badge">Known-source isolated calibration</span> <span class="badge">Synthetic, not a biophysical neuron</span>
+</section>
+<div class="layout"><aside class="panel controls">
+<div><div class="eyebrow">01 / Calibrate</div><h2>Learn the two response shapes</h2>
+<p class="small">Full A/B/C observations teach the two Markov correlations; separately isolated stimulation teaches which physical response follows which source. The source identity is then withheld at test.</p>
+<button id="retrain">Recalibrate another body</button><p class="small" id="calInfo">Preparing calibration</p></div>
+<div class="section"><div class="eyebrow">02 / Send a physical report</div><h2>Keep the sign. Change the path.</h2>
+<button id="new">New hidden test world</button><p class="small" id="world"></p>
+<label for="A">Observed A</label><select id="A"><option value="1">A = +1</option><option value="-1">A = −1</option></select>
+<label for="z">Incoming signed B-like report</label><select id="z"><option value="1">z = +1</option><option value="-1">z = −1</option></select>
+<label for="origin">Generator only: physical input that produced the wave</label><select id="origin"><option value="replay">Replayed prediction</option><option value="actual">Independent sensory input</option></select>
+<label for="p">Reported sensor reliability <output id="pLabel">95%</output></label><input type="range" id="p" min=".55" max=".95" step=".05" value=".95">
+</div>
+<div class="section"><div class="eyebrow">03 / Manipulate the medium</div><h2>Choose a physical signature</h2>
+<label for="mode">Synthetic response family</label><select id="mode">
+<option value="cable">Fast vs damped cable</option>
+<option value="spike">Subtle spike-shape difference</option>
+<option value="combined">Combined cable and spike shapes</option>
+<option value="equalized">Identical signatures (negative control)</option></select>
+<label><input id="swapped" type="checkbox"> Reverse source-specific responses at test</label>
+<label><input id="cut" type="checkbox"> Cut B → C while retaining B</label>
+<label><input id="truth" type="checkbox"> Reveal held-out C waveform</label>
+<button id="resample">Re-sample waveform noise</button>
+<div class="note">The “generator only” selector determines which physical waveform is synthesized. It is NOT passed to the decoder. Swapping breaks the calibration-to-test mapping.</div>
+</div>
+<div class="section"><div class="eyebrow">04 / Benchmark</div><h2>Evaluate unseen cases</h2>
+<button id="benchmark" class="primary">Compare nine conditions</button>
+<p class="small" id="benchInfo">Development evaluation is separate from frozen confirmation.</p></div>
+</aside>
+<div class="workspace">
+<section class="panel"><div class="row"><div><div class="eyebrow">The receiver's one input channel</div><h2>The waveform is all it gets</h2></div><span class="badge" id="packet">Unknown origin at receiver</span></div>
+<canvas id="wavePlot" aria-label="Signed waveform normalized by message polarity, compared with learned actual and replay templates"></canvas>
+<div class="legend"><span><i class="key" style="background:var(--amber)"></i>Current wave (polarity removed for comparison)</span><span><i class="key" style="background:var(--cyan)"></i>Known-source real template</span><span><i class="key" style="background:var(--violet)"></i>Known-source replay template</span></div>
+<p class="small" id="waveDescription">Sign and average clean energy are matched between paths. The calibrated filter is a toy damped impulse, not a reconstructed dendritic voltage trace.</p>
+</section>
+<section class="panel"><div class="eyebrow">Test inference without a tag</div><h2>What does the receiving neuron believe?</h2>
+<div class="grid3">
+<div class="box"><div class="small">Inferred probability of REAL evidence</div><div class="metric" id="realProb">—</div><div class="track"><span id="realMeter" style="width:0"></span></div></div>
+<div class="box"><div class="small">Internally held expectation B</div><div class="metric" id="beliefB">—</div><div class="small">Prior and incoming waveform combined</div></div>
+<div class="box"><div class="small">Projected expectation C</div><div class="metric" id="beliefC">—</div><div class="small" id="probC">Estimated C sign, not a spike count</div></div>
+</div><p class="note" id="interpretation">A predicted B may be carried without being mistaken for independently observed B.</p>
+<div class="grid2"><div class="box"><div class="small">Optimal receiver WITHOUT a waveform</div><div class="metric" id="blindC">—</div></div><div class="box"><div class="small">Exact source identity given to oracle only</div><div class="metric" id="oracleC">—</div></div></div>
+</section>
+<section class="panel"><div class="eyebrow">Two physically different journeys, identical signed report</div><h2>Same message, two candidate histories</h2>
+<div class="grid2">
+<div class="box"><h3 style="color:var(--cyan)">Fast / real path</h3><canvas class="plotSmall" id="realWave" aria-label="Actual-source waveform"></canvas><div class="metric" id="actualProb">— <small>inferred REAL probability</small></div><p class="small" id="actualC">Downstream C expectation</p></div>
+<div class="box"><h3 style="color:var(--violet)">Slow / replay path</h3><canvas class="plotSmall" id="replayWave" aria-label="Replay-source waveform"></canvas><div class="metric" id="replayProb">— <small>inferred REAL probability</small></div><p class="small" id="replayC">Downstream C expectation</p></div>
+</div><p class="small">Both panels use the same A, z, reliability, noise draw and matched waveform energy. Only the physical response family differs. In the equalized condition, they should become indistinguishable.</p>
+</section>
+<section class="panel"><div class="eyebrow">Downstream inverse prediction</div><h2>C exists in the held state, even if C is not heard</h2>
+<canvas id="cPlot" aria-label="Predicted C waveform, optional hidden true C"></canvas><div class="legend"><span><i class="key" style="background:var(--cyan)"></i>Held predicted C wave</span><span><i class="key" style="background:#95a6bd"></i>True C wave (reveal only)</span></div><p class="small" id="cError">C truth is withheld from inference; the principal benchmark scores signed C prediction error.</p></section>
+<section class="panel"><div class="eyebrow">Matched intervention study</div><h2>Which physical cue actually helps?</h2><div id="results"><p class="small">Run the benchmark to compare cable, synthetic spike-shape, both together, identical response, amplitude-only, swapped response, optimal no-wave inference, known-origin oracle and naive echo-counting.</p></div></section>
+</div></div>
+<section class="panel" style="margin-top:17px"><div class="eyebrow">Frozen twelve-population confirmation · signed-C held-out prediction</div><h2>Path shape helps; matching waveforms remove the information</h2>
+<div class="grid2"><div class="box"><div class="small">Six predeclared checks, across twelve populations</div><div class="metric" style="color:var(--cyan)">6/6 <small>passed in 12/12</small></div><div class="small">No source flag given to the live waveform decoder</div></div><div class="box"><div class="small">Physical cable classifier on ambiguous z=A reports</div><div class="metric" style="color:var(--amber)">≈94% <small>source accuracy</small></div><div class="small">Engineered separation, not demonstrated biology</div></div></div>
+<table style="margin-top:14px"><thead><tr><th>Condition</th><th>Median C error ↓</th></tr></thead><tbody>
+<tr><td>Known-source oracle</td><td>0.7317</td></tr><tr><td>Waveform-only cable inference</td><td>0.7337</td></tr>
+<tr><td>Combined response</td><td>0.7349</td></tr><tr><td>Spike-shape analogue alone</td><td>0.7382</td></tr>
+<tr><td>Optimal no-wave receiver</td><td>0.7389</td></tr><tr><td>Energy-only control</td><td>0.7389</td></tr>
+<tr><td>Equalized responses</td><td>0.7391</td></tr><tr><td>Swapped waveform origins</td><td>0.7511</td></tr>
+</tbody></table>
+<p class="small">Calibration knows which isolated pathway produced each training pulse. Source-specific waveforms are engineered and the test receiver reads no explicit source field. These are twelve separately trained systems, each tested on 4096 new cases. Full per-seed outcomes and controls are in the <a href="https://github.com/anttiluode/QualiaAstra/blob/main/docs/GATE6_RESULTS.md">technical report</a> and <a href="https://github.com/anttiluode/QualiaAstra/blob/main/results/gate6_confirmation.json">numerical receipt</a>.</p></section>
+<p class="foot"><strong>Still not solved:</strong> a waveform is a probabilistic provenance cue, not an event identifier. Eight copies of the same weakly misclassified echo could still be counted as fresh evidence unless the circuit also controls temporal reuse (refractory latch, independent sensor channel, or equivalent causal rule). No action-potential biophysics, autonomous source learning, or phenomenal experience is demonstrated.</p>
+</main>
+<script src="gate5_engine.js"></script><script src="gate6_engine.js"></script><script>
+"use strict";
+const $=id=>document.getElementById(id),G=globalThis.Gate6,G5=globalThis.Gate5;
+let trainSeed=17001,model=G.train(trainSeed,512,320),trialNumber=0,noiseSeed=0,caseData=null;
+const signed=x=>(x>=0?"+":"")+x.toFixed(3);
+function graph(id,series,colors,mark=[]){
+const cv=$(id),box=cv.getBoundingClientRect(),w=Math.max(1,box.width),h=Math.max(1,box.height),pixel=window.devicePixelRatio||1,ctx=cv.getContext("2d");
+cv.width=Math.ceil(w*pixel);cv.height=Math.ceil(h*pixel);ctx.scale(pixel,pixel);
+ctx.clearRect(0,0,w,h);let max=.1;
+for(const line of series)for(const v of line)max=Math.max(max,Math.abs(v));
+max*=1.18;ctx.strokeStyle="#30455c";ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+for(let k=0;k<series.length;k++){
+ctx.strokeStyle=colors[k];ctx.lineWidth=k===0?2.35:1.45;ctx.setLineDash(mark.includes(k)?[5,4]:[]);
+ctx.beginPath();series[k].forEach((v,t)=>{const x=9+(w-18)*t/(series[k].length-1),y=h/2-h*.42*v/max;t?ctx.lineTo(x,y):ctx.moveTo(x,y);});ctx.stroke();
+}
+ctx.setLineDash([]);
+}
+function readInput(){
+return {A:Number($("A").value),z:Number($("z").value),p:Number($("p").value)};
+}
+function payload(origin,mode,settings){
+const obs=readInput(),trace=G.waveform(mode,origin,obs.z,settings,$("swapped").checked);
+return {...obs,trace};
+}
+function render(){
+if(!caseData)return;
+const report=readInput(),mode=$("mode").value,origin=$("origin").value,settings=G.nuisance(G5.rng(noiseSeed));
+const packet=payload(origin,mode,settings);
+const state=G.infer(model,packet,mode,{cutBC:$("cut").checked});
+const blind=G5.infer(model.relations,report,"blind");
+const oracle=G5.infer(model.relations,{...report,provenance:origin},"aware");
+$("pLabel").textContent=Math.round(report.p*100)+"%";
+$("calInfo").textContent="Body "+trainSeed+" · rho_AB="+model.relations.rho1.toFixed(3)+
+" · rho_BC="+model.relations.rho2.toFixed(3)+" · 320 known-source calibration pulses per class and mode";
+$("packet").textContent=origin==="actual"?"Generator: external source":"Generator: internal replay";
+$("realProb").textContent=(100*state.probReal).toFixed(1)+"%";
+$("realMeter").style.width=Math.max(0,Math.min(100,state.probReal*100))+"%";
+$("beliefB").textContent=signed(state.mB);$("beliefC").textContent=signed(state.mC);
+$("blindC").textContent=signed(blind.mC);$("oracleC").textContent=signed($("cut").checked?0:oracle.mC);
+$("probC").textContent=(50*(state.mC+1)).toFixed(1)+"% probability C positive";
+$("interpretation").textContent=$("cut").checked?"The held B expectation is intact, but cutting B→C zeroes C's prediction. This is a logical routing intervention, not a physical cable cut.":
+"Estimated source confidence comes from learned waveform shape plus the signed report's possible origins, not an explicit per-message provenance flag.";
+const decoder=model.decoders[mode],signedTrace=packet.trace.map(v=>v*report.z);
+graph("wavePlot",[signedTrace,decoder.muA,decoder.muR],["#ffc287","#8edbc9","#bea9fb"],[1,2]);
+const actualPacket=payload("actual",mode,settings),replayPacket=payload("replay",mode,settings);
+const actual=G.infer(model,actualPacket,mode),replay=G.infer(model,replayPacket,mode);
+$("actualProb").innerHTML=(100*actual.probReal).toFixed(1)+'% <small>predicted REAL</small>';
+$("replayProb").innerHTML=(100*replay.probReal).toFixed(1)+'% <small>predicted REAL</small>';
+$("actualC").textContent="C projection "+signed(actual.mC);
+$("replayC").textContent="C projection "+signed(replay.mC);
+graph("realWave",[actualPacket.trace.map(v=>v*report.z)],["#8edbc9"]);
+graph("replayWave",[replayPacket.trace.map(v=>v*report.z)],["#bea9fb"]);
+const Cwave=state.cPrediction,show=$("truth").checked;
+graph("cPlot",show?[Cwave,caseData.cTrace]:[Cwave],show?["#8edbc9","#95a6bd"]:["#8edbc9"],[1]);
+$("cError").textContent=show?
+"True C waveform belongs to the generated test world. If you manually changed A, z or reliability, this is a counterfactual comparison, not a matched test. Truth was never input to inference.":
+"The true C wave is hidden. The live decoder sees only observed A, signed report z, apparent p, and its noisy pulse trace.";
+$("waveDescription").textContent=mode==="equalized"?"NULL CONDITION: the two sources now produce identical clean response shapes. Source probabilities must rely on z and prior knowledge, not the waveform.":
+"All source-specific clean traces have equal energy. Random pulse jitter, shared nuisance amplitude, and independent Gaussian noise obscure the source.";
+}
+function newTrial(){
+trialNumber++;
+caseData=G5.newCase(G5.rng(155991+trialNumber*101));
+$("A").value=String(caseData.A);$("z").value=String(caseData.z);
+$("p").value=String(caseData.p);$("origin").value=caseData.provenance;
+$("swapped").checked=false;$("cut").checked=false;$("truth").checked=false;
+noiseSeed=440901+trialNumber*991;
+$("world").textContent="Hidden world "+trialNumber+" generated · true B/C withheld";
+render();
+}
+$("new").addEventListener("click",newTrial);
+$("retrain").addEventListener("click",()=>{trainSeed+=19;model=G.train(trainSeed,512,320);render();});
+$("resample").addEventListener("click",()=>{noiseSeed+=89;render();});
+for(const id of ["A","z","origin","p","mode","swapped","cut","truth"])$(id).addEventListener("input",render);
+$("benchmark").addEventListener("click",()=>{
+const result=G.evaluate(model,20001,2048),names={
+ cable:"Cable waveform",spike:"Synthetic spike kinetics",combined:"Combined signature",
+ equalized:"Identical waveforms",energy:"Amplitude/energy only",swapped:"Signatures swapped at test",
+ blind:"Optimal no-wave baseline",oracle:"Oracle with known source",naive:"Every report treated as real"};
+const order=["cable","combined","spike","equalized","energy","swapped","blind","oracle","naive"];
+$("results").innerHTML='<table><thead><tr><th>Intervention / comparator</th><th>C error ↓</th></tr></thead><tbody>'+
+order.map(k=>'<tr><td>'+names[k]+'</td><td>'+result.mse[k].toFixed(4)+'</td></tr>').join("")+
+'</tbody></table><p class="small">Among ambiguous z=A reports only: cable source classification '+
+(result.sourceAccuracy.cable.ambiguous*100).toFixed(1)+'%; spike-shape analogue '+
+(result.sourceAccuracy.spike.ambiguous*100).toFixed(1)+'%. The oracle receives true origin only as a scoring reference; waveform decoders receive no test origin tag. Equalized and energy controls check for leakage. This development run is distinct from the frozen 12-seed receipt.</p>';
+$("benchInfo").textContent="Development world seed 20001 · "+result.n+" separate hidden-C episodes";
+});
+window.addEventListener("resize",render);
+newTrial();
+</script></body></html>
